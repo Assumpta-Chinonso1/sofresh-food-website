@@ -1,0 +1,88 @@
+/* Main container */
+.menu {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Category Buttons */
+.category-menu {
+  margin-bottom: 2rem;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.category-buttons button {
+  background-color: #e6f4e7; 
+  color: #2d7f2d; 
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 1000px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-buttons button:hover {
+  background-color: #d0ebd2; 
+}
+
+.category-buttons button.active {
+  background-color: #2d7f2d;
+  color: #fff; 
+}
+
+/* Menu items grid */
+.menu_itemss {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual menu item card */
+.menu_item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu_item:hover {
+  transform: scale(1.03);
+}
+
+.menu_i {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu_n {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1rem 1rem 0.5rem;
+  color: #333;
+}
+
+.menu_des {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 1rem 1rem;
+  flex-grow: 1;
+}
+
+.menu_amount {
+  font-weight: 700;
+  color: #8758ff; 
+  margin: 0 1rem 1rem;
+}

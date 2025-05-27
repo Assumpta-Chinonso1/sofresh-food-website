@@ -1,13 +1,15 @@
 import React from 'react'
 import './Navbar.css'
 import { assets } from '../assets/assests'
+import { Link } from 'react-router-dom'
+import Menu from '../Menu/Menu'
 const Navbar = () => {
   return (
     <div className='navbar'>
          <img src={assets.sofresh_logo} alt=" logo" className='logo' /> 
             
          <ul className="navbar-menu">
-               <li>Our Menu</li>
+             <li> <Link to='/menu' className='nav-link'> Our Menu  </Link> </li> 
                <li>Find Us</li>
          </ul>
          <div className="navbar-right">
