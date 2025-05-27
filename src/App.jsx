@@ -3,6 +3,11 @@ import React from 'react'
 import Navbar from './Navbar/Navbar'
 import Hero from './Heros/Hero'
 import Explore from './Explore/Explore'
+import DiscountExplore from './DiscountExplores/Discountexplore'
+import Latest from './Latest/Latest'
+import SofreshStory from './Story/SofreshStory'
+import Get from './Get/Get'
+import Footer from './Footer/Footer'
 
 const App = () => {
   return (
@@ -10,6 +15,11 @@ const App = () => {
       <Navbar/>
     <Hero/>
     <Explore/>
+    <DiscountExplore/>
+    <Latest/>
+    <SofreshStory/>
+    <Get/>
+    <Footer/>
     </div>
   )
 }
