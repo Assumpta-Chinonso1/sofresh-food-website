@@ -6,7 +6,7 @@ import Menu from '../Menu/Menu'
 const Navbar = () => {
   return (
     <div className='navbar'>
-         <img src={assets.sofresh_logo} alt=" logo" className='logo' /> 
+       <Link to='/'> <img src={assets.sofresh_logo} alt=" logo" className='logo' /> </Link>  
             
          <ul className="navbar-menu">
              <li> <Link to='/menu' className='nav-link'> Our Menu  </Link> </li> 
