@@ -7,18 +7,16 @@
 
 /* Category Buttons */
 .category-menu {
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .category-buttons {
   display: flex;
   flex-wrap: wrap;
-  flex: 60%;
   gap: 1rem;
-  justify-content: center;
-  white-space: nowrap;
-  padding-right: 200px;
-  margin-right: 30px;
+  justify-content: flex-start;
+  overflow-x: auto;
+ bottom: 9rem;
   
 }
 
@@ -33,6 +31,15 @@
   border-radius: 1000px;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.category-buttons::-webkit-scrollbar {
+  height: 60px;
+}
+
+.category-buttons::-webkit-scrollbar-thumb {
+  background-color: #2d7f2d;
+  border-radius: 3px;
 }
 
 .category-buttons button:hover {
@@ -90,6 +97,8 @@
 
 .menu_amount {
   font-weight: 700;
-  color: #8758ff; 
+  margin: 0 1rem 1rem;
+  font-size: 1.2rem;
+  color: rgb(9, 132, 9); 
   margin: 0 1rem 1rem;
 }

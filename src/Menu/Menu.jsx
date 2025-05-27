@@ -50,6 +50,7 @@ const Menu = () => {
             <img src={item.menu_i} alt={item.menu_n} className="menu_i" />
             <h3 className="menu_n">{item.menu_n}</h3>
             <p className="menu_d">{item.menu_d}</p>
+            <br />
             <span className="menu_amount">{item.menu_amount}</span>
           </div>
         ))}
