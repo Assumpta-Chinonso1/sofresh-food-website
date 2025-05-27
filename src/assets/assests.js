@@ -737,8 +737,41 @@ export const Allcategories =  [
        menu_d:'Value Basket with Assorted Fruits and Snacks',
        menu_amount:"#8,0000"
      },
-     
-     
       
+     {
+       menu_n:"VANILLA COMBO",
+       menu_i: vanilla_c,
+       menu_d:'Vanilla Smoothie with Assorted Fruits',
+         menu_amount: "#4,5000"
+       },
+
+       {
+
+         menu_n:"VITALITY BOOST",
+         menu_i: vatality_b,
+         menu_d:'Vitality Boost Smoothie with Spinach and Banana',
+         menu_amount:"#4,0000"
+       },
+
+       {
+         menu_n:"VEGGIE RICE TWIST",
+         menu_i: veggie_r,
+         menu_d:'Veggie Rice Wrap with Assorted Vegetables',
+         menu_amount:"#3,5000"
+       },
+
+       {
+         menu_n:"WATERMELON AND PINEAPPLE",
+         menu_i: watermelo_a,
+         menu_d:'Watermelon and Pineapple Smoothie with Coconut Water',
+         menu_amount:"#4,0000"
+       },
+
+       {
+         menu_n:"YOGHURT MIX",
+         menu_i: yoghurt_mic,
+         menu_d:'Yoghurt Mix with Assorted Fruits and Granola',
+         menu_amount:"#3,5000"
+       }
 
 ]
