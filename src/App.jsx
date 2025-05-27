@@ -1,11 +1,15 @@
 
 import React from 'react'
 import Navbar from './Navbar/Navbar'
+import Hero from './Heros/Hero'
+import Explore from './Explore/Explore'
 
 const App = () => {
   return (
-    <div>
+    <div className='app'>
       <Navbar/>
+    <Hero/>
+    <Explore/>
     </div>
   )
 }
