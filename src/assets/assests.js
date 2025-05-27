@@ -1,4 +1,4 @@
-import search_icon from './searchicon.png'
+import search_icon from './searchIcon.png'
 import sofresh_logo from './sofreshLogo.png'
 import smoothies_1 from './smoothie.jpeg'
 import greek_y from './greek y.jpeg'
