@@ -5,9 +5,10 @@ import Hero from './Heros/Hero'
 import Explore from './Explore/Explore'
 import DiscountExplore from './DiscountExplores/Discountexplore'
 import Latest from './Latest/Latest'
-import SofreshStory from './Story/SofreshStory'
+import SofreshStory from './SofreshStory/SofreshStory'
 import Get from './Get/Get'
 import Footer from './Footer/Footer'
+
 
 const App = () => {
   return (
