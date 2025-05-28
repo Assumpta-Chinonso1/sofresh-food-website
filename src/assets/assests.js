@@ -267,8 +267,9 @@ export const Allcategories =  [
          },
          {
          menu_n: "Exotic cuty",
-         menu_i: exotic_cuty,
+         menu_i: ex_c,
          menu_d: 'Perfect for sharing',
+           category: "Juices",
          menu_amount:"#17,000"
          },
 
