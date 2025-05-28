@@ -49,7 +49,6 @@ import Day_s from './Day starter.jpeg'
 import delight_t from './delightfull twist.jpeg'
 import eggs_na from './eggs n avocado wrap.jpeg'
 import enery_b from './Energy Boost.webp'
-import ex_c from     './exotic cuty.jpeg'
 import ex_s from './Exotic Splash.jpeg'
 import ex_co from './Exquisite combo.jpeg'
 import fresh_d from './Fresh Delight.jpeg'
@@ -559,13 +558,7 @@ category: "Parfait & Fruit Cups",
     menu_amount:"#31,0000"
    },
    
-   {
-    menu_n:"EXOTIC CUTY",
-    menu_i: ex_c,
-    menu_d:'Exotic Fruit Salad with Greek Yoghurt',
-   category: "Baskets & Platters",
-    menu_amount:"#51,0000"
-   },
+  
    
    {
     menu_n:"EXOTIC SPLASH",
