@@ -106,7 +106,7 @@ import  Love_platters from './love platterr.jpeg'
 import three_mango from './3 manago.png'
 import classic_Tropical  from  './classic tropical.jpeg'
 import three_coconut from './3 coconut.png'
-import exotic_cuty from './exotic cuty.jpeg'
+
 import choco_lux from './choco lux.png'
 import chicken_w from './chicken & egg.jpeg'
 
@@ -264,14 +264,7 @@ export const Allcategories =  [
           category: "Parfait Exotic",
          menu_amount:"#20,0000"
          },
-         {
-         menu_n: "Exotic cuty",
-         menu_i: ex_c,
-         menu_d: 'Perfect for sharing',
-           category: "Juices",
-         menu_amount:"#17,000"
-         },
-
+        
          {
          menu_n: "Choco Lux",
          menu_i: choco_lux,
