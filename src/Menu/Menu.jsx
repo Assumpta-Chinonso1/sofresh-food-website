@@ -21,15 +21,14 @@ const categories = [
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState('All Categories');
 
- const filterItems = activeCategory === 'All Categories'
-
-  ?  Allcategories
-  : Allcategories.filter(item => 
-    item.menu_n.toLowerCase().includes (activeCategory.toLowerCase())
-);
+  // Filtering items based on the selected category
+  const filterItems = activeCategory === 'All Categories'
+    ? Allcategories
+    : Allcategories.filter(item => item.category === activeCategory);
 
   return (
     <div className='menu'>
+    
       <div className="category-menu">
         <div className="category-buttons">
           {categories.map((category) => (
@@ -44,6 +43,7 @@ const Menu = () => {
         </div>
       </div>
 
+      {/* Display Filtered Menu Items */}
       <div className="menu_itemss">
         {filterItems.map((item, index) => (
           <div className="menu_item" key={index}>
@@ -60,3 +60,4 @@ const Menu = () => {
 };
 
 export default Menu;
+

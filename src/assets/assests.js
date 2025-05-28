@@ -109,6 +109,7 @@ import classic_Tropical  from  './classic tropical.jpeg'
 import three_coconut from './3 coconut.png'
 import exotic_cuty from './exotic cuty.jpeg'
 import choco_lux from './choco lux.png'
+import chicken_w from './chicken & egg.jpeg'
 
 
 export const assets = {
@@ -239,12 +240,14 @@ export const Allcategories =  [
          menu_n: "Love Platter",
          menu_i: Love_platters,
          menu_d: 'Perfect for sharing',
+          category: "Baskets & Platters",
          menu_amount: "#30,0000"
       },
          {
             menu_n: "3 Mango",
          menu_i: three_mango,
          menu_d: 'Perfect for sharing',
+          category: "Parfait Exotic",
          menu_amount: "#30,0000"
          },
 
@@ -252,12 +255,14 @@ export const Allcategories =  [
               menu_n: "Classic Tropical",
          menu_i: classic_Tropical,
          menu_d: 'Perfect for sharing',
+          category: "Baskets & Platters",
          menu_amount:"#45,000"
          },
          {
          menu_n: "3 Coconut",
          menu_i: three_coconut,
          menu_d: 'Perfect for sharing',
+          category: "Parfait Exotic",
          menu_amount:"#20,0000"
          },
          {
@@ -271,6 +276,7 @@ export const Allcategories =  [
          menu_n: "Choco Lux",
          menu_i: choco_lux,
          menu_d: 'Perfect for sharing',
+          category: "Parfait Exotic",
          menu_amount:"19,0000"
          },
 
@@ -278,12 +284,14 @@ export const Allcategories =  [
    menu_n: 'Parfait',
    menu_i: parfairt_delight,
    menu_d: 'Strawberry, Blueberries, Kiwi, Apple, Banana, Grapes Roasted Coconut Flakes, Granola in L.Fat Yoghurt',
+    category: "Parfait Exotic",
    menu_amount: "#7,0000"
 },
  {
    menu_n:"3 LITERS OF ORANGE ",
    menu_i:three_lir,
    menu_d:'Fresh 3 Litre juice for the family',
+    category: "Juices",
    menu_amount: "#35, 0000"
  },
 
@@ -292,6 +300,7 @@ export const Allcategories =  [
    menu_n: "3 LITERS OF WATERMELON",
    menu_i: three_lier,
    menu_d: 'Watermelon, Pineapple, Ginger, Mint, Lime',
+    category: "Juices",
    menu_amount: "#15,0000"
 },
 
@@ -299,20 +308,43 @@ export const Allcategories =  [
    menu_n: "ABC",
    menu_i: ABC_w,
    menu_d: 'Apple, Banana, Carrot',
+    category: "Smoothies",
    menu_amount: "#4,0000"
+},
+
+
+{
+   menu_n: "ABC",
+   menu_i: ABC_w,
+   menu_d: 'Apple, Banana, Carrot',
+  category: "Juices",
+   menu_amount: "#4,0000"
+},
+
+
+{
+   menu_n: "APPLE MAX",
+   menu_i: aplle_m,
+   menu_d: 'Apple, Banana, Strawberry, Blueberry',
+   category: "Parfait Exotic",
+   menu_amount: "#4500,0000"
 },
 
 {
    menu_n: "APPLE MAX",
    menu_i: aplle_m,
    menu_d: 'Apple, Banana, Strawberry, Blueberry',
+category: "Parfait & Fruit Cups",
    menu_amount: "#4500,0000"
 },
+
+
 
 {
    menu_n: "APPLE CHICKEN",
    menu_i: apple_c,
    menu_d: 'Apple, Chicken Breast, Greek Yoghurt',
+   category: "Salads",
    menu_amount: "#50,0000"
 },
 
@@ -320,20 +352,44 @@ export const Allcategories =  [
    menu_n: "APPLE",
    menu_i: apple_a,
    menu_d: 'Apple',
+    category: "Smoothies",
    menu_amount: "#6.500,000"
 },
+
+{
+   menu_n: "APPLE",
+   menu_i: apple_a,
+   menu_d: 'Apple',
+   category: "Juices",
+   menu_amount: "#6.500,000"
+},
+
+
 
 {
    menu_n: "AQUA SPLASH",
    menu_i: aqua_s,
    menu_d: 'Cucumber, Pineapple, Mint',
+    category: "Smoothies",
    menu_amount: "#25,000"
 },
+
+
+{
+   menu_n: "AQUA SPLASH",
+   menu_i: aqua_s,
+   menu_d: 'Cucumber, Pineapple, Mint',
+    category: "Juices",
+   menu_amount: "#25,000"
+},
+
+
 
 {
    menu_n:"AVO SPICY CHICKEN",
    menu_i: avo_s,
    menu_d:'Avocado, Chicken Breast, Greek Yoghurt',
+   category: "Salads",
    menu_amount:"#45,0000"
 },
 
@@ -341,6 +397,7 @@ export const Allcategories =  [
   menu_n:"AVOCADO RELISH",
   menu_i:aqua_r,
   menu_d:'Avocado, Cucumber, Tomato',
+   category: "Smoothies",
   menu_amount:"#20,5000"
 },
 
@@ -355,6 +412,7 @@ export const Allcategories =  [
   menu_n:"BERRY SWIRL",
   menu_i: berry_s,
   menu_d:'Strawberry and Blueberry Smoothie with Granola Topping',
+   category: "Smoothies",
   menu_amount:"#45,0000"
 },
 
@@ -362,13 +420,25 @@ export const Allcategories =  [
   menu_n:"CARROT COOLER",
   menu_i: carrot_c,
   menu_d:'Carrot and Orange Smoothie with Ginger and Mint',
+   category: "Smoothies",
   menu_amount:"#35,5000"
 },
+
+{
+  menu_n:"CARROT COOLER",
+  menu_i: carrot_c,
+  menu_d:'Carrot and Orange Smoothie with Ginger and Mint',
+  category: "Juices",
+  menu_amount:"#35,5000"
+},
+
+
 
 {
   menu_n:"CHERRY BLISS",
   menu_i: cherry_b,
   menu_d:'Cherry and Banana Smoothie with Almond Milk',
+   category: "Smoothies",
   menu_amount:"#12,0000"
 },
 
@@ -376,20 +446,40 @@ export const Allcategories =  [
    menu_n:"CHERRY DELIGHT",
    menu_i: cherry_d,
    menu_d:'Cherry, Banana, Greek Yoghurt',
+    category: "Smoothies",
    menu_amount:"#8,0000"
    },
-   
+   {
+    menu_n:"EGGS N AVOCADO WRAP",
+    menu_i: chicken_w,
+    menu_d:'Eggs and Avocado Wrap with Vegetables',
+     category: "Wraps and Sandwich",
+    menu_amount:"#31,5000"
+   },
    {
    menu_n:"CINNAMON SPICE",
    menu_i: cinna_s,
    menu_d:'Cinnamon, Banana, Almond Milk',
+    category: "Smoothies",
+    
    menu_amount:"#30,5000"
    },
+
+     {
+   menu_n:"CINNAMON SPICE",
+   menu_i: cinna_s,
+   menu_d:'Cinnamon, Banana, Almond Milk',
+  category: "Tigernut Drinks", 
+   menu_amount:"#30,5000"
+   },
+
+
    
    {
    menu_n:"CITRUS ZOBO",
    menu_i: citrus_z,
    menu_d:'Zobo Drink with Citrus Fruits and Ginger',
+    category: "Zobo Drinks",
    menu_amount:"#22,5000"
    },
    
@@ -397,13 +487,24 @@ export const Allcategories =  [
    menu_n:"COCONUT AND PINEAPPLE",
    menu_i: coconut_a,
    menu_d:'Coconut Water, Pineapple, Mint',
+    category: "Smoothies",
+   menu_amount:"#31,0000"
+   },
+
+    {
+   menu_n:"COCONUT AND PINEAPPLE",
+   menu_i: coconut_a,
+   menu_d:'Coconut Water, Pineapple, Mint',
+  category: "Juices",
    menu_amount:"#31,0000"
    },
    
+    
    {
    menu_n:"DANLITY COMBO",
    menu_i: danity_c,
    menu_d:'Combo of Parfait and Smoothie',
+    category: "Baskets & Platters",
    menu_amount:"#82,0000"
    },
    
@@ -411,6 +512,7 @@ export const Allcategories =  [
    menu_n:"DAY BOOSTER",
    menu_i: day_b,
    menu_d:'Smoothie with Spinach, Banana, and Almond Milk',
+    category: "Smoothies",
    menu_amount:"#41,0000"
    },
    
@@ -418,6 +520,7 @@ export const Allcategories =  [
    menu_n:"DAY STARTER",
    menu_i: Day_s,
    menu_d:'Smoothie with Oats, Banana, and Almond Milk',
+    category: "Smoothies",
    menu_amount:"#40,0000"
    },
    
@@ -425,13 +528,25 @@ export const Allcategories =  [
     menu_n:"DELIGHTFUL TWIST",
     menu_i: delight_t,
     menu_d:'Smoothie with Mango, Pineapple, and Coconut Water',
+     category: "Smoothies",
     menu_amount:"#4,5000"
    },
+
+     {
+    menu_n:"DELIGHTFUL TWIST",
+    menu_i: delight_t,
+    menu_d:'Smoothie with Mango, Pineapple, and Coconut Water',
+      category: "Juices",
+    menu_amount:"#4,5000"
+   },
+
+  
    
    {
     menu_n:"EGGS N AVOCADO WRAP",
     menu_i: eggs_na,
     menu_d:'Eggs and Avocado Wrap with Vegetables',
+     category: "Wraps and Sandwich",
     menu_amount:"#31,5000"
    },
    
@@ -439,6 +554,7 @@ export const Allcategories =  [
     menu_n:"ENERGY BOOST",
     menu_i: enery_b,
     menu_d:'Smoothie with Spinach, Banana, and Almond Milk',
+     category: "Combo Meals",
     menu_amount:"#31,0000"
    },
    
@@ -446,6 +562,7 @@ export const Allcategories =  [
     menu_n:"EXOTIC CUTY",
     menu_i: ex_c,
     menu_d:'Exotic Fruit Salad with Greek Yoghurt',
+   category: "Baskets & Platters",
     menu_amount:"#51,0000"
    },
    
@@ -453,6 +570,7 @@ export const Allcategories =  [
     menu_n:"EXOTIC SPLASH",
     menu_i: ex_s,
     menu_d:'Exotic Fruit Smoothie with Coconut Water',
+     category: "Baskets & Platters",
     menu_amount:"#12,5000"
    },
 
@@ -461,6 +579,7 @@ export const Allcategories =  [
       menu_n:"EXQUISITE COMBO",
       menu_i: ex_co,
       menu_d:'Combo of Parfait and Smoothie with Granola',
+       category: "Baskets & Platters",
       menu_amount:"#8,5000"
       },
    
@@ -468,6 +587,7 @@ export const Allcategories =  [
       menu_n:"FRESH DELIGHT",
       menu_i: fresh_d,
       menu_d:'Fresh Fruit Salad with Greek Yoghurt',
+       category: "Baskets & Platters",
       menu_amount:"#5,0000"
       },
    
@@ -475,13 +595,29 @@ export const Allcategories =  [
       menu_n:"FRESH REVIVE",
       menu_i: fresh_r,
       menu_d:'Smoothie with Spinach, Banana, and Almond Milk',
+       category: "Combo Meals",
       menu_amount:"#40,0000"
       },
-   
+  
       {
       menu_n:"FRESH SEIESTA",
       menu_i: fresh_si,
       menu_d:'Smoothie with Mango, Pineapple, and Coconut Water',
+       category: "Wraps and Sandwich",
+      menu_amount:"#40,5000"
+      },
+       {
+      menu_n:"FRESH SEIESTA",
+      menu_i: fresh_si,
+      menu_d:'Smoothie with Mango, Pineapple, and Coconut Water',
+       category: "Wraps and Sandwich",
+      menu_amount:"#40,5000"
+      },
+       {
+      menu_n:"FRESH SEIESTA",
+      menu_i: fresh_si,
+      menu_d:'Smoothie with Mango, Pineapple, and Coconut Water',
+       category: "Wraps and Sandwich",
       menu_amount:"#40,5000"
       },
    
@@ -489,6 +625,7 @@ export const Allcategories =  [
       menu_n:"FRUIT BLAST",
       menu_i: fruit_b,
       menu_d:'Mixed Fruit Smoothie with Greek Yoghurt',
+      category: "Parfait & Fruit Cups",
       menu_amount:"#8,0000"
       },
    
@@ -496,13 +633,24 @@ export const Allcategories =  [
       menu_n:"FRUIT CUPS",
       menu_i: fruit_cups,
       menu_d:'Assorted Fresh Fruits in a Cup',
+       category: "Parfait Exotic",
       menu_amount:"#20,5000"
       },
    
+       {
+      menu_n:"FRUIT CUPS",
+      menu_i: fruit_cups,
+      menu_d:'Assorted Fresh Fruits in a Cup',
+     category: "Parfait & Fruit Cups",
+      menu_amount:"#20,5000"
+      },
+
+       
       {
       menu_n:"FRUIT SPLASH",
       menu_i: fruit_splash,
       menu_d:'Fruit Smoothie with Coconut Water',
+      category: "Parfait & Fruit Cups",
       menu_amount:"#39,0000"
       },
    
@@ -510,13 +658,26 @@ export const Allcategories =  [
       menu_n:"FUSION DELIGHT",
       menu_i: fushion_d,
       menu_d:'Fusion of Tropical Fruits in a Smoothie',
+       category: "Smoothies",
+      menu_amount:"#50,0000"
+      },
+
+      
+      {
+      menu_n:"FUSION DELIGHT",
+      menu_i: fushion_d,
+      menu_d:'Fusion of Tropical Fruits in a Smoothie',
+       category: "Combo Meals",
       menu_amount:"#50,0000"
       },
    
+
+      
       {
       menu_n:"GINGER SNAP ZOBO",
       menu_i: ginger_s,
       menu_d:'Zobo Drink with Ginger and Mint',
+       category: "Zobo Drinks",
       menu_amount:"#20,5000"
       },
    
@@ -524,6 +685,7 @@ export const Allcategories =  [
       menu_n:"GINGER ZINGER",
       menu_i: ginger_z,
       menu_d:'Ginger and Lemon Smoothie with Honey',
+      category: "Tigernut Drinks",
       menu_amount:"#32,5000"
       },
    
@@ -531,6 +693,7 @@ export const Allcategories =  [
          menu_n:"GRAILED CATFISH",
          menu_i: grailed_c,
          menu_d:'Grilled Catfish with Vegetables and Sauce',
+         category: "Salads",
          menu_amount:"#60,0000" 
    },
 
@@ -538,6 +701,7 @@ export const Allcategories =  [
       menu_n:"GREENSIVE",
       menu_i: greensiv_e,
       menu_d:'Smoothie with Spinach, Banana, and Almond Milk',
+      category: "Juices",
       menu_amount:"#40,0000"
    },
 
@@ -545,6 +709,7 @@ export const Allcategories =  [
       menu_n:"ISLAND BURST",
       menu_i: island_b,
       menu_d:'Tropical Fruit Smoothie with Coconut Water',
+       category: "Smoothies",
       menu_amount:"#20,5000"
    },
 
@@ -552,6 +717,7 @@ export const Allcategories =  [
       menu_n:"JOLLOF RICE FIESTA",
       menu_i: jollof_r,
       menu_d:'Jollof Rice with Grilled Chicken and Vegetables',
+       category: "Warm Bowls",
       menu_amount:"#30,0000"
    },
 
@@ -559,6 +725,7 @@ export const Allcategories =  [
       menu_n:"LEMON ZINGER",
       menu_i: lemon_z,
       menu_d:'Lemon and Ginger Smoothie with Honey',
+       category: "Juices",
       menu_amount:"#36,5000"
    },
 
@@ -566,6 +733,7 @@ export const Allcategories =  [
       menu_n:"LIMEY SNAP ZOBO",
       menu_i: limey_snap,
       menu_d:'Zobo Drink with Lime and Mint',
+       category: "Zobo Drinks",
       menu_amount:"#29,5000"
    },
 
@@ -573,9 +741,10 @@ export const Allcategories =  [
       menu_n:"LOVE BASKET",
       menu_i: love_b,
       menu_d:'Basket of Assorted Fruits and Snacks',
+      category: "Baskets & Platters",
       menu_amount:"#79,0000"
    },
-
+        
    {
       menu_n:"LOVE PLATTER",
       menu_i: love_p,
@@ -600,6 +769,7 @@ export const Allcategories =  [
       menu_n:"MINI AVO SWEET N SPICY",
       menu_i: min_avo,
       menu_d:'Mini Avocado Wrap with Sweet and Spicy Sauce',
+      category: "Salads",
       menu_amount:"#32,5000"
    },
 
@@ -607,6 +777,7 @@ export const Allcategories =  [
       menu_n:"MINI SHRIMPLE",
       menu_i: mini_s,
       menu_d:'Mini Shrimp Wrap with Vegetables and Sauce',
+      category: "Salads",
       menu_amount:"#69,5000"
    },
 
@@ -614,6 +785,7 @@ export const Allcategories =  [
       menu_n:"NUTTY STEAKHOUSE",
       menu_i: Nutty_s,
       menu_d:'Steak Wrap with Nutty Sauce and Vegetables',
+      category: "Salads",
       menu_amount:"#50,0000"
    },
 
@@ -621,13 +793,23 @@ export const Allcategories =  [
       menu_n:"MINI SWEET N SPICY",
       menu_i: mini_swe,
       menu_d:'Mini Sweet and Spicy Wrap with Vegetables',
+      category: "Salads",
       menu_amount:"#30,5000"
+   },
+  
+   {
+      menu_n:"ORANGE AND PINEAPPLE",
+      menu_i: orange_p,
+      menu_d:'Orange and Pineapple Smoothie with Coconut Water',
+       category: "Smoothies",
+      menu_amount:"#45,0000"
    },
 
    {
       menu_n:"ORANGE AND PINEAPPLE",
       menu_i: orange_p,
       menu_d:'Orange and Pineapple Smoothie with Coconut Water',
+       category: "Juices",
       menu_amount:"#45,0000"
    },
 
@@ -635,19 +817,62 @@ export const Allcategories =  [
      menu_n:"PARFAIT AND CUPS",
      menu_i: parft_cups,
      menu_d:'Parfait Cups with Assorted Fruits and Granola',
+      category: "Parfait Exotic",
      menu_amount:"#15,5000"
    },
 
-   {
-     menu_n:"PARFAIT MAX FEAST",
-     menu_i: parfait_max,
-     menu_d:'Max Feast Parfait with Assorted Fruits and Granola',
-     menu_amount:"#56,0000"
-   },
+   
+
    {
        menu_n:"PARFAIT PLEASURE",
        menu_i: parfair_ple,
        menu_d:'Parfait with Assorted Fruits and Greek Yoghurt',
+        category: "Parfait Exotic",
+       menu_amount:"#45,0000"
+    },
+
+    
+   {
+       menu_n:"PARFAIT PLEASURE",
+       menu_i: parfair_ple,
+       menu_d:'Parfait with Assorted Fruits and Greek Yoghurt',
+        category: "Combo Meals",
+       menu_amount:"#45,0000"
+    },
+
+     {
+       menu_n:"PARFAIT PLEASURE",
+       menu_i: parfair_ple,
+       menu_d:'Parfait with Assorted Fruits and Greek Yoghurt',
+       category: "Parfait & Fruit Cups",
+       menu_amount:"#45,0000"
+    },
+
+     
+
+     {
+       menu_n:"PARFAIT PLEASURE",
+       menu_i: parfait_max,
+       menu_d:'Parfait with Assorted Fruits and Greek Yoghurt',
+        category: "Combo Meals",
+       menu_amount:"#45,0000"
+    },
+
+      {
+       menu_n:"PARFAIT PLEASURE",
+       menu_i: parfait_max,
+       menu_d:'Parfait with Assorted Fruits and Greek Yoghurt',
+       category: "Parfait & Fruit Cups",
+       menu_amount:"#45,0000"
+    },
+
+    
+
+     {
+       menu_n:"PARFAIT PLEASURE",
+       menu_i: parfair_ple,
+       menu_d:'Parfait with Assorted Fruits and Greek Yoghurt',
+        category: "Parfait Exotic",
        menu_amount:"#45,0000"
     },
    
@@ -655,6 +880,7 @@ export const Allcategories =  [
        menu_n:"PASTA SUPREME",
        menu_i: pasta_s,
        menu_d:'Pasta with Assorted Vegetables and Sauce',
+        category: "Warm Bowls",
        menu_amount:"#60,0000"
     },
    
@@ -662,6 +888,7 @@ export const Allcategories =  [
        menu_n:"PORCUPINE LARGE",
        menu_i: por_l,
        menu_d:'Large Porcupine Wrap with Vegetables and Sauce',
+        category: "Baskets & Platters",
        menu_amount:"#79,0000"
     },
    
@@ -669,6 +896,7 @@ export const Allcategories =  [
          menu_n:"SHRIMPLE DELIGHT",
          menu_i: shrimple_d,
          menu_d:'Shrimp Wrap with Vegetables and Sauce',
+         category: "Salads",
          menu_amount:"#42,5000"
     },
    
@@ -676,6 +904,15 @@ export const Allcategories =  [
          menu_n:"SMOOTHIE BLISS",
          menu_i: smoothie_b,
          menu_d:'Smoothie Bliss with Assorted Fruits and Greek Yoghurt',
+          category: "Smoothies",
+         menu_amount:"#43,0000"
+    },
+
+     {
+         menu_n:"SMOOTHIE BLISS",
+         menu_i: smoothie_b,
+         menu_d:'Smoothie Bliss with Assorted Fruits and Greek Yoghurt',
+          category: "Combo Meals",
          menu_amount:"#43,0000"
     },
    
@@ -683,6 +920,7 @@ export const Allcategories =  [
          menu_n:"SMOOTHIE BREAKFAST",
          menu_i: smoothie_bre,
          menu_d:'Smoothie Breakfast with Oats and Fruits',
+          category: "Smoothies",
          menu_amount:"#19,5000"
     },
    
@@ -690,6 +928,7 @@ export const Allcategories =  [
          menu_n:"SNOW WHITE",
          menu_i: snow_white,
          menu_d:'Snow White Smoothie with Coconut Water and Mint',
+          category: "Smoothies",
          menu_amount:"#69,0000"
     },
    
@@ -697,6 +936,7 @@ export const Allcategories =  [
          menu_n:"SPICY CHICKEN SANDWICH",
          menu_i: spicy_c,
          menu_d:'Spicy Chicken Sandwich with Vegetables',
+          category: "Wraps and Sandwich",
          menu_amount:"#65,5000"
     },
    
@@ -704,6 +944,7 @@ export const Allcategories =  [
          menu_n:"SPICY CHICKEN",
          menu_i: spicy_chi,
          menu_d:'Spicy Chicken Wrap with Vegetables and Sauce',
+         category: "Salads",
          menu_amount:"#41,5000"
     },
    
@@ -711,6 +952,7 @@ export const Allcategories =  [
           menu_n:"SUYA STEAK SALAD",
           menu_i: suya_steak,
           menu_d:'Suya Steak Salad with Assorted Vegetables',
+          category: "Salads",
           menu_amount:"#39,0000"
       },
    
@@ -718,6 +960,7 @@ export const Allcategories =  [
           menu_n:"SWEET N SPICY",
           menu_i: sweeent_Nspicy,
           menu_d:'Sweet and Spicy Wrap with Vegetables',
+          category: "Salads",
           menu_amount:"#30,5000"
    },
 
@@ -725,6 +968,7 @@ export const Allcategories =  [
          menu_n:"SWEET POTATO",
          menu_i: sweet_potato,
          menu_d:'Sweet Potato Wrap with Vegetables and Sauce',
+          category: "Warm Bowls",
          menu_amount:"#40,5000"
      },
 
@@ -732,6 +976,7 @@ export const Allcategories =  [
          menu_n:"SWEET VEGIES",
          menu_i: sweet_vegies,
          menu_d:'Sweet Vegetable Wrap with Sauce',
+         category: "Salads",
          menu_amount:"#89,0000"
      },
 
@@ -739,6 +984,7 @@ export const Allcategories =  [
          menu_n:"SWEETENED GREEN YOGHURT",
          menu_i: sweetend_g,
          menu_d:'Sweetened Green Yoghurt Smoothie',
+         category: "Greek Yoghurt",
          menu_amount:"#65,5000"
      },
 
@@ -746,6 +992,7 @@ export const Allcategories =  [
          menu_n:"TIGER DRINKS",
          menu_i: tiger_d,
          menu_d:'Tiger Nut Drink with Coconut Water',
+         category: "Tigernut Drinks",
          menu_amount:"#22,5000"
      },
 
@@ -760,6 +1007,7 @@ export const Allcategories =  [
         menu_n:"TROPICAL FIESTA",
         menu_i: tropical_f,
         menu_d:'Tropical Fruit Salad with Greek Yoghurt',
+         category: "Combo Meals",
         menu_amount:"#54,0000"
      },
 
@@ -774,6 +1022,7 @@ export const Allcategories =  [
         menu_n:"UNSWEETENED GREEN YOGHURT",
         menu_i: unsweentend_n,
         menu_d:'Unsweetened Green Yoghurt Smoothie',
+        category: "Greek Yoghurt",
         menu_amount:"#33,0000"
      },
 
@@ -781,6 +1030,7 @@ export const Allcategories =  [
        menu_n:"VALUE BASKET",
        menu_i: value_b,
        menu_d:'Value Basket with Assorted Fruits and Snacks',
+        category: "Baskets & Platters",
        menu_amount:"#80,0000"
      },
       
@@ -788,6 +1038,7 @@ export const Allcategories =  [
        menu_n:"VANILLA COMBO",
        menu_i: vanilla_c,
        menu_d:'Vanilla Smoothie with Assorted Fruits',
+       category: "Tigernut Drinks",
          menu_amount: "#40,5000"
        },
 
@@ -796,6 +1047,7 @@ export const Allcategories =  [
          menu_n:"VITALITY BOOST",
          menu_i: vatality_b,
          menu_d:'Vitality Boost Smoothie with Spinach and Banana',
+          category: "Combo Meals",
          menu_amount:"#90,0000"
        },
 
@@ -803,6 +1055,7 @@ export const Allcategories =  [
          menu_n:"VEGGIE RICE TWIST",
          menu_i: veggie_r,
          menu_d:'Veggie Rice Wrap with Assorted Vegetables',
+          category: "Warm Bowls",
          menu_amount:"#78,5000"
        },
 
@@ -810,6 +1063,7 @@ export const Allcategories =  [
          menu_n:"WATERMELON AND PINEAPPLE",
          menu_i: watermelo_a,
          menu_d:'Watermelon and Pineapple Smoothie with Coconut Water',
+          category: "Juices",
          menu_amount:"#44,0000"
        },
 
@@ -817,9 +1071,22 @@ export const Allcategories =  [
          menu_n:"YOGHURT MIX",
          menu_i: yoghurt_mic,
          menu_d:'Yoghurt Mix with Assorted Fruits and Granola',
+         category: "Greek Yoghurt",
+         menu_amount:"#25,5000"
+       },
+
+       
+       {
+         menu_n:"YOGHURT MIX",
+         menu_i: yoghurt_mic,
+         menu_d:'Yoghurt Mix with Assorted Fruits and Granola',
+        category: "Parfait & Fruit Cups",
          menu_amount:"#25,5000"
        }
-        
+
+      
+     
+       
      
 
 ]
