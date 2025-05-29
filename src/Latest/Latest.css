@@ -70,10 +70,6 @@ margin-bottom: 40px;
 }
 
 
-
-
-
-
 .latest-card h3{
   font-size: 15px;
   font-family: 'Poppins', sans-serif;
@@ -102,10 +98,7 @@ margin-bottom: 40px;
   margin-bottom: 20px;
 }
 
-  
-
-
-.latest-card img {
+  .latest-card img {
   width: 100%;
   height: 300px;
   object-fit: cover;
@@ -113,6 +106,9 @@ margin-bottom: 40px;
   margin-bottom: 60px;
     
 }
+
+
+
 .latest-card img:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;

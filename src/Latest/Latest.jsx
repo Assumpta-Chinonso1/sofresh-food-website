@@ -21,7 +21,9 @@ const Latest = () => {
         <div className="latest-container">
            {menu_more.map((item, index)=> (
              <div key={index} className="latest-card">
-               <img src={item.menu_image}  alt  /> <h3 >{item.menu_name}</h3>
+               <img src={item.menu_image}  alt = {item.menu_name} /> 
+    
+               <h3>{item.menu_name}</h3>
                 <p>{item.menu_des}</p>
              <div className="date-btn-wrapper">
            <p className="date">{item.menu_date}</p>

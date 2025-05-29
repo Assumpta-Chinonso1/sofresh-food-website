@@ -1,16 +1,16 @@
-import './Explore.css';
+   import './Explore.css';
 import { useRef, useEffect, useState } from 'react';
 import { menu_lists } from '../assets/assests';
 import {ArrowLeftIcon, ArrowRightIcon} from '@heroicons/react/24/solid'
 
 
-const Explore = () => {
+ const Explore = () => {
           const scrollRef = useRef(null);
           const scrollInterval = useRef(null);
            
           const [direction, setDirection] = useState('right');
 
-          const ITEM_WIDTH = 200;
+          const ITEM_WIDTH = 300;
 
           const scroll = (dir)=> {
                 const container = scrollRef.current
@@ -70,10 +70,10 @@ const Explore = () => {
         <div className="explore-menu-item" ref={scrollRef}>
           {menu_lists.map((item, index) => (
             <div key={index} className="explore-menu-list">
-              <img src={item.menu_image} alt={item.menu_name} />
-              <p>{item.menu_name}</p>
-              <h2>
-                From <span className="menu">{item.menu_price}</span>
+              <img src={item.menu_image} alt={item.menu_name}   />
+               <p>{item.menu_name}</p>
+             
+              <h2><span className="menu">{item.menu_price}</span>
               </h2>
             </div>
           ))}
@@ -88,4 +88,6 @@ const Explore = () => {
 }
 
 
-export default Explore;
+export default Explore; 
+
+

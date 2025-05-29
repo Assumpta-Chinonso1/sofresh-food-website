@@ -106,7 +106,6 @@ import  Love_platters from './love platterr.jpeg'
 import three_mango from './3 manago.png'
 import classic_Tropical  from  './classic tropical.jpeg'
 import three_coconut from './3 coconut.png'
-
 import choco_lux from './choco lux.png'
 import chicken_w from './chicken & egg.jpeg'
 
@@ -143,11 +142,13 @@ export const assets = {
 
 
 export const menu_lists = [
-    {
-        menu_name: "SMOOTHIES",
+         {
+        menu_name: 'SMOOTHIES',
         menu_image: assets.smoothies_1,
         menu_price: "₦4,000.00",
     },
+
+   
     {
         menu_name: "GREEK YOGURT",
         menu_image: assets.greek_y,
