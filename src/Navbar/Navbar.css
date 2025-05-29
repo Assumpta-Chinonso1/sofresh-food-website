@@ -1,9 +1,8 @@
- /*.navbar{
+ .navbar{
     position: fixed;
-top: 0;
-width: 100%;
-z-index: 1000; 
-
+     top: 0;
+     width: 100%;
+    z-index: 100; 
     padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
@@ -75,10 +74,10 @@ border-radius: 50px;
     background-color: green;
     transition: 2s;
     cursor: pointer;
-}*/
+}
 
 
-.navbar{
+ /*.navbar{
     padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
@@ -135,4 +134,4 @@ border-radius: 50px;
     background-color: green;
     transition: 2s;
     cursor: pointer;
-}
+}*/

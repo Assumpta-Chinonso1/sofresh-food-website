@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Hero.css'
+import Order from '../Order/Order'
 
 
 const Hero = () => {
+
+  const  [showPopUp, setShowPopUp] = useState(false)
+  
+    const handleOrderClick = () => {
+      setShowPopUp(true)
+    }
+  
+    const closePopUp = () => {
+      setShowPopUp(false)
+    }
+  
   return (
     <div className='Hero'>
          <div className="hero">
@@ -12,7 +24,8 @@ const Hero = () => {
                      </h1>
               
                      <br />
-                <button className='btn'>Order  Now</button> 
+                <button onClick={handleOrderClick} className='btn'>Order  Now</button> 
+                   {showPopUp && <Order onClose={closePopUp}/>}
                </div>
          
               
