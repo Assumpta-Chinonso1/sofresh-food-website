@@ -108,6 +108,19 @@ import classic_Tropical  from  './classic tropical.jpeg'
 import three_coconut from './3 coconut.png'
 import choco_lux from './choco lux.png'
 import chicken_w from './chicken & egg.jpeg'
+import so_gba from './So Fresh Gbagada.jpeg'
+import so_agu from './So Fresh Agungi.jpeg'
+import so_iba from './So Fresh Ibadan.jpeg'
+import so_ikoyi from './So Fresh Ikoyi.jpeg'
+import so_isheri from './So Fresh Isheri Estate.jpeg'
+import so_lekki from './So Fresh Lekki 1B.jpeg'
+import so_mma2 from './So Fresh MMA2.jpeg'
+import so_ogudu from './So Fresh Ogudu.jpeg'
+import so_opebi  from './So Fresh Opebi.jpeg'
+import so_port from './So Fresh Port Harcourt.jpeg'
+import so_wuse from './So Fresh Wuse 2.jpeg'
+import so_yaba  from './So Fresh Yaba.jpeg'
+
 
 
 export const assets = {
@@ -137,7 +150,19 @@ export const assets = {
     arrow_o,
     fb_or,
     twit_or,
-    ig_or
+    ig_or,
+    so_gba,
+    so_opebi,
+    so_ogudu,
+    so_agu,
+    so_yaba,
+    so_isheri,
+    so_mma2,
+    so_lekki,
+    so_ikoyi,
+    so_port,
+    so_iba,
+    so_wuse
 }
 
 
@@ -1071,11 +1096,117 @@ category: "Parfait & Fruit Cups",
         category: "Parfait & Fruit Cups",
          menu_amount:"#25,5000"
        }
-
-      
-     
-       
-     
+ 
 
 ]
 
+
+export const menu_locations = [
+   {
+      menuLoc_pix: so_gba,
+      menuLoca_namee: "So Fresh Gbagada",
+      menuLoc_destination: "310 Gbagada - oworonshoki Expy, Gbagada, Lagos 102216, Lagos",
+      menuLoc_del: "delivery",
+      menuLoc_number: '0812 405 4767',
+       mapUrl: 'https://maps.app.goo.gl/pcmps3W5adXL6asU6'
+   },
+
+   {
+      menuLoc_pix: so_opebi,
+      menuLoca_namee: "So Fresh Opebi",
+      menuLoc_destination:"71 opebi Rd, opebi, ikeja 101233, Lagos",
+      menuLoc_del: "delivery",
+      menuLoc_number: '0706 069 5508',
+      mapUrl: 'https://maps.app.goo.gl/B5LVHcSq2YvfN9eEA'
+   },
+     {
+      menuLoc_pix: so_ogudu,
+      menuLoca_namee: "So Fresh Ogudu",
+      menuLoc_destination:"40b Ogudu rd, Kososfe, Lagos 105102, Lagos",
+      menuLoc_del: "delivery",
+      menuLoc_number: "07071353084",
+      mapUrl: 'https://maps.app.goo.gl/FB2CMEL4x9HPvRVg7'
+   },
+
+     {
+      menuLoc_pix: so_yaba,
+      menuLoca_namee: "So Fresh Yaba",
+      menuLoc_destination:"280 Herbert Macaulay Wy, Yaba, Lagos 101245, Lagos",
+      menuLoc_del: "delivery",
+      menuLoc_number: '07036037059',
+      mapUrl: 'https://maps.app.goo.gl/KYanmwGb88DEFerT6'
+   
+   },
+
+     {
+      menuLoc_pix: so_isheri,
+      menuLoca_namee: "So Fresh Isheri Estate",
+      menuLoc_destination:"opic estate, 17 channel Rd, Isheri, Agege 102109, Ogun State",
+      menuLoc_del: "delivery",
+      menuLoc_number: '0813814930',
+      mapUrl: 'https://maps.app.goo.gl/6rTtfi75ZtVZKeP29'
+   },
+
+     {
+      menuLoc_pix: so_mma2,
+      menuLoca_namee: "So Fresh MMA2",
+      menuLoc_destination:"Muritala Mohammed Airport Terminal, 2 Airport Rd, Ikeja",
+      menuLoc_del: "delivery",
+      menuLoc_number: '08122228520',
+      mapUrl: 'https://maps.app.goo.gl/Ze1JT3WjEAKtPSsU9'
+   },
+
+     {
+      menuLoc_pix: so_lekki,
+      menuLoca_namee: "So Fresh Lekki 1B",
+      menuLoc_destination:"15b Admiralty way, Lekki Phase 1, Lekki 106104, Lagos",
+      menuLoc_del: "delivery",
+      menuLoc_number: '0907697405',
+      mapUrl: "https://maps.app.goo.gl/zeMtbQdB8HMwkhsG8"
+   },
+
+     {
+      menuLoc_pix:so_ikoyi,
+      menuLoca_namee: "So Fresh Ikoyi",
+      menuLoc_destination:"92 Awolowo Rd, Ikoyi, Lagos 1061104, Lagos",
+      menuLoc_del: "delivery",
+      menuLoc_number: '08105951601',
+      mapUrl: 'https://maps.app.goo.gl/PBRaVSQqYAnioEEi9'
+   },
+
+     {
+      menuLoc_pix:so_port,
+      menuLoca_namee: "So Fresh Port Harcourt",
+      menuLoc_destination:"9 Sani Abacha Road, GRA PHASE 3 Port Harcourt 500272, Rivers",
+      menuLoc_del: "delivery",
+      menuLoc_number: '08141722412',
+      mapUrl: 'https://maps.app.goo.gl/ge1yDVP8diCwETJU7'
+   },
+
+     {
+      menuLoc_pix:so_iba,
+      menuLoca_namee: "So Fresh Ibadan",
+      menuLoc_destination:"4 Town planning Way, MKO Abiola Way, Oluyole, Ibadan 200273, Oyo",
+      menuLoc_del: "delivery",
+      menuLoc_number: '08145449972',
+      mapUrl: 'https://maps.app.goo.gl/FYD9779byoiLL7bh8'
+   },
+
+     {
+      menuLoc_pix:so_wuse,
+      menuLoca_namee: "So Fresh Wuse 2",
+      menuLoc_destination:"130 Aminu Kano Cres, Wuse 2, Abuja 904101, Federal Capital territory",
+      menuLoc_del: "delivery",
+      menuLoc_number: '09023156694',
+      mapUrl: 'https://maps.app.goo.gl/WLACvWTdeCcze1ydA'
+   },
+
+     {
+      menuLoc_pix: so_agu,
+      menuLoca_namee: "So Fresh Agungi",
+      menuLoc_destination:"De Heavens Plaza, 7 Agungi Ajiran Rd, Agungi, Lekki 105102",
+      menuLoc_del: "delivery",
+      menuLoc_number: '07060992781',
+      mapUrl: 'https://maps.app.goo.gl/Z6Bxroa2ESBrFP4BA'
+   }
+]

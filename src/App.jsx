@@ -10,6 +10,7 @@ import Get from './Get/Get'
 import Footer from './Footer/Footer'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Menu from './Menu/Menu'
+import Location from './FindUs/Location'
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
   const location = useLocation();
 
   const isPageMenu = location.pathname ==='/menu'
+  const isLocationPage = location.pathname === '/location'
 
   return (
     <div className='app'>
@@ -24,12 +26,13 @@ const App = () => {
       <Routes>
           <Route path="/" element={ <Hero/>} />
           <Route path="/menu" element={ <Menu/> } />
+           <Route path="/location" element ={ <Location/> } />
           
 
       </Routes>
 
 
-   {!isPageMenu &&( 
+   {!isPageMenu && !isLocationPage &&( 
    <> 
   
     <Explore/>
@@ -40,6 +43,7 @@ const App = () => {
     <Footer/>
     </>
      )}
+     {isLocationPage && <Footer/>}
     </div>
   )
 }

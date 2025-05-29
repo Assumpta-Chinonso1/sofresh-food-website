@@ -24,7 +24,7 @@ const Navbar = () => {
             
          <ul className="navbar-menu">
              <li> <Link to='/menu' className='nav-link'> Our Menu  </Link> </li> 
-               <li>Find Us</li>
+               <li> <Link to='/location' > Find Us  </Link></li>
          </ul>
          <div className="navbar-right">
                   <img src={assets.search_icon} alt="" className='icon'/>
