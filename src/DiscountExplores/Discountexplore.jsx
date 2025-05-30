@@ -1,6 +1,7 @@
 import React from 'react'
 import './DiscountExplore.css'
 import { assets } from '../assets/assests'
+import { Link } from 'react-router-dom'
 
 const DiscountExplore = () => {
   return (
@@ -23,7 +24,7 @@ const DiscountExplore = () => {
         Don’t wait—take control of your health now and <br />
         grab this exclusive offer before it’s gone!
       </h3>
-      <button className="btn">Order Now</button>
+      <button className="btn"> <Link to='/mealplan' > Order Now </Link></button>    
     </div>
 
     <div className="discount-image">

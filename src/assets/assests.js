@@ -120,6 +120,37 @@ import so_opebi  from './So Fresh Opebi.jpeg'
 import so_port from './So Fresh Port Harcourt.jpeg'
 import so_wuse from './So Fresh Wuse 2.jpeg'
 import so_yaba  from './So Fresh Yaba.jpeg'
+import detox_backgrd from './Detox Plan.jpeg'
+import yummy_feast from './Yummy Feast.jpg'
+import fresh_start from './Fresh Start.jpg'
+import citrus_Gaurd from './Citrus Guard Comb.png'
+import root_intense from './Root Intense Combo.png'
+import green_vat from './Green Vitality Boost.png'
+import zesty_trop from './Zesty Tropical Defense.png'
+import reju_juc from './Rejuvenate(Jucices Only).png'
+import refresh_sm from './Refresh (smoothies only).png'
+import fresh_up from './Freshup (Juices + smoothies).png'
+import glow_up from './GlowUp (Juices + smoothies + fruit cups + salad).png'
+import customer_1 from './customer 1.jpg'
+import customer_2 from './customer 2.png'
+import customer_3 from './customer 3.jpg'
+import customer_4 from './customer 4.jpg'
+import customer_5 from './customer 5.jpg'
+import customer_6 from './customer 6.jpg'
+import customer_7 from './customer 7.jpg/'
+import customer_8 from './customer 8.jpg'
+import customer_9 from './customer 9.jpg'
+import customer_10 from './customer 10.jpg'
+import customer_11 from './customer 11.png'
+import customer_12 from './customer 12.png'
+import customer_13 from './customer 13.png'
+import customer_14 from './customer 14.png'
+import customer_15 from './customer 15.png'
+import customer_16 from './customer 16.png'
+import customer_17 from './customer 17.png'
+import customer_18 from './customer 18.png'
+
+
 
 
 
@@ -162,7 +193,37 @@ export const assets = {
     so_ikoyi,
     so_port,
     so_iba,
-    so_wuse
+    so_wuse,
+    detox_backgrd,
+    yummy_feast,
+    fresh_start,
+    citrus_Gaurd,
+    root_intense,
+    green_vat,
+    zesty_trop,
+    reju_juc,
+    refresh_sm,
+    fresh_up,
+    glow_up,
+    customer_1,
+    customer_2,
+    customer_3,
+    customer_4,
+    customer_5,
+    customer_6,
+     customer_7,
+    customer_8,
+     customer_9,
+       customer_10,
+     customer_11,
+    customer_12,
+    customer_13,
+      customer_14,
+      customer_15,
+       customer_16,
+       customer_17,
+         customer_18,
+
 }
 
 
@@ -1210,3 +1271,65 @@ export const menu_locations = [
       mapUrl: 'https://maps.app.goo.gl/Z6Bxroa2ESBrFP4BA'
    }
 ]
+
+export const customers_reviews = [
+   {
+      cust_1: customer_1
+   },
+    {
+      cust_1: customer_2
+   },
+    {
+      cust_1: customer_3
+   },
+    {
+      cust_1: customer_4
+   },
+    {
+      cust_1: customer_5
+   },
+    {
+      cust_1: customer_6
+   },
+    {
+      cust_1: customer_7
+   },
+    {
+      cust_1: customer_8
+   },
+    {
+      cust_1: customer_9
+   },
+    {
+      cust_1: customer_10
+   },
+    {
+      cust_1: customer_11
+   },
+    {
+      cust_1: customer_12
+   },
+   
+    {
+      cust_1: customer_13
+   },
+    {
+      cust_1: customer_14
+   },
+    {
+      cust_1: customer_15
+   },
+    {
+      cust_1: customer_16
+   },
+      
+    {
+      cust_1: customer_17
+   },
+    {
+      cust_1: customer_18
+   },
+
+]
+
+

@@ -1,0 +1,314 @@
+.navsss {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: green; 
+  color: #fff;               
+  text-align: center;
+  padding: 5px;      
+  font-size: 10px;           
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  z-index: 1000;
+}
+
+.navmeal-header {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  right: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 50px;
+  background-color: white;
+  z-index: 999;
+}
+
+.navmeal-container {
+  padding-top: 160px; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+
+.navmeal-logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 60px;
+
+}
+
+.navmeal-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+   color: rgb(68, 54, 54);
+}
+
+
+.navmeal-nav ul li a {
+  text-decoration: none;
+  color: #403c3c;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navmeal-cart {
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 60px;
+}
+
+.navmeal-banner{
+    background-image: url('../assets/Detox Plan.jpeg');
+  background-size: contain;
+  background-position: center;
+  padding: 100px 90px;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.navmeal-banner .highlight {
+  color: #ffcc00;
+  font-size: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navmeal-banner .pre{
+  color: green;
+  font-size: 2rem;
+}
+
+.navmeal-banner p{
+  font-weight: bold;
+  margin-top: 20px;
+  color: grey;
+  text-decoration-color: #403c3c;
+}
+
+.navmeal-section {
+  padding: 40px 20px;
+  text-align: center;
+  display: grid;
+}
+
+.navmeal-section .mealll-p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.mealll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  gap: 10px; 
+  color: rgb(253, 173, 25);
+  margin-bottom: 20px;
+}
+
+ .mealll .line {
+  width: 450px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mealll .arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(0, 0, 0, 0.2); 
+}
+
+
+
+.navmeal-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+ 
+}
+
+
+
+.navmeal-product {
+  width: 400px;
+  border: 2px solid #f0f0f0;
+  padding: 10px 20px;
+  margin: 10px 20px;
+  border-radius: 2px;
+  background-color: #fff;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease-out;
+}
+
+.navmeal-product:hover {
+  box-shadow: 0 15px 20px 1px #f0f0f0; 
+  border-color: #fff; 
+}
+
+
+
+
+
+.navmeal-product img {
+  width: 100%;
+  height: 60%;
+  border-radius: 10px;
+  gap: 50px;
+}
+
+.navmeal-product p{
+    display: block;
+  margin: 10px 0;
+  font-weight: bold;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.navmeal-product span {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+}
+
+.btns{
+  background-color: #FFf;
+  color: green;
+  border: 2px solid green;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.btns:hover{
+    color: white;
+    background-color: green;
+    transition: 0.3ms;
+}
+
+
+.navmeal-reviews {
+  padding: 30px 10px;
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.navmeal-reviews .cust-h {
+  color: green;
+  font-style: italic;
+}
+
+.navmeal-reviews .s {
+  color: orange;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  gap: 8px; 
+}
+
+.navmeal-customers {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 30px;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+  flex-grow: 1;
+  scrollbar-width: none; 
+}
+
+.navmeal-customers::-webkit-scrollbar {
+  display: none; 
+}
+
+.navmeal-customer {
+  flex: 0 0 auto;
+  width: 210px;
+  scroll-snap-align: start;
+  height: 200px;
+}
+
+.navmeal-customer img {
+  width: 100%;
+  border-radius: 2px; 
+  object-fit: contain;
+  pointer-events: none;
+}
+
+
+.carousel-arrow {
+  cursor: pointer;
+  width: 150px;
+  height: 90px;
+  color: orange;
+  transition: color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.carousel-arrow:hover {
+  color: green; 
+  transform: scale(1.1);
+}
+
+.carousel-arrow:first-of-type {
+  margin-right: 10px;
+}
+
+.carousel-arrow:last-of-type {
+  margin-left: 10px;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+
+
+
+
+
+
+
+

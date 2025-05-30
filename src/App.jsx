@@ -11,6 +11,7 @@ import Footer from './Footer/Footer'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Menu from './Menu/Menu'
 import Location from './FindUs/Location'
+import NavMeal from './NavMealPlan/NavMeal'
 
 
 const App = () => {
@@ -19,20 +20,24 @@ const App = () => {
 
   const isPageMenu = location.pathname ==='/menu'
   const isLocationPage = location.pathname === '/location'
+  const isMealPlanPage = location.pathname === '/mealplan'
+
 
   return (
     <div className='app'>
-       <Navbar/>
+      {!isMealPlanPage && <Navbar/>}
+        {/*<Navbar/>*/}
       <Routes>
           <Route path="/" element={ <Hero/>} />
           <Route path="/menu" element={ <Menu/> } />
            <Route path="/location" element ={ <Location/> } />
+           <Route path="/mealplan" element =  { <NavMeal/> } />
           
 
       </Routes>
 
 
-   {!isPageMenu && !isLocationPage &&( 
+   {!isPageMenu && !isLocationPage && !isMealPlanPage &&( 
    <> 
   
     <Explore/>
@@ -44,6 +49,7 @@ const App = () => {
     </>
      )}
      {isLocationPage && <Footer/>}
+     {isMealPlanPage}
     </div>
   )
 }
