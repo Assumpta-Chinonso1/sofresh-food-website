@@ -4,6 +4,7 @@ import './NavMeal.css';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { DivideIcon } from '@heroicons/react/24/outline';
 
 const NavMeal = () => {
   const carouselRef = useRef(null);
@@ -52,7 +53,7 @@ const NavMeal = () => {
           </ul>
         </nav>
         <div className="navmeal-cart">
-          <FaCartShopping />
+          <Link to='/cart'> <FaCartShopping /> </Link>
         </div>
       </header>
 
@@ -215,6 +216,458 @@ const NavMeal = () => {
           ))}
         </div>
       </section>
+        
+
+     {/**Questions section 
+        <section id="mealplan" className="navmeal-section">
+        <h2 className='mealll'>
+          <span className='line'></span>
+          <svg xmlns="http://www.w3.org/2000/svg"
+            className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+          FAQs
+          <span className="line"></span>
+        </h2>
+          <p className="navMeal-questions">
+            Got Questions? We’ve Got Answers!
+          </p>
+          <h1 className="general">
+            General Questions
+          </h1>
+
+
+          <div class="faq-item">
+        <div class="faq-question">
+    <hr />
+      <span className='arrow'>
+       <svg xmlns="http://www.w3.org/2000/svg"
+            className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+    </span>
+    <span>What is a meal plan?</span>
+  </div>
+  <div class="faq-answer">
+    <p>
+      A Meal Plan is a structured program that provides balanced,
+       nutrient-rich meals tailored to support your wellness goals. 
+       Our plans include a rich blend of salads, rice bowls, potato bowls,
+        pasta bowls wraps, sandwich, juices, 
+        smoothie and Parfait designed to make
+         healthy eating convenient and enjoyable,
+       delivered daily for your ease.
+    </p>
+  </div>
+  
+ </div>
+
+   <div class="faq-item">
+        <div class="faq-question">
+    <hr />
+      <span className='arrow'>
+       <svg xmlns="http://www.w3.org/2000/svg"
+            className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+    </span>
+    <span>What is a Detox Plan?</span>
+  </div>
+  <div class="faq-answer">
+    <p>
+      
+A Detox Plan is a short-term program focused on cleansing your body,
+ boosting your energy, and improving overall well-being. 
+ It includes juices, smoothies, fruit cups,
+  salads or a combination of both, made from fresh, 
+natural ingredients to help rejuvenate your system.
+    </p>
+  </div>
+
+ </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+    <hr />
+      <span className='arrow'>
+       <svg xmlns="http://www.w3.org/2000/svg"
+            className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+    </span>
+    <span> What would I get in a Meal Plan?</span>
+  </div>
+  <div class="faq-answer">
+    <p>
+    
+
+With a Meal Plan, you’ll receive two items daily,
+ which could include a mix of salads, juices, parfaits,
+  sandwiches, wraps, or fruit cups. For example, you might get:
+ 
+A juice and salad
+A parfait and wrap
+A sandwich and fruit cup
+    </p>
+  </div>
+  
+ </div>
+    <div class="faq-item">
+        <div class="faq-question">
+    <hr />
+      <span className='arrow'>
+       <svg xmlns="http://www.w3.org/2000/svg"
+            className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+    </span>
+    <span>  What do I get in a Detox Plan?</span>
+  </div>
+  <div class="faq-answer">
+    <p>
+    
+In a Detox Plan, you’ll receive a variety of 4 to 5 juices or
+ smoothies daily. On some days,
+  your plan may include a fruit cup or
+   salad as a substitute for one of the juices or smoothies, 
+depending on the specific plan you choose.
+    </p>
+  </div>
+  
+ </div>
+    <div class="faq-item">
+        <div class="faq-question">
+    <hr />
+      <span className='arrow'>
+       <svg xmlns="http://www.w3.org/2000/svg"
+            className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+    </span>
+    <span>How are the meals and detox items delivered?</span>
+  </div>
+  <div class="faq-answer">
+    <p>
+      
+Deliveries are made once daily in the morning for 
+the duration of your plan. All items must be immediately 
+stored in the refrigerator or consumed
+ right away to maintain freshness and quality.
+    </p>
+  </div>
+  
+ </div>
+    <div class="faq-item">
+        <div class="faq-question">
+    <hr />
+      <span className='arrow'>
+       <svg xmlns="http://www.w3.org/2000/svg"
+            className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+    </span>
+    <span> What ingredients are used in the products?</span>
+  </div>
+  <div class="faq-answer">
+    <p>
+     
+Our meals and detox products are made daily with high-quality
+ ingredients, including fresh fruits, vegetables, 
+ creamy yogurt, crunchy granola, natural herbs and spices.
+  Each combination is carefully curated for optimal taste,
+ nutrition, and satisfaction.</p>
+  </div>
+  
+ </div>
+    <div class="faq-item">
+        <div class="faq-question">
+    <hr />
+      <span className='arrow'>
+       <svg xmlns="http://www.w3.org/2000/svg"
+            className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+    </span>
+    <span>  Do your products contain preservatives?</span>
+  </div>
+  <div class="faq-answer">
+    <p>
+    
+No! At So Fresh, we pride ourselves on delivering preservative-free,
+ all-natural products. 
+Everything is freshly made to ensure maximum nutrients and flavor.
+    </p>
+  </div>
+  
+ </div>
+    <div class="faq-item">
+        <div class="faq-question">
+    <hr />
+      <span className='arrow'>
+       <svg xmlns="http://www.w3.org/2000/svg"
+            className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+    </span>
+    <span>How long will my product stay fresh?</span>
+  </div>
+  <div class="faq-answer">
+    <p>
+      
+Our parfaits, yogurts, smoothies, and juices
+ are made fresh daily and should be consumed 
+ within the same day for the best experience. 
+Greek yogurts come with expiry dates that should be adhered to.
+    </p>
+  </div>
+  
+ </div>
+    <div class="faq-item">
+        <div class="faq-question">
+    <hr />
+      <span className='arrow'>
+       <svg xmlns="http://www.w3.org/2000/svg"
+            className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+    </span>
+    <span>How should I store the products?</span>
+  </div>
+  <div class="faq-answer">
+    <p>
+      
+We recommend refrigerating all parfaits, yogurts, juices, 
+and smoothies to maintain their freshness and quality. 
+Ensure all containers are sealed tightly before storing.
+
+
+    </p>
+  </div>
+ </div>
+    <div class="faq-item">
+        <div class="faq-question">
+    <hr />
+      <span className='arrow'>
+       <svg xmlns="http://www.w3.org/2000/svg"
+            className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+    </span>
+    <span> Can I freeze the juices or smoothies?</span>
+  </div>
+  <div class="faq-answer">
+    <p>
+Yes, you can freeze our juices and smoothies to extend their shelf life.
+ However, 
+we recommend consuming them fresh for the best taste and nutrient content.
+    </p>
+  </div>
+  
+ </div>
+
+
+ <div class="faq-item">
+        <div class="faq-question">
+    <hr />
+      <span className='arrow'>
+       <svg xmlns="http://www.w3.org/2000/svg"
+            className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+    </span>
+    <span>Can I freeze the parfait and Greek yogurt?</span>
+  </div>
+  <div class="faq-answer">
+    <p>
+No, we do not recommend freezing the parfait or Greek yogurt, 
+as it may affect the texture and consistency.
+    </p>
+  </div>
+  
+ </div>
+  
+
+
+ <div className="right">
+  <h1>Choosing the Right Plan</h1>
+  <div class="faq-question">
+    <hr />
+      <span className='arrow'>
+       <svg xmlns="http://www.w3.org/2000/svg"
+            className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+    </span>
+    <span>Which plan is the best option for me?</span>
+  </div>
+  <div class="faq-answer">
+    <p>
+
+The best plan for you depends on your goals:
+
+ <ol>For long-term healthy eating, choose a <strong>Meal Plan</strong> (Fresh Start or Yummy Feast).</ol>
+For a short-term cleanse or reset, a Detox Plan(Rejuvenate, Fresh Up, Refresh, or Glow Up) is ideal.
+If you’re unsure, send us a WhatsApp at 08062868430 for a free consultation to determine the best fit for your needs.
+    </p>
+  </div>
+  <div class="faq-question">
+    <hr />
+      <span className='arrow'>
+       <svg xmlns="http://www.w3.org/2000/svg"
+            className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+    </span>
+    <span>What are the health benefits of your products?</span>
+  </div>
+  <div class="faq-answer">
+    <p>
+Our products are packed with vitamins, minerals, and antioxidants to 
+support immunity, digestion, weight management, and overall vitality. 
+They help you maintain a healthy lifestyle
+ and promote sustainable energy throughout the day.
+    </p>
+  </div>
+  <div class="faq-question">
+    <hr />
+      <span className='arrow'>
+       <svg xmlns="http://www.w3.org/2000/svg"
+            className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+    </span>
+    <span>Are your products suitable for children?</span>
+  </div>
+  <div class="faq-answer">
+    <p>
+Absolutely! Our combos are made with natural ingredients, 
+making them a nutritious 
+and delicious option for all age groups, including children
+    </p>
+  </div>
+
+ </div>
+
+ 
+</section> */}
+
+<section id="mealplan" className="navmeal-section">
+  <h2 className="mealll">
+    <span className="line"></span>
+    <svg xmlns="http://www.w3.org/2000/svg"
+      className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+    FAQs
+    <span className="line"></span>
+  </h2>
+  <p className="navMeal-questions">Got Questions? We’ve Got Answers!</p>
+  <h1 className="general">General Questions</h1>
+
+ 
+
+  {/* FAQ Items */}
+  {[
+    {
+      question: "What is a meal plan?",
+      answer: "A Meal Plan is a structured program that provides balanced, nutrient-rich meals tailored to support your wellness goals. Our plans include a rich blend of salads, rice bowls, potato bowls, pasta bowls, wraps, sandwiches, juices, smoothies, and parfaits designed to make healthy eating convenient and enjoyable, delivered daily for your ease."
+    },
+    {
+      question: "What is a Detox Plan?",
+      answer: "A Detox Plan is a short-term program focused on cleansing your body, boosting your energy, and improving overall well-being. It includes juices, smoothies, fruit cups, salads, or a combination of both, made from fresh, natural ingredients to help rejuvenate your system."
+    },
+    {
+      question: "What would I get in a Meal Plan?",
+      answer: "With a Meal Plan, you’ll receive two items daily, which could include a mix of salads, juices, parfaits, sandwiches, wraps, or fruit cups. For example, you might get: A juice and salad, a parfait and wrap, or a sandwich and fruit cup."
+    },
+    {
+      question: "What do I get in a Detox Plan?",
+      answer: "In a Detox Plan, you’ll receive a variety of 4 to 5 juices or smoothies daily. On some days, your plan may include a fruit cup or salad as a substitute for one of the juices or smoothies, depending on the specific plan you choose."
+    },
+    {
+      question: "How are the meals and detox items delivered?",
+      answer: "Deliveries are made once daily in the morning for the duration of your plan. All items must be immediately stored in the refrigerator or consumed right away to maintain freshness and quality."
+    },
+    {
+      question: "What ingredients are used in the products?",
+      answer: "Our meals and detox products are made daily with high-quality ingredients, including fresh fruits, vegetables, creamy yogurt, crunchy granola, and natural herbs and spices. Each combination is carefully curated for optimal taste, nutrition, and satisfaction."
+    },
+    {
+      question: "Do your products contain preservatives?",
+      answer: "No! At So Fresh, we pride ourselves on delivering preservative-free, all-natural products. Everything is freshly made to ensure maximum nutrients and flavor."
+    },
+    {
+      question: "How long will my product stay fresh?",
+      answer: "Our parfaits, yogurts, smoothies, and juices are made fresh daily and should be consumed within the same day for the best experience. Greek yogurts come with expiry dates that should be adhered to."
+    },
+    {
+      question: "How should I store the products?",
+      answer: "We recommend refrigerating all parfaits, yogurts, juices, and smoothies to maintain their freshness and quality. Ensure all containers are sealed tightly before storing."
+    }
+  ].map((faq, index) => (
+    <details key={index} className="faq-item">
+      <summary className="faq-question">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+        {faq.question}
+      </summary>
+      <div className="faq-answer">
+        <p>{faq.answer}</p>
+      </div>
+    </details>
+  ))}
+
+   <h1 className="general">
+    Choosing the Right Plan
+  </h1>
+
+   {[
+    {
+      question: "Which plan is the best option for me?",
+      answer: "The best plan for you depends on your goals:For long-term healthy eating, choose a  Meal Plan(Fresh Start or Yummy Feast).For a short-term cleanse or reset, a Detox Plan(Rejuvenate, Fresh Up, Refresh, or Glow Up) is ideal.If you’re unsure, send us a WhatsApp at 08062868430 for a free consultation to determine the best fit for your needs"
+    },
+    {
+      question: "What are the health benefits of your products?",
+      answer: "Our products are packed with vitamins, minerals, and antioxidants to support immunity, digestion, weight management, and overall vitality. They help you maintain a healthy lifestyle and promote sustainable energy throughout the day."
+    },
+    
+       
+    {
+      question: "Are your products suitable for children?",
+      answer: "Absolutely! Our combos are made with natural ingredients, making them a nutritious and delicious option for all age groups, including children."
+    }
+    
+
+  ].map((faq, index) => (
+    <details key={index} className="faq-item">
+      <summary className="faq-question">
+        
+        <svg xmlns="http://www.w3.org/2000/svg"
+          className="heroicon-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" style={{ marginRight: '8px' }}>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+        {faq.question}
+      </summary>
+      
+      <div className="faq-answer">
+        <p>{faq.answer}</p>
+      </div>
+    </details>
+  ))}
+</section>
+
+
+
+<footer className="navFoot">
+
+<div className="navmea">
+
+</div>
+<h3>Copyright 2025 © So Fresh Neigbourhood Market</h3>
+</footer>
+     
     </div>
   );
 };

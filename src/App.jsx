@@ -12,6 +12,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import Menu from './Menu/Menu'
 import Location from './FindUs/Location'
 import NavMeal from './NavMealPlan/NavMeal'
+import CartComponent from './Carts/Cart'
 
 
 const App = () => {
@@ -21,23 +22,25 @@ const App = () => {
   const isPageMenu = location.pathname ==='/menu'
   const isLocationPage = location.pathname === '/location'
   const isMealPlanPage = location.pathname === '/mealplan'
+  const isCArtPage = location.pathname === '/cart'
 
 
   return (
     <div className='app'>
-      {!isMealPlanPage && <Navbar/>}
+      {!isMealPlanPage && !isCArtPage && <Navbar/>}
         {/*<Navbar/>*/}
       <Routes>
           <Route path="/" element={ <Hero/>} />
           <Route path="/menu" element={ <Menu/> } />
            <Route path="/location" element ={ <Location/> } />
-           <Route path="/mealplan" element =  { <NavMeal/> } />
+           <Route path="/mealplan" element =  {!isCArtPage && <NavMeal/> } />
+           <Route path='/cart' element ={ <CartComponent/> }/>
           
 
       </Routes>
 
 
-   {!isPageMenu && !isLocationPage && !isMealPlanPage &&( 
+   {!isPageMenu && !isLocationPage && !isMealPlanPage && !isCArtPage && ( 
    <> 
   
     <Explore/>
@@ -49,7 +52,7 @@ const App = () => {
     </>
      )}
      {isLocationPage && <Footer/>}
-     {isMealPlanPage}
+     
     </div>
   )
 }

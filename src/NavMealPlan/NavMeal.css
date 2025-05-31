@@ -306,9 +306,132 @@
 
 
 
+.navMeal-questions{
+  font-size: 15px;
+  color: green;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+
+.general{
+  font-weight: 900;
+  font-size: 2rem;
+  margin-top: 30px;
+  color: orange;
+}
 
 
 
+/* Questions section 
+.faq-item {
+  width: 300px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.faq-question:hover span:first-child {
+  color: green;
+}
+
+.faq-question hr {
+  flex: 1;
+  border: 1px solid #ccc;
+  margin: 0 10px;
+}
+
+.arrow {
+  transition: transform 0.3s;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px 0;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+.faq-item.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* Center alignment and structure */
+
+/* FAQ container styling (assumes it's wrapped in a section) */
+
+/* Container to center all FAQ items */
+.navmeal-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Each FAQ item */
+.faq-item {
+  width: 100%;
+  max-width: 600px;
+  border-bottom: 1px solid #dadce0;
+  margin: 1rem 0;
+  transition: background-color 0.3s ease;
+}
 
 
 
+/* Summary: flex, center everything horizontally */
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  cursor: pointer;
+  font-weight: 500;
+  color: #202124;
+  position: relative;
+  padding: 1rem 0;
+  box-sizing: border-box;
+  text-align: center;
+  gap: 0.1rem; 
+}
+
+.faq-question svg {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+
+.faq-item[open] .faq-question svg {
+  transform: rotate(180deg);
+}
+
+
+.faq-question::after {
+  content: '';
+  flex-grow: 1;
+  background-color: #dadce0;
+  margin-left: 1rem;
+  margin-right: 0; /* no extra right margin */
+}
+
+/* Answer text */
+.faq-answer {
+  text-align: center;
+  color: #5f6368;
+  font-size: 0.95rem;
+  line-height: 1.1;
+  padding: 0.1rem 9rem 1rem;
+  max-width: 600px;
+  margin: 0 auto; /* center horizontally */
+}
