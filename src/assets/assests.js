@@ -149,6 +149,11 @@ import customer_15 from './customer 15.png'
 import customer_16 from './customer 16.png'
 import customer_17 from './customer 17.png'
 import customer_18 from './customer 18.png'
+import visa_c from './visa (2).png'
+import master_c from './mastercard.png'
+import bank_t from './bank (2).png'
+import pal_pay from './palpay (2).png'
+import cartt from './carrt.jpeg'
 
 
 
@@ -223,6 +228,11 @@ export const assets = {
        customer_16,
        customer_17,
          customer_18,
+         visa_c,
+         master_c,
+         bank_t,
+         pal_pay,
+         cartt
 
 }
 
