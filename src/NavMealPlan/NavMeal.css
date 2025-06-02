@@ -596,11 +596,10 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
   display: inline-block;
 }
 
-.cart-count {
+   /*.cart-count {
   position: absolute;
   top: -8px;
   right: -8px;
-  background-color: green;
   color: #fff;
   border-radius: 50%;
   font-size: 0.7rem;
@@ -610,6 +609,21 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
   align-items: center;
   justify-content: center;
   font-weight: bold;
-}
+}*/
  
+.navmeal-cart {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.7rem;
+  color: #000; 
+  font-weight: bold;
+  pointer-events: none; 
+}
 
