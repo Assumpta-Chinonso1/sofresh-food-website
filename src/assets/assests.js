@@ -154,6 +154,7 @@ import master_c from './mastercard.png'
 import bank_t from './bank (2).png'
 import pal_pay from './palpay (2).png'
 import cartt from './carrt.jpeg'
+import empty_cart from './empty cart (2).png'
 
 
 
@@ -232,7 +233,8 @@ export const assets = {
          master_c,
          bank_t,
          pal_pay,
-         cartt
+         cartt,
+         empty_cart
 
 }
 
@@ -1341,5 +1343,15 @@ export const customers_reviews = [
    },
 
 ]
+
+
+
+export const new_products = [
+  
+    { name: 'Ginger Snap', image: zesty_trop},
+    { name: 'Citrus Breeze', image: green_vat},
+    { name: 'Lime Vibe', image: root_intense},
+    { name: 'Lime Vibe', image: citrus_Gaurd},
+  ]
 
 

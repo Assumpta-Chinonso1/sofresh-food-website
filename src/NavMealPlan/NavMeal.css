@@ -1,3 +1,4 @@
+
 .navsss {
   position: fixed;
   top: 0;
@@ -240,7 +241,7 @@
   padding: 10px 0;
   scroll-snap-type: x mandatory;
   flex-grow: 1;
-  scrollbar-width: none; 
+ /* scrollbar-width: none; */
 }
 
 .navmeal-customers::-webkit-scrollbar {
@@ -268,7 +269,7 @@
   height: 90px;
   color: orange;
   transition: color 0.3s ease, transform 0.2s ease;
-  user-select: none;
+ /* user-select: none;*/
 }
 
 .cart{
@@ -325,7 +326,7 @@
   color: orange;
 }
 
-/* Container to center all FAQ items */
+/* Container to center all FAQ items 
 .navmeal-section {
   display: flex;
   flex-direction: column;
@@ -345,21 +346,22 @@
 }
 
 
-.faq-question {
+ .faq-question {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   cursor: pointer;
   font-weight: 500;
   color: #202124;
   position: relative;
   padding: 1rem 0;
   box-sizing: border-box;
-  text-align: left;
+  text-align: center;
   gap: 0.5rem;
   transition: color 0.3s ease, background-color 0.3s ease;
    font-size: 1.2rem;
    font-weight: 500;
+   position: relative;
 }
 
 
@@ -384,6 +386,99 @@
   margin: 0 auto;
 }
 
+
+
+
+.faq-item[open] .faq-question {
+  color: green; 
+ 
+}
+
+.faq-item[open] .faq-question::after {
+  background-color:  green; 
+  font-size: 3rem;
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(180deg);
+}*/
+
+/* Container */
+.navmeal-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+.mealll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  font-size: 2rem;
+  margin: 2rem 0;
+  font-weight: bold;
+}
+
+.mealll .line {
+  flex: 1;
+  height: 2px;
+  background-color: #202124;
+  opacity: 0.5;
+}
+
+.mealll svg {
+  flex-shrink: 1;
+}
+
+/* FAQ item styling */
+.faq-item {
+  width: 100%;
+  max-width: 600px;
+  border-bottom: 1px solid rgb(202, 199, 199);
+  margin: 1rem auto;
+  transition: background-color 0.3s ease;
+
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  font-weight: 500;
+  color: #202124;
+  padding: 1rem 0;
+  box-sizing: border-box;
+  text-align: center;
+  gap: 0.1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.faq-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  text-align: left;
+  color: #5f6368;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  padding: 0.5rem 2rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
 .faq-item[open] .faq-question {
   color: green; 
  
@@ -397,6 +492,12 @@
 .faq-item[open] .faq-icon {
   transform: rotate(180deg);
 }
+
+.faq-item[open] .faq-question svg {
+  transform: rotate(180deg);
+}
+
+
 
 .navFoot{  
 width: 100%;
@@ -432,3 +533,83 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
   color: white;
 
 }
+
+
+
+ .navmeal-cart {
+  position: relative;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+  padding: 3rem;
+  text-align: center;
+  border-radius: 8px;
+  display: none; 
+}
+
+.navmeal-cart:hover .cart-dropdown {
+  display: block;
+}
+
+.navmeal-cart img.cart{
+  width: 30px;
+  margin-bottom: 0.1rem;
+}
+
+.cart-dropdown p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+
+}
+
+.cart-dropdown .return-shop {
+  display: inline-block;
+  background-color: green;
+  color: #fff;
+  text-decoration: none;
+  padding: 1px;
+  margin: 1px;
+  border-radius: 2px;
+  margin-top: 40px;
+}
+
+
+.navmeal-cart {
+  position: relative;
+}
+
+.cart-link {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: green;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+ 
+
