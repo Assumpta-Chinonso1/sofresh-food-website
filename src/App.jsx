@@ -48,7 +48,7 @@ const App = () => {
            <Route path='/cart' element ={ <CartComponent/> }/>
            <Route path='/SoFreshLifeStyleBlog' element={<SoFreshLifeStyleBlog/>} />
            <Route path='/HealthyIndul' element={<HealthyIndul/>} />
-           <Route path='/FeelingTired' element ={< FeelingTired/>} />
+           <Route path='/FeelingTired' element ={<FeelingTired/>} />
            <Route path='/TheStory' element ={<TheStory/>} />
           
 
