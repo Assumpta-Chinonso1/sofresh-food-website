@@ -1,5 +1,5 @@
 import React from 'react';
-import './SoFreshLifeStyleBlog.css';
+import './SoFreshLifestyleBlog.css';
 import { assets } from '../assets/assests';
 
 const SoFreshLifeStyleBlog = () => {
