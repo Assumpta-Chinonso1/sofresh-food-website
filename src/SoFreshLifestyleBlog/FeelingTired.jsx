@@ -1,9 +1,9 @@
 import React from 'react'
 import { assets } from '../assets/assests'
 
-const FeelingTried = () => {
+const FeelingTired = () => {
   return (
-     <div className='blog'>
+    <div className='blog'>
               <div className="blog-image-wrapper">
                 <img src={assets.feeling_tired} alt="So Fresh Blog Banner" />
               </div>
@@ -49,4 +49,4 @@ const FeelingTried = () => {
   )
 }
 
-export default FeelingTried
+export default FeelingTired

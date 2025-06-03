@@ -15,9 +15,9 @@ import NavMeal from './NavMealPlan/NavMeal'
 import CartComponent from './Carts/Cart'
 import SoFreshLifeStyleBlog from './SoFreshLifestyleBlog/SoFreshLifeStyleBlog'
 import HealthyIndul from './SoFreshLifestyleBlog/HealthyIndul'
-import FeelingTried from './SoFreshLifestyleBlog/feelingTried'
- /*import FeelingTried from './SoFreshLifestyleBlog/feelingTried'*/
+import FeelingTired from './SoFreshLifestyleBlog/FeelingTired'
 import TheStory from './SofreshStory/TheStory'
+
 
 
 
@@ -48,7 +48,7 @@ const App = () => {
            <Route path='/cart' element ={ <CartComponent/> }/>
            <Route path='/SoFreshLifeStyleBlog' element={<SoFreshLifeStyleBlog/>} />
            <Route path='/HealthyIndul' element={<HealthyIndul/>} />
-           <Route path='/feelingTired' element ={<FeelingTried/>} />
+           <Route path='/feelingTired' element ={< FeelingTired/>} />
            <Route path='/TheStory' element ={<TheStory/>} />
           
 
