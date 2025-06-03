@@ -16,7 +16,9 @@ import CartComponent from './Carts/Cart'
 import SoFreshLifeStyleBlog from './SoFreshLifestyleBlog/SoFreshLifeStyleBlog'
 import HealthyIndul from './SoFreshLifestyleBlog/HealthyIndul'
 import FeelingTried from './SoFreshLifestyleBlog/feelingTried'
+ /*import FeelingTried from './SoFreshLifestyleBlog/feelingTried'*/
 import TheStory from './SofreshStory/TheStory'
+
 
 
 const App = () => {
