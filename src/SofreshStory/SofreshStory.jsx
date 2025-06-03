@@ -1,9 +1,17 @@
 import React from 'react'
 import './SofreshStory.css'
 import { assets } from '../assets/assests'
+import { useNavigate } from 'react-router-dom'
+
 
 
 const SofreshStory = () => {
+     const navigate = useNavigate();
+      const handleReadMores = () => {
+        navigate('/TheStory');
+         window.scrollTo(0, 0);
+        
+      }
   return (
     <div className="sofreshstory">
   <div className="sofreshstory-container" >
@@ -21,7 +29,7 @@ const SofreshStory = () => {
        sandwich and other quick on the go healthy meals.
       </p>
 
-      <button className="btn">Read More</button>
+      <button onClick={handleReadMores} className="btn">Read More</button>
     </div>
 
     <div className="sofreshstory-image">

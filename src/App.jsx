@@ -13,6 +13,10 @@ import Menu from './Menu/Menu'
 import Location from './FindUs/Location'
 import NavMeal from './NavMealPlan/NavMeal'
 import CartComponent from './Carts/Cart'
+import SoFreshLifeStyleBlog from './SoFreshLifestyleBlog/SoFreshLifeStyleBlog'
+import HealthyIndul from './SoFreshLifestyleBlog/HealthyIndul'
+import FeelingTried from './SoFreshLifestyleBlog/feelingTried'
+import TheStory from './SofreshStory/TheStory'
 
 
 const App = () => {
@@ -23,6 +27,11 @@ const App = () => {
   const isLocationPage = location.pathname === '/location'
   const isMealPlanPage = location.pathname === '/mealplan'
   const isCArtPage = location.pathname === '/cart'
+  const isBlogPage = location.pathname === '/SoFreshLifeStyleBlog'
+  const isHealthyIndulPage = location.pathname === '/HealthyIndul'
+  const isFeelingTired = location.pathname === '/FeelingTired'
+  const isTheStory = location.pathname === '/TheStory'
+  
 
 
   return (
@@ -35,12 +44,16 @@ const App = () => {
            <Route path="/location" element ={ <Location/> } />
            <Route path="/mealplan" element =  {!isCArtPage && <NavMeal/> } />
            <Route path='/cart' element ={ <CartComponent/> }/>
+           <Route path='/SoFreshLifeStyleBlog' element={<SoFreshLifeStyleBlog/>} />
+           <Route path='/HealthyIndul' element={<HealthyIndul/>} />
+           <Route path='/feelingTired' element ={<FeelingTried/>} />
+           <Route path='/TheStory' element ={<TheStory/>} />
           
 
       </Routes>
 
 
-   {!isPageMenu && !isLocationPage && !isMealPlanPage && !isCArtPage && ( 
+   {!isPageMenu && !isLocationPage && !isMealPlanPage && !isCArtPage && !isBlogPage && !isHealthyIndulPage && !isFeelingTired && !isTheStory && ( 
    <> 
   
     <Explore/>
@@ -51,7 +64,7 @@ const App = () => {
     <Footer/>
     </>
      )}
-     {isLocationPage && <Footer/>}
+     {(isLocationPage || isBlogPage || isHealthyIndulPage || isFeelingTired || isTheStory) && <Footer/>}
      
     </div>
   )

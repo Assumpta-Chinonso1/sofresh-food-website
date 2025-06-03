@@ -314,6 +314,7 @@ export const menu_more = [
             menu_image: assets.behind_s,
             menu_des: "Ever wonder what happens behind the scenes before your meal arrives at your doorstep or is ready for pick-up?",
             menu_date: "21, April 2025",
+            link: '/SoFreshLifeStyleBlog'
          },
    
       {
@@ -321,6 +322,7 @@ export const menu_more = [
                menu_image: assets.healthy_ind,
                menu_des: "Let’s be honest: we all crave something sweet from time to time. After a long day, when the...",
                menu_date: "14, April 2025",
+               link: "/HealthyIndul"
             },
    
             {
@@ -328,6 +330,8 @@ export const menu_more = [
                menu_image: assets.feeling_tired,
                menu_des: "You know that feeling, when you’ve had a full night’s sleep, but you still wake up drained?",
                  menu_date: "10, April 2025",
+               link: "/FeelingTired"
+
             },
 ]
 

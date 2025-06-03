@@ -2,9 +2,18 @@ import React from 'react'
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import './Latest.css'
 import  {menu_more } from '../assets/assests'
+import { useNavigate } from 'react-router-dom'
+
 
 
 const Latest = () => {
+  const navigate = useNavigate();
+  const handleReadMore = (path) => {
+    navigate(path);
+     window.scrollTo(0, 0);
+    
+  }
+ 
   return (
     <div className='latest'>
         <br /><br /><br />
@@ -27,9 +36,10 @@ const Latest = () => {
                 <p>{item.menu_des}</p>
              <div className="date-btn-wrapper">
            <p className="date">{item.menu_date}</p>
-                <button className="read-more-btn">
-            Read More <ArrowRightIcon className='arrow-btn' />
+                <button onClick={() => handleReadMore (item.link)} className="read-more-btn"  >
+            Read More <ArrowRightIcon className='arrow-btn'  />
               </button>
+             
                     </div>
 
     
