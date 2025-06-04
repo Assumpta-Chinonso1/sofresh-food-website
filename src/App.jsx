@@ -21,6 +21,8 @@ import TheStory from './SofreshStory/TheStory'
 
 
 
+
+
 const App = () => {
 
   const location = useLocation();
@@ -33,6 +35,7 @@ const App = () => {
   const isHealthyIndulPage = location.pathname === '/HealthyIndul'
   const isFeelingTired = location.pathname === '/FeelingTired'
   const isTheStory = location.pathname === '/TheStory'
+  
   
 
 
@@ -49,7 +52,9 @@ const App = () => {
            <Route path='/SoFreshLifeStyleBlog' element={<SoFreshLifeStyleBlog/>} />
            <Route path='/HealthyIndul' element={<HealthyIndul/>} />
            <Route path='/FeelingTired' element ={<FeelingTired/>} />
-           <Route path='/TheStory' element ={<TheStory/>} />
+           <Route path='/TheStory' element ={ <TheStory/>} />
+          
+           
           
 
       </Routes>

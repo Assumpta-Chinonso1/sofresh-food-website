@@ -155,6 +155,15 @@ import bank_t from './bank (2).png'
 import pal_pay from './palpay (2).png'
 import cartt from './carrt.jpeg'
 import empty_cart from './empty cart (2).png'
+import fifteen_m from './fifteenM.svg'
+import fifteen_plus from './fiftheenPlus.svg'
+import onefifteen_s from './onefifteen.svg'
+import made_for from  './made for you.webp'
+import quest from './questt.png'
+import mission from './mission.svg'
+import vision from './vision.svg'
+import values from './values.png'
+import space from './space.webp'
 
 
 
@@ -234,7 +243,16 @@ export const assets = {
          bank_t,
          pal_pay,
          cartt,
-         empty_cart
+         empty_cart,
+         fifteen_m,
+         fifteen_plus,
+         onefifteen_s,
+         made_for,
+         quest,
+         mission,
+         vision,
+         values,
+         space
 
 }
 
