@@ -1,10 +1,17 @@
- import { assets} from '../assets/assests';
+import { assets} from '../assets/assests';
 import { Link } from 'react-router-dom';
 import './Cart.css';
 import { ChevronRightIcon } from '@heroicons/react/16/solid';
+import { useContext } from 'react';
+import { CartContext } from '../CartContext/CartContext.jsx';
+import { new_products } from '../assets/assests'; 
+import { useNavigate } from 'react-router-dom';
+
 
 const Cart = () => {
- 
+
+   const { addToCart } = useContext(CartContext);
+   const navigation = useNavigate();
 
 
   return (
@@ -27,12 +34,6 @@ const Cart = () => {
         <div className="navmeal-cart">
           <Link to='/cart'><img src={assets.cartt} alt="" className='cart' /></Link>
         </div>
-        {/*<div className="navmeal-cart">
-  <Link to='/cart'>
-    <img src={assets.cartt} alt="" className='cart' />
-    <span className="cart-count">{cartCount}</span>
-  </Link>
-  </div>*/}
 
       </header>
 
@@ -59,13 +60,13 @@ const Cart = () => {
            </div>
     </div>
 
-                   <section className='checks'>
-                   <div className="navmeal-productss">
+                    <section className='checks'>
+                   {/* <div className="navmeal-productss">
             <img src={assets.zesty_trop} alt="Zesty Trop" />
             <p className='name'>Zesty Trop</p>
             <span>₦19,700.00</span>
             <button className="btnss">ADD TO CART</button>
-          </div>
+          </div> 
 
            <div className="navmeal-productss">
             <img src={assets.green_vat} alt="Green Vat" />
@@ -81,12 +82,24 @@ const Cart = () => {
             <button className="btnss"> ADD TO CART</button>
           </div>
 
-           <div className="navmeal-productss">
+            <div className="navmeal-productss">
             <img src={assets.citrus_Gaurd} alt="Citrus Guard" />
            <p className='name'> Citrus Guard</p>
             <span>₦11,500.00</span>
-            <button className="btnss">ADD TO CART</button>
+            <button  className="btnss">ADD TO CART</button>
+          </div>*/}
+
+           {new_products.map(product => (
+          <div key={product.id} className="navmeal-productss">
+            <img src={product.image} alt={product.name} />
+            <p className='name'>{product.name}</p>
+            <span>₦{product.price.toLocaleString()}</span>
+            <button className="btnss" onClick={()=> {
+              addToCart(product) 
+              navigation('/add')
+            }}>ADD TO CART</button>
           </div>
+        ))}
 </section>
 
 
@@ -104,6 +117,5 @@ const Cart = () => {
   );
 };
 export default Cart;
-
 
 

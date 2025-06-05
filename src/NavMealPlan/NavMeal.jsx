@@ -6,7 +6,7 @@ import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-const NavMeal = () => {
+ const NavMeal = () => {
   const carouselRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -56,28 +56,15 @@ const NavMeal = () => {
            <Link to='/cart'> <img src={assets.cartt} alt=""  className='cart'/> </Link>
            <span className="cart-count">0</span> {/* Cart count badge */}
            <div className="cart-dropdown">
-           {/* <img src={assets.cartt} alt="Empty Cart" className="empty-cart-icon" />*/}
+           
             <Link to='/cart'> <img src={assets.cartt} alt=""  className='cart'/> </Link>
             <p>No products in the cart.</p>
             <Link to="/store" className="return-shop">RETURN TO SHOP</Link>
           </div>
         </div>
 
-        {/*<div className="navmeal-cart">
-  <Link to="/cart" className="cart-link">
-    <img src={assets.cartt} alt="" className="cart" />
-    <span className="cart-count">0</span>
-  </Link>
-  <div className="cart-dropdown">
-    <Link to="/cart">
-      <img src={assets.cartt} alt="" className="cart" />
-    </Link>
-    <p>No products in the cart.</p>
-    <Link to="/store" className="return-shop">RETURN TO SHOP</Link>
-  </div>
-</div>*/}
 
-      </header>
+      </header> 
 
       <hr />
 

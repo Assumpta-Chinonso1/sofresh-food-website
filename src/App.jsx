@@ -17,6 +17,7 @@ import SoFreshLifeStyleBlog from './SoFreshLifestyleBlog/SoFreshLifeStyleBlog'
 import HealthyIndul from './SoFreshLifestyleBlog/HealthyIndul'
 import FeelingTired from './SoFreshLifestyleBlog/FeelingTired'
 import TheStory from './SofreshStory/TheStory'
+import AddToCart from './AddToCart/AddToCart'
 
 
 
@@ -35,13 +36,13 @@ const App = () => {
   const isHealthyIndulPage = location.pathname === '/HealthyIndul'
   const isFeelingTired = location.pathname === '/FeelingTired'
   const isTheStory = location.pathname === '/TheStory'
-  
+  const isAddToCartPage = location.pathname === '/add';
   
 
 
   return (
     <div className='app'>
-      {!isMealPlanPage && !isCArtPage && <Navbar/>}
+      {!isMealPlanPage && !isCArtPage && !isAddToCartPage && <Navbar/>}
         {/*<Navbar/>*/}
       <Routes>
           <Route path="/" element={ <Hero/>} />
@@ -53,6 +54,7 @@ const App = () => {
            <Route path='/HealthyIndul' element={<HealthyIndul/>} />
            <Route path='/FeelingTired' element ={<FeelingTired/>} />
            <Route path='/TheStory' element ={ <TheStory/>} />
+            <Route path='/add' element={<AddToCart/>} />
           
            
           
@@ -60,7 +62,7 @@ const App = () => {
       </Routes>
 
 
-   {!isPageMenu && !isLocationPage && !isMealPlanPage && !isCArtPage && !isBlogPage && !isHealthyIndulPage && !isFeelingTired && !isTheStory && ( 
+   {!isPageMenu && !isLocationPage && !isMealPlanPage && !isCArtPage && !isBlogPage && !isHealthyIndulPage && !isFeelingTired && !isTheStory && !isAddToCartPage &&( 
    <> 
   
     <Explore/>

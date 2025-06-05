@@ -1369,11 +1369,8 @@ export const customers_reviews = [
 
 
 export const new_products = [
-  
-    { name: 'Ginger Snap', image: zesty_trop},
-    { name: 'Citrus Breeze', image: green_vat},
-    { name: 'Lime Vibe', image: root_intense},
-    { name: 'Lime Vibe', image: citrus_Gaurd},
-  ]
-
-
+  { id: 1, name: 'Ginger Snap', image: zesty_trop, price: 19700 },
+  { id: 2, name: 'Citrus Breeze', image: green_vat, price: 21400 },
+  { id: 3, name: 'Lime Vibe', image: root_intense, price: 10700 },
+  { id: 4, name: 'Citrus Guard', image: citrus_Gaurd, price: 11500 }
+];
