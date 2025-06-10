@@ -61,33 +61,6 @@ const Cart = () => {
     </div>
 
                     <section className='checks'>
-                   {/* <div className="navmeal-productss">
-            <img src={assets.zesty_trop} alt="Zesty Trop" />
-            <p className='name'>Zesty Trop</p>
-            <span>₦19,700.00</span>
-            <button className="btnss">ADD TO CART</button>
-          </div> 
-
-           <div className="navmeal-productss">
-            <img src={assets.green_vat} alt="Green Vat" />
-            <p className='name'>Green Vat</p>
-            <span>₦21,400.00</span>
-            <button className="btnss">ADD TO CART</button>
-          </div>
-
-          <div className="navmeal-productss">
-            <img src={assets.root_intense} alt="Root Intense"  />
-            <p className='name'>Root Intense</p>
-            <span>₦10,700.00</span>
-            <button className="btnss"> ADD TO CART</button>
-          </div>
-
-            <div className="navmeal-productss">
-            <img src={assets.citrus_Gaurd} alt="Citrus Guard" />
-           <p className='name'> Citrus Guard</p>
-            <span>₦11,500.00</span>
-            <button  className="btnss">ADD TO CART</button>
-          </div>*/}
 
            {new_products.map(product => (
           <div key={product.id} className="navmeal-productss">
