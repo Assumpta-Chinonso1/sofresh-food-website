@@ -68,7 +68,7 @@ const { cartCount } = useCart();
         </nav>
         <div className="navmeal-cart">
           <Link to="/cart"><img src={assets.cartt} alt="Cart" className="cart" />
-            {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+           <span className="cart-count-badge">{cartCount}</span>
           </Link>
         </div>
       </header>

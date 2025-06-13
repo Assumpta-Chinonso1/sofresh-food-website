@@ -37,7 +37,7 @@ const Cart = () => {
         <div className="navmeal-cart">
           <Link to='/cart'><img src={assets.cartt} alt="" className='cart' />
          {/* <span className="cart-count">0</span>*/}
-          {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+         <span className="cart-count-badge">{cartCount}</span>
           </Link>
         </div>
 
