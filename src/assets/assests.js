@@ -164,6 +164,7 @@ import mission from './mission.svg'
 import vision from './vision.svg'
 import values from './values.png'
 import space from './space.webp'
+import whatsapp from './whatsapp_icon.png'
 
 
 
@@ -252,7 +253,8 @@ export const assets = {
          mission,
          vision,
          values,
-         space
+         space,
+         whatsapp
 
 }
 

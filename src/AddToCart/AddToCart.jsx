@@ -1,21 +1,28 @@
 
-import { useContext, useState } from 'react';
+import {  useContext, useState } from 'react';
 import { CartContext } from '../CartContext/CartContext';
 import { Link } from 'react-router-dom';
 import { assets } from '../assets/assests';
 import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
 import './AddToCart.css';
+import { useCart } from '../CartContext/CartContext.jsx';
 
 const AddToCart = () => {
   const { cartItems, removeFromCart, addToCart, deleteFromCart } = useContext(CartContext);
   const [showCoupon, setShowCoupon] = useState(false);
   const [couponCode, setCouponCode] = useState('');
   const [isDeliveryOpen, setIsDeliveryOpen] = useState(false);
+  const [isCountryOpen, setIsCountryOpen] = useState(false);
+const [isCityOpen, setIsCityOpen] = useState(false);
+const [isStateOpen, setIsStateOpen] = useState(false);
 
-  const [selectedLocation, setSelectedLocation] = useState('So Fresh Ogudu');
-  const [country, setCountry] = useState('Nigeria');
-  const [city, setCity] = useState('Lagos');
-  const [state, setState] = useState('Opebi (Ikeja), Lagos');
+const { cartCount } = useCart();
+
+
+  const [selectedLocation, setSelectedLocation] = useState('');
+  const [country, setCountry] = useState('');
+  const [city, setCity] = useState('');
+  const [state, setState] = useState('');
 
   const DELIVERY_FEE = selectedLocation.toLowerCase().includes('free') ? 0 : 1800;
   const calculateSubtotal = () => cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
@@ -36,6 +43,14 @@ const AddToCart = () => {
     'So Fresh Wuse 2',
   ];
 
+  const handleApplyCoupon = () => {
+    if (couponCode.toLowerCase() === 'fresh10') {
+      alert('Coupon Applied: 10% Discount');
+    } else {
+      alert('Invalid Coupon');
+    }
+  };
+
   return (
     <div className="navmeal-container">
       <nav className="navsss">
@@ -52,7 +67,9 @@ const AddToCart = () => {
           </ul>
         </nav>
         <div className="navmeal-cart">
-          <Link to="/cart"><img src={assets.cartt} alt="Cart" className="cart" /></Link>
+          <Link to="/cart"><img src={assets.cartt} alt="Cart" className="cart" />
+            {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+          </Link>
         </div>
       </header>
 
@@ -69,33 +86,34 @@ const AddToCart = () => {
           <div className="empty-cart"><p>No items in the cart yet.</p></div>
         ) : (
           <div className="cart-grid">
-
-            {/* LEFT SIDE */}
             <div className="cart-left">
               <div className="cart-header-row">
                 <span className="product-header">Product</span>
-                <span className="total-header">Total
-                 
-                </span>
+                <span className="total-header">Total</span>
               </div>
               <div className="divider" />
 
               {cartItems.map(item => (
                 <div key={item.id} className="cart-item-card">
-                  <img src={item.image} alt={item.name} className="cart-img" />
-                  <div className="cart-item-info">
-                    <h4>{item.name}</h4>
-                    <p className="price-display">₦{item.price.toLocaleString()}</p>
-                    <p className="item-description">{item.description || ''}</p>
+                  <div className="item-left">
+                    <img src={item.image} alt={item.name} className="cart-img" />
+                    <div className="cart-item-info">
+                      <h4>{item.name}</h4>
+                      <p className="price-display">₦{item.price.toLocaleString()}</p>
+                      <p className="item-description">{item.description || ''}</p>
 
-                    <div className="qty-control">
-                      <button onClick={() => removeFromCart(item.id)} className="qty-btn">－</button>
-                      <p className="qty-number">{item.quantity}</p>
-                      <button onClick={() => addToCart(item)} className="qty-btn">＋</button>
+                      <div className="qty-control">
+                        <button onClick={() => removeFromCart(item.id)} className="qty-btn">－</button>
+                        <p className="qty-number">{item.quantity}</p>
+                        <button onClick={() => addToCart(item)} className="qty-btn">＋</button>
+                      </div>
+
+                      <button onClick={() => deleteFromCart(item.id)} className="remove-btn">Remove item</button>
                     </div>
+                  </div>
 
-                    <p className="product-total">₦{(item.price * item.quantity).toLocaleString()}</p>
-                    <button onClick={() => deleteFromCart(item.id)} className="remove-btn">Remove item</button>
+                  <div className="item-total">
+                    ₦{(item.price * item.quantity).toLocaleString()}
                   </div>
                 </div>
               ))}
@@ -103,74 +121,109 @@ const AddToCart = () => {
               <div className="divider" />
             </div>
 
-            {/* RIGHT SIDE */}
             <div className="cart-summary">
               <h3>Cart Totals</h3>
+              <hr />
 
               <div className="coupon-section">
                 <div className="coupon-toggle" onClick={() => setShowCoupon(!showCoupon)}>
                   <span>Add a coupon</span>
                   <ChevronDownIcon className={`icon ${showCoupon ? 'rotated' : ''}`} />
                 </div>
+                
                 {showCoupon && (
                   <div className="coupon-content">
-                    <label htmlFor="coupon" className="coupon-label">Enter Coupon Code</label>
-                    <input
-                      type="text"
-                      id="coupon"
-                      className="coupon-input"
-                      value={couponCode}
-                      onChange={(e) => setCouponCode(e.target.value)}
-                      placeholder="Enter code"
-                    />
-                    <button className="apply-btn">Apply</button>
+                    <div className="coupon-row">
+                      <input
+                        type="text"
+                        id="coupon"
+                        className="coupon-input"
+                        value={couponCode}
+                        onChange={(e) => setCouponCode(e.target.value)}
+                        placeholder="Enter code"
+                      />
+                      <button className="apply-btn" onClick={handleApplyCoupon}>Apply</button>
+                    </div>
                   </div>
                 )}
+
+                <hr />
               </div>
 
               <div className="cart-row"><span>Subtotal</span><span>₦{calculateSubtotal().toLocaleString()}</span></div>
               <div className="cart-row"><span>Delivery Fee</span><span>₦{DELIVERY_FEE.toLocaleString()}</span></div>
 
               <div className="delivery-section">
-                <div className="delivery-toggle" onClick={() => setIsDeliveryOpen(!isDeliveryOpen)}>
-                      <ChevronDownIcon className={`input-dropdown-icon ${isDeliveryOpen ? 'rotated' : ''}`} />
-                   <p className="delivery-location">
-                     
-                Collection from 40b Ogudu Rd, Kosofe, Lagos, Ogudu, Lagos, 105102
-                   </p>
-                 </div>
-
+                <div className="delivery-delivery" onClick={() => setIsDeliveryOpen(!isDeliveryOpen)}>
+                  <p className="delivery-location">
+                    Delivers <span> Opebi (Ikeja), Lagos, <ChevronDownIcon className={`input-dropdown-icon ${isDeliveryOpen ? 'rotated' : ''}`} /> <br />Nigeria</span>  
+                  </p>
+                </div>
 
                 {isDeliveryOpen && (
-                  <>
-                    <div className="select-wrapper">
-                      <select value={selectedLocation} onChange={(e) => setSelectedLocation(e.target.value)}>
-                        {['So Fresh Gbagada — Free', 'So Fresh Ogudu', 'So Fresh Opebi — Free'].map(loc => (
-                          <option key={loc}>{loc}</option>
-                        ))}
-                      </select>
-                      <ChevronDownIcon className="input-dropdown-icon" />
-                    </div>
+                  <div className="location-inputs">
 
-                    <div className="location-inputs">
-                      {[
-                        { label: 'Country/Region', value: country, setter: setCountry, options: ['Nigeria'] },
-                        { label: 'City', value: city, setter: setCity, options: ['Lagos', 'Abuja', 'Port Harcourt'] },
-                        { label: 'State', value: state, setter: setState, options: ['Opebi (Ikeja), Lagos', 'Sura, Lagos Island, Lagos', 'Wuse 2, Abuja'] }
-                      ].map(({ label, value, setter, options }) => (
-                        <div key={label} className="input-group">
-                          <label>{label}</label>
-                          <div className="select-wrapper">
-                            <select value={value} onChange={(e) => setter(e.target.value)}>
-                              {options.map(opt => <option key={opt}>{opt}</option>)}
-                            </select>
-                            <ChevronDownIcon className="input-dropdown-icon" />
-                          </div>
-                        </div>
-                      ))}
-                      <button className="delivery-check-btn">Check delivery options</button>
-                    </div>
-                  </>
+
+                {[
+  {
+    label: 'Country/Region',
+    value: country,
+    setter: setCountry,
+    placeholder: 'Nigeria',
+    options: ['Nigeria', 'Ghana', 'Kenya', 'South Africa', 'United Kingdom', 'United States'],
+    isOpen: isCountryOpen,
+    setIsOpen: setIsCountryOpen
+  },
+  {
+    label: 'City',
+    value: city,
+    setter: setCity,
+    placeholder: 'Select City',
+    options: ['Lagos', 'Abuja', 'Port Harcourt'],
+    isOpen: isCityOpen,
+    setIsOpen: setIsCityOpen
+  },
+  {
+    label: 'State',
+    value: state,
+    setter: setState,
+    placeholder: 'Opebi (Ikeja), Lagos',
+    options: ['Opebi (Ikeja), Lagos', 'Sura, Lagos Island, Lagos', 'Wuse 2, Abuja'],
+    isOpen: isStateOpen,
+    setIsOpen: setIsStateOpen
+  }
+].map(({ label, value, setter, options, placeholder, isOpen, setIsOpen }) => (
+  <div key={label} className="input-group">
+    <div className="fake-select" onClick={() => {
+      // Close all others first
+      setIsCountryOpen(false);
+      setIsCityOpen(false);
+      setIsStateOpen(false);
+      // Then open the one being clicked
+      setIsOpen(!isOpen);
+    }}>
+      <p className="select-label">{label}</p>
+      <div className="selected-value">
+        {value || placeholder}
+        <ChevronDownIcon className={`input-dropdown-icon ${isOpen ? 'rotated' : ''}`} />
+      </div>
+    </div>
+
+    {isOpen && (
+      <ul className="options-dropdown">
+        {options.map((opt) => (
+          <li key={opt} onClick={() => {
+            setter(opt);
+            setIsOpen(false);
+          }}>{opt}</li>
+        ))}
+      </ul>
+    )}
+  </div>
+))}
+
+                    <button className="delivery-check-btn">Check delivery options</button>
+                  </div>
                 )}
               </div>
 
@@ -196,6 +249,10 @@ const AddToCart = () => {
         )}
       </div>
 
+      <a href="https://wa.me/234XXXXXXXXXX" className="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <img src={assets.whatsapp} alt="Chat on WhatsApp" />
+      </a>
+
       <footer className="navFoot">
         <div className="navmea">
           <img src={assets.visa_c} alt="Visa" />
@@ -210,17 +267,3 @@ const AddToCart = () => {
 };
 
 export default AddToCart;
-
-
-
-
-
-
-
-
-
-
-
-
-
-

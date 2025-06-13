@@ -4,11 +4,14 @@ import './NavMeal.css';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../CartContext/CartContext';
 
 
  const NavMeal = () => {
   const carouselRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const { cartCount } = useCart();
 
   const scrollToIndex = (index) => {
     const carousel = carouselRef.current;
@@ -54,7 +57,9 @@ import { Link } from 'react-router-dom';
         </nav>
           <div className="navmeal-cart">
            <Link to='/cart'> <img src={assets.cartt} alt=""  className='cart'/> </Link>
-           <span className="cart-count">0</span> {/* Cart count badge */}
+          {/*<span className="cart-count">0</span> */}
+                  <span className="cart-count-badge">{cartCount}</span>
+
            <div className="cart-dropdown">
            
             <Link to='/cart'> <img src={assets.cartt} alt=""  className='cart'/> </Link>

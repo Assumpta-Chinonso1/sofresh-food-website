@@ -6,12 +6,15 @@ import { useContext } from 'react';
 import { CartContext } from '../CartContext/CartContext.jsx';
 import { new_products } from '../assets/assests'; 
 import { useNavigate } from 'react-router-dom';
+import { useCart } from '../CartContext/CartContext.jsx';
 
 
 const Cart = () => {
 
    const { addToCart } = useContext(CartContext);
    const navigation = useNavigate();
+
+    const { cartCount } = useCart();
 
 
   return (
@@ -32,7 +35,10 @@ const Cart = () => {
           </ul>
         </nav>
         <div className="navmeal-cart">
-          <Link to='/cart'><img src={assets.cartt} alt="" className='cart' /></Link>
+          <Link to='/cart'><img src={assets.cartt} alt="" className='cart' />
+         {/* <span className="cart-count">0</span>*/}
+          {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+          </Link>
         </div>
 
       </header>
@@ -53,6 +59,7 @@ const Cart = () => {
     
           <div className="empty-cart">
             <img src={assets.empty_cart} alt="Empty Cart" className="empty-cart-icon" />
+      
             <h2>Your cart is currently empty!</h2>
             <Link to="/store" className="browse-store">Browse store</Link>
      
@@ -75,7 +82,9 @@ const Cart = () => {
         ))}
 </section>
 
-
+<a href="https://wa.me/2348133124741" className="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <img src={assets.whatsapp} alt="Chat on WhatsApp" />
+      </a>
 
     <footer className="navFoot">
         <div className="navmea">
