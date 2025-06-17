@@ -4,10 +4,14 @@ import { Link } from 'react-router-dom';
 import { ChevronRightIcon } from '@heroicons/react/16/solid';
 import { assets } from '../assets/assests';
 import { CartContext } from '../CartContext/CartContext';
+import { useLocation } from 'react-router-dom';
 
 const CheckoutPage = () => {
   const { cartItems, cartCount } = useContext(CartContext);
   const [showNote, setShowNote] = useState(false);
+
+  const location = useLocation();
+const currentPath = location.pathname;
 
   const DELIVERY_FEE = 1800;
   const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
@@ -40,11 +44,31 @@ const CheckoutPage = () => {
 
       <hr />
 
-      <ul className="carrt">
+       {/*<ul className="carrt">
         <li className="cart-nav">Shopping Cart <ChevronRightIcon className="icon" /></li>
         <li className="cart-nav">Checkout Details <ChevronRightIcon className="icon" /></li>
         <li className="cart-nav">Order Complete</li>
-      </ul>
+      </ul>*/}
+
+       <ul className="carrt">
+  <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
+    <Link to="/add">
+      Shopping Cart <ChevronRightIcon className="icon" />
+    </Link>
+  </li>
+
+  <li className={`cart-nav ${currentPath === '/Checkout' ? 'active' : ''}`}>
+    <Link to="/Checkout">
+      Checkout Details <ChevronRightIcon className="icon" />
+    </Link>
+  </li>
+
+  <li className={`cart-nav ${currentPath === '/complete' ? 'active' : ''}`}>
+    <Link to="/complete">
+      Order Complete
+    </Link>
+  </li>
+</ul>
 
       <div className="checkout-container">
         {cartItems.length === 0 ? (

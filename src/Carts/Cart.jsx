@@ -7,6 +7,7 @@ import { CartContext } from '../CartContext/CartContext.jsx';
 import { new_products } from '../assets/assests'; 
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../CartContext/CartContext.jsx';
+import { useLocation } from 'react-router-dom';
 
 
 const Cart = () => {
@@ -15,6 +16,9 @@ const Cart = () => {
    const navigation = useNavigate();
 
     const { cartCount } = useCart();
+
+    const location = useLocation();
+    const currentPath = location.pathname;
 
 
   return (
@@ -46,13 +50,34 @@ const Cart = () => {
       <hr />
 
 
-      <ul className="carrt">
+      {/*<ul className="carrt">
         <li className='cart-nav'>Shopping Cart <ChevronRightIcon className="icon"/>  </li>  
          
         <li className='cart-nav'>Checkout details <ChevronRightIcon className="icon"/> </li>
           
         <li className='cart-nav'>Order Complete</li>
-      </ul>
+      </ul>*/}
+
+      
+      <ul className="carrt">
+  <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
+    <Link to="/add">
+      Shopping Cart <ChevronRightIcon className="icon" />
+    </Link>
+  </li>
+
+  <li className={`cart-nav ${currentPath === '/Checkout' ? 'active' : ''}`}>
+    <Link to="/Checkout">
+      Checkout Details <ChevronRightIcon className="icon" />
+    </Link>
+  </li>
+
+  <li className={`cart-nav ${currentPath === '/complete' ? 'active' : ''}`}>
+    <Link to="/complete">
+      Order Complete
+    </Link>
+  </li>
+</ul>
 
     
       <div className="cart-content">

@@ -6,7 +6,8 @@ import { assets } from '../assets/assests';
 import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
 import './AddToCart.css';
 import { useCart } from '../CartContext/CartContext.jsx';
-import CheckoutPage from '../Checkout/Checkout.jsx';
+import { useLocation } from 'react-router-dom';
+
 
 const AddToCart = () => {
   const { cartItems, removeFromCart, addToCart, deleteFromCart } = useContext(CartContext);
@@ -18,6 +19,9 @@ const [isCityOpen, setIsCityOpen] = useState(false);
 const [isStateOpen, setIsStateOpen] = useState(false);
 
 const { cartCount } = useCart();
+
+const location = useLocation();
+const currentPath = location.pathname;
 
 
 
@@ -80,12 +84,24 @@ const { cartCount } = useCart();
       <hr />
 
       <ul className="carrt">
-        <li className="cart-nav">Shopping Cart <ChevronRightIcon className="icon" /></li>
-        <li className='cart-nav'>  <Link to='/Checkout'>
+  <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
+    <Link to="/cart">
+      Shopping Cart <ChevronRightIcon className="icon" />
+    </Link>
+  </li>
+
+  <li className={`cart-nav ${currentPath === '/Checkout' ? 'active' : ''}`}>
+    <Link to="/Checkout">
       Checkout Details <ChevronRightIcon className="icon" />
-    </Link></li>
-        <li className="cart-nav">Order Complete</li>
-      </ul>
+    </Link>
+  </li>
+
+  <li className={`cart-nav ${currentPath === '/complete' ? 'active' : ''}`}>
+    <Link to="/complete">
+      Order Complete
+    </Link>
+  </li>
+</ul>
 
       <div className="cart-wrapper">
         {cartItems.length === 0 ? (

@@ -43,6 +43,38 @@
   flex: 1;
 }
 
+ /*carrt*/
+
+.carrt {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cart-nav {
+  color: grey;
+  opacity: 0.6;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.cart-nav a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.cart-nav.active {
+  color: black;
+  opacity: 1;
+  font-weight: bold;
+}
+/*end*/
+
 .price-display {
   color: #777;
   font-weight: bold;
