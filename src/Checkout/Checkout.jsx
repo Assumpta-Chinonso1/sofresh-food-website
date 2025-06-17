@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import './Checkout.css';
 import { Link } from 'react-router-dom';
 import { ChevronRightIcon } from '@heroicons/react/16/solid';
-import { assets } from '../assets/assests'; 
+import { assets } from '../assets/assests';
+import { CartContext } from '../CartContext/CartContext';
 
 const CheckoutPage = () => {
-  const cartCount = 0; 
-  const cartItems = [1]; 
+  const { cartItems, cartCount } = useContext(CartContext);
+  const [showNote, setShowNote] = useState(false);
+
+  const DELIVERY_FEE = 1800;
+  const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const total = subtotal + DELIVERY_FEE;
 
   return (
     <div className="navmeal-container">
@@ -41,13 +46,13 @@ const CheckoutPage = () => {
         <li className="cart-nav">Order Complete</li>
       </ul>
 
-      <div className="cart-wrapper">
+      <div className="checkout-container">
         {cartItems.length === 0 ? (
           <div className="empty-cart">
             <p>No items in the cart yet.</p>
           </div>
         ) : (
-          <div className="checkout-container">
+          <>
             <div className="checkout-left">
               <section className="contact-info">
                 <h2>Contact information</h2>
@@ -83,55 +88,72 @@ const CheckoutPage = () => {
                 <input type="text" placeholder="Address" />
                 <input type="text" placeholder="+ Add apartment, suite, etc." />
               </section>
+
+              <div className="checkout-form-sections">
+ 
+  <section className="shipping-address">
+    <h2>Shipping Options</h2>
+    <div className="shipping-box">
+      <label className="shipping-label">
+        <input type="radio" checked readOnly />
+        <span className="shipping-text">Delivery Fee</span>
+      </label>
+      <span className="shipping-price">₦{DELIVERY_FEE.toLocaleString()}</span>
+    </div>
+  </section>
+</div>
+
+
+              <section className="shipping-address">
+                <h2>Payment options</h2>
+                <div className="payment-box">
+                  <div className="card-icons">
+                    <img src={assets.pay} alt="Payment options" />
+                  </div>
+                  <strong>Debit/Credit Cards</strong>
+                  <p>Make payment using your debit and credit cards</p>
+                </div>
+              </section>
+
+              <div className="note-wrapper">
+                <label className="note-label">
+                  <input
+                    type="checkbox"
+                    onChange={(e) => setShowNote(e.target.checked)}
+                  />
+                  <strong>Add a note to your order</strong>
+                </label>
+                {showNote && (
+                  <textarea
+                    placeholder="Write any special instructions for delivery..."
+                    className="note-textarea"
+                  />
+                )}
+              </div>
+
+              <p className="terms">
+                By proceeding with your purchase you agree to our
+                <a href="/terms"> Terms and Conditions</a> and
+                <a href="/privacy"> Privacy Policy</a>.
+              </p>
+
+              <button className="place-order-btn">Place Order</button>
             </div>
 
             <div className="checkout-right">
               <div className="order-summary">
                 <h3>Order summary</h3>
-                <div className="summary-item">
-                  <img src="/path-to-your-product-image.jpg" alt="product" />
-                  <div>
-                    <p className="item-title">ROOT INTENSE COMBO</p>
-                    <p className="item-price">₦10,700.00</p>
-                    <p className="item-desc">Loaded with nature’s healing roots, this blend detoxifies...</p>
-                  </div>
-                  <span className="item-quantity">3</span>
-                </div>
-
-                {/* Add more items as needed */}
-
-                <section className="shipping-method">
-                  <h2>Shipping options</h2>
-                  <div className="shipping-option-box">
-                    <input type="radio" checked readOnly />
-                    <span>Delivery Fee</span>
-                    <span className="shipping-price">₦1,800.00</span>
-                  </div>
-                </section>
-
-                <section className="payment-method">
-                  <h2>Payment options</h2>
-                  <div className="payment-box">
-                    <div className="card-icons">
-                      <img src="/paystack-logos.png" alt="Payment options" />
+                {cartItems.map((item) => (
+                  <div className="summary-item" key={item.id}>
+                    <img src={item.image} alt={item.name} />
+                    <div>
+                      <p className="item-title">{item.name}</p>
+                      <p className="item-price">₦{(item.price * item.quantity).toLocaleString()}</p>
+                      <p className="item-desc">{item.description}</p>
                     </div>
-                    <strong>Debit/Credit Cards</strong>
-                    <p>Make payment using your debit and credit cards</p>
+                    <span className="item-quantity">{item.quantity}</span>
                   </div>
-                </section>
-
-                <div className="note-checkbox">
-                  <input type="checkbox" id="note" />
-                  <label htmlFor="note"><strong>Add a note to your order</strong></label>
-                </div>
-
-                <p className="terms">
-                  By proceeding with your purchase you agree to our 
-                  <a href="/terms"> Terms and Conditions</a> and 
-                  <a href="/privacy"> Privacy Policy</a>
-                </p>
-
-                <button className="place-order-btn">Place Order</button>
+                ))}
 
                 <div className="coupon-section">
                   <label>Add a coupon</label>
@@ -142,22 +164,40 @@ const CheckoutPage = () => {
                 <div className="price-summary">
                   <div className="subtotal">
                     <span>Subtotal</span>
-                    <span>₦32,100.00</span>
+                    <span>₦{subtotal.toLocaleString()}</span>
                   </div>
                   <div className="delivery-fee">
                     <span>Delivery</span>
-                    <span>₦1,800.00</span>
+                    <span>₦{DELIVERY_FEE.toLocaleString()}</span>
+                  </div>
+                  <div className="total-row">
+                    <strong>Total</strong>
+                    <strong>₦{total.toLocaleString()}</strong>
                   </div>
                 </div>
-
               </div>
             </div>
-          </div>
+          </>
         )}
       </div>
+
+      <footer className="navFoot">
+        <div className="navmea">
+          <img src={assets.visa_c} alt="Visa" />
+          <img src={assets.master_c} alt="Mastercard" />
+          <img src={assets.bank_t} alt="Bank Transfer" />
+          <img src={assets.pal_pay} alt="PayPal" />
+        </div>
+        <h3 className="h3">Copyright 2025 <span>© So Fresh Neighbourhood Market</span></h3>
+      </footer>
     </div>
   );
 };
 
 export default CheckoutPage;
+
+
+
+
+
 

@@ -165,6 +165,7 @@ import vision from './vision.svg'
 import values from './values.png'
 import space from './space.webp'
 import whatsapp from './whatsapp_icon.png'
+import pay from './paystack-wc.png'
 
 
 
@@ -254,7 +255,8 @@ export const assets = {
          vision,
          values,
          space,
-         whatsapp
+         whatsapp,
+         pay
 
 }
 
