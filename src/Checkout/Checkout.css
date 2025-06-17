@@ -1,0 +1,136 @@
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem;
+}
+
+.checkout-left {
+  width: 60%;
+}
+
+.checkout-right {
+  width: 35%;
+  background-color: #fafafa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2, h3 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.name-fields {
+  display: flex;
+  gap: 1rem;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.delivery-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.option {
+  padding: 1rem;
+  flex: 1;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.option.selected {
+  border-color: black;
+  background-color: #f3f3f3;
+}
+
+.order-summary img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.summary-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.item-title {
+  font-weight: 600;
+}
+
+.item-desc {
+  font-size: 0.85rem;
+  color: gray;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #333;
+}
+
+.item-quantity {
+  position: absolute;
+  top: 0;
+  left: 45px;
+  background: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.coupon-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.apply-btn {
+  padding: 0.6rem 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.price-summary {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.price-summary div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}

@@ -6,6 +6,7 @@ import { assets } from '../assets/assests';
 import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
 import './AddToCart.css';
 import { useCart } from '../CartContext/CartContext.jsx';
+import CheckoutPage from '../Checkout/Checkout.jsx';
 
 const AddToCart = () => {
   const { cartItems, removeFromCart, addToCart, deleteFromCart } = useContext(CartContext);
@@ -19,10 +20,13 @@ const [isStateOpen, setIsStateOpen] = useState(false);
 const { cartCount } = useCart();
 
 
+
   const [selectedLocation, setSelectedLocation] = useState('');
   const [country, setCountry] = useState('');
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
+ 
+
 
   const DELIVERY_FEE = selectedLocation.toLowerCase().includes('free') ? 0 : 1800;
   const calculateSubtotal = () => cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
@@ -77,7 +81,9 @@ const { cartCount } = useCart();
 
       <ul className="carrt">
         <li className="cart-nav">Shopping Cart <ChevronRightIcon className="icon" /></li>
-        <li className="cart-nav">Checkout Details <ChevronRightIcon className="icon" /></li>
+        <li className='cart-nav'>  <Link to='/Checkout'>
+      Checkout Details <ChevronRightIcon className="icon" />
+    </Link></li>
         <li className="cart-nav">Order Complete</li>
       </ul>
 
@@ -262,6 +268,7 @@ const { cartCount } = useCart();
         </div>
         <h3 className="h3">Copyright 2025 <span>© So Fresh Neighbourhood Market</span></h3>
       </footer>
+
     </div>
   );
 };
