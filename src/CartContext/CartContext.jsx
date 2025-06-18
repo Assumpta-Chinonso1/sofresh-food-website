@@ -24,13 +24,25 @@ export const CartProvider = ({ children }) => {
 
   const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
+  const getTotalCartAmount = () => {
+    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+  };
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, cartCount, getCartItems: () => cartItems }}>
+    <CartContext.Provider
+      value={{
+        cartItems,
+        addToCart,
+        removeFromCart,
+        cartCount,
+        getCartItems: () => cartItems,
+        getTotalCartAmount // ✅ Make sure this is included
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
 };
-
 
 export const useCart = () => useContext(CartContext);*/
 
@@ -54,6 +66,12 @@ export const CartProvider = ({ children }) => {
   };
 
   const removeFromCart = (id) => {
+    setCartItems(cartItems.map(item =>
+      item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+    ).filter(item => item.quantity > 0));
+  };
+
+  const deleteFromCart = (id) => {
     setCartItems(cartItems.filter(item => item.id !== id));
   };
 
@@ -69,9 +87,10 @@ export const CartProvider = ({ children }) => {
         cartItems,
         addToCart,
         removeFromCart,
+        deleteFromCart, // ✅ Added here
         cartCount,
         getCartItems: () => cartItems,
-        getTotalCartAmount // ✅ Make sure this is included
+        getTotalCartAmount
       }}
     >
       {children}
@@ -80,5 +99,6 @@ export const CartProvider = ({ children }) => {
 };
 
 export const useCart = () => useContext(CartContext);
+
 
 

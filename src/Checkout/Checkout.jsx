@@ -26,6 +26,22 @@ const CheckoutPage = () => {
     alert(`Coupon "${couponCode}" applied!`);
   };
 
+  const statesInLagos = [
+    'Opebi (Ikeja), Lagos',
+    'Yaba, Lagos',
+    'Lekki Phase 1, Lagos',
+    'Surulere, Lagos',
+    'Victoria Island, Lagos'
+  ];
+
+  const countries = [
+    'Nigeria',
+    'Ghana',
+    'Kenya',
+    'South Africa',
+    'Egypt'
+  ];
+
   return (
     <div className="navmeal-container">
       <nav className="navsss">
@@ -108,28 +124,43 @@ const CheckoutPage = () => {
                 </div>
               </section>
 
-              {deliveryMethod === 'ship' ? (
-                <>
-                  <section className="shipping-address">
+              <section className="shipping-address">
+                {deliveryMethod === 'ship' ? (
+                  <>
                     <h2>Shipping address</h2>
                     <p>Enter the address where you want your order delivered.</p>
-                    <select>
-                      <option>Nigeria</option>
+                    <select defaultValue="Nigeria">
+                      {countries.map((country, index) => (
+                        <option key={index} value={country}>{country}</option>
+                      ))}
                     </select>
+
                     <div className="name-fields">
                       <input type="text" placeholder="First name" />
                       <input type="text" placeholder="Last name" />
                     </div>
+
                     <input type="text" placeholder="Address" />
                     <p className='p'>+ Add apartment, suite, etc.</p>
+
                     <div className="name-fields">
                       <input type="text" placeholder="City" />
-                      <input type="text" placeholder="State" />
+                      <select defaultValue="Opebi (Ikeja), Lagos">
+                        <option disabled>Choose your area in Lagos</option>
+                        {statesInLagos.map((state, index) => (
+                          <option key={index} value={state}>{state}</option>
+                        ))}
+                      </select>
                     </div>
-                    <input type="tel" placeholder="Phone number" />
-                  </section>
 
-                  <div className="checkout-form-sections">
+                    <input type="tel" placeholder="Phone number" />
+                    <div className="checkbox-wrapper">
+                      <input type="checkbox" id="subscribe" />
+                      <label htmlFor="subscribe">
+                        Use same address for billing
+                      </label>
+                    </div>
+
                     <section className="shipping-address">
                       <h2>Shipping Options</h2>
                       <div className="shipping-box">
@@ -140,23 +171,33 @@ const CheckoutPage = () => {
                         <span className="shipping-price">₦{DELIVERY_FEE.toLocaleString()}</span>
                       </div>
                     </section>
-                  </div>
-                </>
-              ) : (
-                <section className="shipping-address">
-                  <div className='name-fields'>
-                    <input type="text" placeholder="First name" />
-                    <input type="text" placeholder="Last name" />
-                  </div>
-                  <input type="text" placeholder="Pickup address or landmark" />
-                  <p>+ Add apartment, suite,</p>
-                  <div className='name-fields'>
-                    <input type="text" placeholder="City" />
-                    <input type="text" placeholder="State" />
-                  </div>
-                  <input type="tel" placeholder="Phone number" />
-                </section>
-              )}
+                  </>
+                ) : (
+                  <>
+                    <div className='name-fields'>
+                      <input type="text" placeholder="First name" />
+                      <input type="text" placeholder="Last name" />
+                    </div>
+                    <input type="text" placeholder="Pickup address or landmark" />
+                    <p>+ Add apartment, suite,</p>
+                    <div className='name-fields'>
+                      <input type="text" placeholder="City" />
+                      <select defaultValue="Opebi (Ikeja), Lagos">
+                        {statesInLagos.map((state, index) => (
+                          <option key={index} value={state}>{state}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <input type="tel" placeholder="Phone number" />
+                    <div className="checkbox-wrapper">
+                      <input type="checkbox" id="subscribe" />
+                      <label htmlFor="subscribe">
+                        Use same address for billing
+                      </label>
+                    </div>
+                  </>
+                )}
+              </section>
 
               <section className="shipping-address">
                 <h2>Payment options</h2>
@@ -206,15 +247,15 @@ const CheckoutPage = () => {
                   </div>
                 ))}
 
-                <div className="coupon-section">
-                  <div className="coupon-toggle" onClick={() => setShowCoupon(!showCoupon)}>
+                <div className="coupon-sections">
+                  <div className="coupon-toggles" onClick={() => setShowCoupon(!showCoupon)}>
                     <span>Add a coupon</span>
                     <ChevronDownIcon className={`icon ${showCoupon ? 'rotated' : ''}`} />
                   </div>
 
                   {showCoupon && (
-                    <div className="coupon-content">
-                      <div className="coupon-row">
+                    <div className="coupon-contents">
+                      <div className="coupon-rows">
                         <input
                           type="text"
                           id="coupon"
@@ -266,6 +307,8 @@ const CheckoutPage = () => {
 };
 
 export default CheckoutPage;
+
+
 
 
 
