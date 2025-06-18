@@ -1,73 +1,135 @@
+/* ========== GENERAL LAYOUT ========== */
 .checkout-container {
   display: flex;
   justify-content: space-around;
   gap: 3rem;
+  padding: 8rem;
+  margin-bottom: 10px;
   font-family: 'Poppins', sans-serif;
-  padding: 7rem;
-  margin-bottom: 100px;
 }
 
 .checkout-left {
-  width: 60%;
+  width: 70%;
 }
 
 .checkout-right {
-  width: 35%;
+  width: 40%;
   background-color: #fafafa;
-  padding: 1.5rem;
-  border-radius: 8px;
+  padding: 2.5rem;
+  border-radius: 2px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
+/* ========== HEADINGS & FORM ELEMENTS ========== */
+.h2{
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.adde{
+  font-weight: 500;
+  font-size: 1.0rem;
+  color: #9b9292;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 1.7rem;
 }
 
-h2, h3 {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+.email-input {
+  margin-bottom: 0.2rem !important;  
 }
 
-input,
-select  {
+.checkout-note {
+  margin-top: 0 !important;        
+  padding-top: 0 !important;         
+  font-size: 0.9rem;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+}
+
+
+
+/* Exclude checkboxes from global input style */
+input:not([type="checkbox"]),
+select {
   width: 90%;
-  padding: 0.75rem;
+  padding: 1rem;
+  margin-right: 4rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
 }
 
-.name-fields {
+/* Checkbox wrapper style */
+.checkbox-wrapper {
   display: flex;
-  gap: 1rem;
-}
-
-.checkbox-group {
-  display: inline-flex;
   align-items: center;
-  font-size: 0.95rem;
   font-family: 'Poppins', sans-serif;
-  color: #333;
-  margin-right: 20rem;
+  font-size: 0.95rem;
+  color: #000;
+  margin: 1rem 0;
 }
 
-.checkbox-group input[type="checkbox"] {
-  transform: scale(1.1);
-  margin-right: 0.1rem; 
+.checkbox-wrapper input[type="checkbox"] {
+  margin: 0;
+  margin-right: 0.5rem;
   accent-color: #333;
+  transform: scale(1.1);
+}
+
+.checkbox-wrapper label {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
 }
 
 
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #000; /* Ensures black text */
+  margin: 1rem 0;
+  padding: 0; /* remove extra space */
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  margin: 0;
+  margin-right: 0.5rem;
+  accent-color: #333;
+  transform: scale(1.1);
+}
+
+.checkbox-wrapper label {
+  color: #000; /* black text */
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+/* ========== ADDRESS FORM ========== */
+
+
+/* ========== DELIVERY OPTIONS ========== */
 .delivery-options {
   display: flex;
   gap: 1rem;
 }
 
 .option {
-  padding: 1rem;
   flex: 1;
+  padding: 1rem;
   border: 2px solid #ccc;
   border-radius: 6px;
   background: white;
@@ -75,11 +137,7 @@ select  {
   cursor: pointer;
 }
 
-.option.selected {
-  border-color: black;
-  background-color: #f3f3f3;
-}
-
+/* ========== ORDER SUMMARY ========== */
 .order-summary img {
   width: 50px;
   height: 50px;
@@ -119,7 +177,7 @@ select  {
   font-weight: bold;
 }
 
-/* Coupon Section */
+/* ========== COUPON SECTION ========== */
 .coupon-section {
   margin-top: 20px;
   display: flex;
@@ -148,39 +206,13 @@ select  {
   background-color: #888;
 }
 
-
-/*Note Wrapper checkbox*/
-
-.note-wrapper {
-  margin: 1rem 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-.note-label {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #333;
-  vertical-align: middle;
-}
-
-.note-label input[type="checkbox"] {
-  transform: scale(1.1);
-  margin-right: 0.1rem; 
-  accent-color: #333;
-}
-
-
-
-/* Wrapper for all form sections */
+/* ========== SHIPPING OPTIONS BOX ========== */
 .checkout-form-sections {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-top: 2rem;
 }
-
 
 .shipping-box {
   display: flex;
@@ -194,7 +226,6 @@ select  {
   font-size: 1rem;
   font-family: 'Poppins', sans-serif;
   width: 100%;
-  max-width: 100%;
 }
 
 .shipping-label {
@@ -219,8 +250,7 @@ select  {
   color: #333;
 }
 
-
-/* Payment Box */
+/* ========== PAYMENT BOX ========== */
 .payment-box {
   background-color: #f5f5f5;
   padding: 15px;
@@ -233,7 +263,7 @@ select  {
   margin-right: 10px;
 }
 
-/* Terms & Conditions */
+/* ========== TERMS & CONDITIONS ========== */
 .terms {
   margin-top: 30px;
   font-size: 0.9rem;
@@ -250,11 +280,11 @@ select  {
   text-decoration: underline;
 }
 
-/* Place Order Button */
+/* ========== PLACE ORDER BUTTON ========== */
 .place-order-btn {
   margin-top: 20px;
   background-color: #5c4033;
-  color: #fff;
+  color: white;
   padding: 14px 20px;
   border: none;
   border-radius: 6px;
@@ -262,26 +292,86 @@ select  {
   font-weight: 600;
   cursor: pointer;
   width: 100%;
-}
-
-.place-order-btn:hover {
-  background-color: #5c4033;
-}
-
-
-
-/* Place Order Button */
-.place-order-btn {
-  padding: 0.75rem 2rem;
-  background-color: #5c4033; 
-  color: white;
-  font-weight: 600;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .place-order-btn:hover {
   background-color: #4a322a;
 }
+
+
+.name-fields {
+  display: flex;
+  gap: 1rem;
+}
+
+.checkbox-group {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin-right: 20rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  transform: scale(1.1);
+  margin-right: 0.1rem; 
+  accent-color: #333;
+}
+
+
+.delivery-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.option {
+  padding: 1rem;
+  flex: 1;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.order-summary img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.summary-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.item-title {
+  font-weight: 600;
+}
+
+.item-desc {
+  font-size: 0.85rem;
+  color: gray;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #333;
+}
+
+.item-quantity {
+  position: absolute;
+  top: 0;
+  left: 45px;
+  background: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+

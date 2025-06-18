@@ -85,7 +85,7 @@ const currentPath = location.pathname;
 
       <ul className="carrt">
   <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
-    <Link to="/cart">
+    <Link to="/add">
       Shopping Cart <ChevronRightIcon className="icon" />
     </Link>
   </li>

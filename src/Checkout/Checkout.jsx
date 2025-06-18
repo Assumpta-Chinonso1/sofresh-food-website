@@ -1,21 +1,30 @@
 import React, { useContext, useState } from 'react';
 import './Checkout.css';
-import { Link } from 'react-router-dom';
-import { ChevronRightIcon } from '@heroicons/react/16/solid';
+import { Link, useLocation } from 'react-router-dom';
+import { ChevronRightIcon, ChevronDownIcon } from '@heroicons/react/16/solid';
 import { assets } from '../assets/assests';
 import { CartContext } from '../CartContext/CartContext';
-import { useLocation } from 'react-router-dom';
 
 const CheckoutPage = () => {
-  const { cartItems, cartCount } = useContext(CartContext);
+  const { cartItems, getTotalCartAmount, cartCount } = useContext(CartContext);
   const [showNote, setShowNote] = useState(false);
-
+  const [deliveryMethod, setDeliveryMethod] = useState('ship');
+  const [showCoupon, setShowCoupon] = useState(false);
+  const [couponCode, setCouponCode] = useState('');
   const location = useLocation();
-const currentPath = location.pathname;
+  const currentPath = location.pathname;
 
-  const DELIVERY_FEE = 1800;
-  const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  const total = subtotal + DELIVERY_FEE;
+  const DELIVERY_FEE = 1000;
+  const subtotal = getTotalCartAmount();
+  const total = deliveryMethod === 'ship' ? subtotal + DELIVERY_FEE : subtotal;
+
+  const handleApplyCoupon = () => {
+    if (couponCode.trim() === '') {
+      alert('Please enter a coupon code.');
+      return;
+    }
+    alert(`Coupon "${couponCode}" applied!`);
+  };
 
   return (
     <div className="navmeal-container">
@@ -43,32 +52,21 @@ const currentPath = location.pathname;
       </header>
 
       <hr />
-
-       {/*<ul className="carrt">
-        <li className="cart-nav">Shopping Cart <ChevronRightIcon className="icon" /></li>
-        <li className="cart-nav">Checkout Details <ChevronRightIcon className="icon" /></li>
-        <li className="cart-nav">Order Complete</li>
-      </ul>*/}
-
-       <ul className="carrt">
-  <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
-    <Link to="/add">
-      Shopping Cart <ChevronRightIcon className="icon" />
-    </Link>
-  </li>
-
-  <li className={`cart-nav ${currentPath === '/Checkout' ? 'active' : ''}`}>
-    <Link to="/Checkout">
-      Checkout Details <ChevronRightIcon className="icon" />
-    </Link>
-  </li>
-
-  <li className={`cart-nav ${currentPath === '/complete' ? 'active' : ''}`}>
-    <Link to="/complete">
-      Order Complete
-    </Link>
-  </li>
-</ul>
+      <ul className="carrt">
+        <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
+          <Link to="/add">
+            Shopping Cart <ChevronRightIcon className="icon" />
+          </Link>
+        </li>
+        <li className={`cart-nav ${currentPath === '/Checkout' ? 'active' : ''}`}>
+          <Link to="/Checkout">
+            Checkout Details <ChevronRightIcon className="icon" />
+          </Link>
+        </li>
+        <li className={`cart-nav ${currentPath === '/complete' ? 'active' : ''}`}>
+          <Link to="/complete">Order Complete</Link>
+        </li>
+      </ul>
 
       <div className="checkout-container">
         {cartItems.length === 0 ? (
@@ -79,10 +77,11 @@ const currentPath = location.pathname;
           <>
             <div className="checkout-left">
               <section className="contact-info">
-                <h2>Contact information</h2>
-                <p>We'll use this email to send you details and updates about your order.</p>
-                <input type="email" placeholder="Email address" />
-                <div className="checkbox-group">
+                <h2 className='h2'>Contact information</h2>
+                <p className='adde'>We'll use this email to send you details and updates about your order.</p>
+                <input type="email" placeholder="Email address" className="email-input" />
+                <p className="checkout-note">You are currently checking out as a guest.</p>
+                <div className="checkbox-wrapper">
                   <input type="checkbox" id="subscribe" />
                   <label htmlFor="subscribe">
                     I would like to receive exclusive emails with discounts and product information
@@ -94,39 +93,70 @@ const currentPath = location.pathname;
                 <h2>Delivery</h2>
                 <p>Select how you would like to receive your order.</p>
                 <div className="delivery-options">
-                  <button className="option selected">🚚 Ship</button>
-                  <button className="option">🏬 Pickup</button>
+                  <button
+                    className={`option ${deliveryMethod === 'ship' ? 'selected' : ''}`}
+                    onClick={() => setDeliveryMethod('ship')}
+                  >
+                    🚚 Ship
+                  </button>
+                  <button
+                    className={`option ${deliveryMethod === 'pickup' ? 'selected' : ''}`}
+                    onClick={() => setDeliveryMethod('pickup')}
+                  >
+                    🏬 Pickup
+                  </button>
                 </div>
               </section>
 
-              <section className="shipping-address">
-                <h2>Shipping address</h2>
-                <p>Enter the address where you want your order delivered.</p>
-                <select>
-                  <option>Nigeria</option>
-                </select>
-                <div className="name-fields">
-                  <input type="text" placeholder="First name" />
-                  <input type="text" placeholder="Last name" />
-                </div>
-                <input type="text" placeholder="Address" />
-                <input type="text" placeholder="+ Add apartment, suite, etc." />
-              </section>
+              {deliveryMethod === 'ship' ? (
+                <>
+                  <section className="shipping-address">
+                    <h2>Shipping address</h2>
+                    <p>Enter the address where you want your order delivered.</p>
+                    <select>
+                      <option>Nigeria</option>
+                    </select>
+                    <div className="name-fields">
+                      <input type="text" placeholder="First name" />
+                      <input type="text" placeholder="Last name" />
+                    </div>
+                    <input type="text" placeholder="Address" />
+                    <p className='p'>+ Add apartment, suite, etc.</p>
+                    <div className="name-fields">
+                      <input type="text" placeholder="City" />
+                      <input type="text" placeholder="State" />
+                    </div>
+                    <input type="tel" placeholder="Phone number" />
+                  </section>
 
-              <div className="checkout-form-sections">
- 
-  <section className="shipping-address">
-    <h2>Shipping Options</h2>
-    <div className="shipping-box">
-      <label className="shipping-label">
-        <input type="radio" checked readOnly />
-        <span className="shipping-text">Delivery Fee</span>
-      </label>
-      <span className="shipping-price">₦{DELIVERY_FEE.toLocaleString()}</span>
-    </div>
-  </section>
-</div>
-
+                  <div className="checkout-form-sections">
+                    <section className="shipping-address">
+                      <h2>Shipping Options</h2>
+                      <div className="shipping-box">
+                        <label className="shipping-label">
+                          <input type="radio" checked readOnly />
+                          <span className="shipping-text">Delivery Fee</span>
+                        </label>
+                        <span className="shipping-price">₦{DELIVERY_FEE.toLocaleString()}</span>
+                      </div>
+                    </section>
+                  </div>
+                </>
+              ) : (
+                <section className="shipping-address">
+                  <div className='name-fields'>
+                    <input type="text" placeholder="First name" />
+                    <input type="text" placeholder="Last name" />
+                  </div>
+                  <input type="text" placeholder="Pickup address or landmark" />
+                  <p>+ Add apartment, suite,</p>
+                  <div className='name-fields'>
+                    <input type="text" placeholder="City" />
+                    <input type="text" placeholder="State" />
+                  </div>
+                  <input type="tel" placeholder="Phone number" />
+                </section>
+              )}
 
               <section className="shipping-address">
                 <h2>Payment options</h2>
@@ -141,10 +171,7 @@ const currentPath = location.pathname;
 
               <div className="note-wrapper">
                 <label className="note-label">
-                  <input
-                    type="checkbox"
-                    onChange={(e) => setShowNote(e.target.checked)}
-                  />
+                  <input type="checkbox" onChange={(e) => setShowNote(e.target.checked)} />
                   <strong>Add a note to your order</strong>
                 </label>
                 {showNote && (
@@ -180,9 +207,27 @@ const currentPath = location.pathname;
                 ))}
 
                 <div className="coupon-section">
-                  <label>Add a coupon</label>
-                  <input type="text" placeholder="Enter code" />
-                  <button className="apply-btn">Apply</button>
+                  <div className="coupon-toggle" onClick={() => setShowCoupon(!showCoupon)}>
+                    <span>Add a coupon</span>
+                    <ChevronDownIcon className={`icon ${showCoupon ? 'rotated' : ''}`} />
+                  </div>
+
+                  {showCoupon && (
+                    <div className="coupon-content">
+                      <div className="coupon-row">
+                        <input
+                          type="text"
+                          id="coupon"
+                          className="coupon-input"
+                          value={couponCode}
+                          onChange={(e) => setCouponCode(e.target.value)}
+                          placeholder="Enter code"
+                        />
+                        <button className="apply-btn" onClick={handleApplyCoupon}>Apply</button>
+                      </div>
+                    </div>
+                  )}
+                  <hr />
                 </div>
 
                 <div className="price-summary">
@@ -190,10 +235,12 @@ const currentPath = location.pathname;
                     <span>Subtotal</span>
                     <span>₦{subtotal.toLocaleString()}</span>
                   </div>
-                  <div className="delivery-fee">
-                    <span>Delivery</span>
-                    <span>₦{DELIVERY_FEE.toLocaleString()}</span>
-                  </div>
+                  {deliveryMethod === 'ship' && (
+                    <div className="delivery-fee">
+                      <span>Delivery</span>
+                      <span>₦{DELIVERY_FEE.toLocaleString()}</span>
+                    </div>
+                  )}
                   <div className="total-row">
                     <strong>Total</strong>
                     <strong>₦{total.toLocaleString()}</strong>
@@ -222,6 +269,4 @@ export default CheckoutPage;
 
 
 
-
-
-
+ 
