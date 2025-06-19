@@ -1,128 +1,201 @@
 
-
-   .navbar {
+/* === GENERAL === */
+.navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  padding: 30px 0;
+  padding: 20px 30px;
   display: flex;
-  justify-content: space-evenly;
-  height: 80px;
+  justify-content: space-between;
   align-items: center;
-  background-color: white; 
-  margin-top: 0;  
+  background-color: white;
+  height: 80px;
 }
 
+.logo {
+  width: 8vh;
+  cursor: pointer;
+}
 
-.navbar .logo{
+/* === NAV MENU DESKTOP === */
+.navbar-menu.desktop-only {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin-right: 800px;
+  font-size: 18px;
+}
+
+.navbar li {
+  cursor: pointer;
+}
+
+.navbar li:hover {
+  color: rgb(31, 198, 31);
+  transition: 0.3s ease;
+}
+
+/* === ICON & RIGHT SIDE === */
+.icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* === BUTTON === */
+.btn {
+  background-color: orange;
+  font-size: 18px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: green;
+}
+
+/* === MOBILE ONLY === */
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+
+  .logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
     width: 8vh;
-    cursor: pointer;
-}
+    z-index: 1002;
+  }
 
-.navbar-menu{
-    display: flex;
-    list-style: none;
-    gap: 50px;
+  .hamburger {
+    display: block;
+    z-index: 1001;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .hamburger:hover,
+  .hamburger.active {
+    color: orange;
+  }
+
+  /* Orange line full-width */
+  .mobile-top-line {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: orange;
+    z-index: 998;
+  }
+
+  /* Full screen dropdown */
+  .navbar-menu.mobile-only {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    padding-top: 120px;
+    gap: 35px; /* more space between items */
+    font-size: 20px;
+    z-index: 999;
+    text-align: center;
+  }
+
+  .navbar-menu li {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar-menu li a {
     color: black;
-    padding-right: 200px;
-    font-size: 18px;
-}
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+  }
 
-.navbar-right{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
+  /* Nice orange separator */
+  .mobile-separator {
+     position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: orange;
+    z-index: 1000;
+  }
 
 
-.navbar .icon{
-    width: 20px;
-    height: 20px;
-    margin-left: 50vh;
-}
-
-.navbar li{
-    cursor: pointer;
-}
-.navbar li:hover{
-    color: rgb(31, 198, 31);
-    transition: 2s;
-}
-
-  .btn{
-background-color: transparent;
-font-size: 20px;
-color: white;
-border: none;
-background-color: orange;
-padding: 10px 20px;
-border-radius: 50px;
-
-}
-
-.btn:hover{
-    background-color: green;
-    transition: 2s;
-    cursor: pointer;
+  .mobile-top-line {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: orange;
+  z-index: 5;
 }
 
 
- /*.navbar{
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-evenly;
-    height: 100px;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.navbar .logo{
-    width: 10vh;
-    cursor: pointer;
-}
-
-.navbar-menu{
-    display: flex;
-    list-style: none;
-    gap: 50px;
-    color: black;
-    padding-right: 200px;
-    font-size: 18px;
-}
-
-.navbar-right{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-
-.navbar .icon{
+  /* Search icon in menu */
+  .navbar-menu .icon {
     width: 30px;
-    margin-left: 60vh;
+    height: 30px;
+    color: green;
+  }
+
+  .btn {
+    width: 30%;
+    max-width: 200px;
+    text-align: center;
+    font-size: 18px;
+    padding: 6px 7px;
+    gap: 50px;
+    margin-left: 90px;
+  }
+
+  /* Show/hide logic */
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .navbar-right {
+    display: none;
+  }
 }
 
-.navbar li{
-    cursor: pointer;
-}
-.navbar li:hover{
-    color: rgb(31, 198, 31);
-    transition: 2s;
-}
 
-  .btn{
-background-color: transparent;
-font-size: 20px;
-color: white;
-border: none;
-background-color: orange;
-padding: 10px 20px;
-border-radius: 50px;
-}
 
-.btn:hover{
-    background-color: green;
-    transition: 2s;
-    cursor: pointer;
-}*/
+

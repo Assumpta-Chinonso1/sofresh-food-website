@@ -53,3 +53,51 @@
   max-width: 700px;
   height: auto;
 }
+
+@media (max-width: 768px) {
+  .discount-explore-container {
+    flex-direction: column-reverse; /* ✅ show image first */
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .discount-image {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .discount-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .discount-text {
+    max-width: 100%;
+  }
+
+  .discount-text h1 {
+    font-size: 26px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+  .discount-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .discount-text h3 {
+    font-size: 15px;
+    color: #4caf50;
+    margin-bottom: 20px;
+  }
+
+  .discount-text .btn {
+    margin-top: 10px;
+    display: inline-block;
+  }
+}
