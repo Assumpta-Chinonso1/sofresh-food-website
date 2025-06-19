@@ -101,7 +101,7 @@
     color: orange;
   }
 
-  /* Orange line full-width */
+  /* Orange line full-width 
   .mobile-top-line {
     position: fixed;
     top: 80px;
@@ -157,6 +157,17 @@
 
 
   .mobile-top-line {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: orange;
+  z-index: 998;
+}
+
+
+  /*.mobile-top-line {
   position: absolute;
   bottom: 30px;
   left: 0;

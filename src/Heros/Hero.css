@@ -63,11 +63,12 @@
     height: auto;
     padding: 5px 19px;
     background-size: cover;
+
   }
 
   .hero {
     position: static;
-    max-width: 110%;
+    max-width: 100%;
     align-items: center;
     text-align: center;
   }
@@ -87,7 +88,8 @@
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-right: 170px;
+   margin: 20px auto 30px;
+  display: block;
   margin-bottom: 30px;
   }
 }
