@@ -42,7 +42,7 @@
   opacity: 0.9;
 }
 
-.btn {
+.clib{
   background-color: orange;
   font-size: 16px;
   color: white;
@@ -53,21 +53,21 @@
   transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.clib:hover {
   background-color: green;
 }
 
 /* Responsive Hero */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .Hero {
     height: auto;
-    padding: 20px 10px;
+    padding: 5px 19px;
     background-size: cover;
   }
 
   .hero {
     position: static;
-    max-width: 100%;
+    max-width: 110%;
     align-items: center;
     text-align: center;
   }
@@ -78,9 +78,16 @@
     margin-right: 20px;
   }
 
-  .btn {
-    font-size: 16px;
-    padding: 5px;
-    margin-right: 100px;
+  .clib{
+  background-color: orange;
+  font-size: 18px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 170px;
+  margin-bottom: 30px;
   }
 }

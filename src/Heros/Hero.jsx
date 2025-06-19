@@ -23,7 +23,7 @@ const Hero = () => {
           <span>It's A Lifestyle</span>
         </h1>
         <br />
-        <button onClick={handleOrderClick} className='btn'>Order Now</button>
+        <button onClick={handleOrderClick} className='clib'>Order Now</button>
         {showPopUp && <Order onClose={closePopUp} />}
       </div>
     </div>

@@ -54,7 +54,7 @@
   height: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .discount-explore-container {
     flex-direction: column-reverse; /* ✅ show image first */
     text-align: center;
