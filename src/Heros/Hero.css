@@ -58,7 +58,7 @@
 }
 
 /* Responsive Hero */
-@media (max-width: 720px) {
+@media (max-width: 620px) {
   .Hero {
     height: auto;
     padding: 5px 19px;
