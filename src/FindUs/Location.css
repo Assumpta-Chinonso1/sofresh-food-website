@@ -35,43 +35,55 @@
   box-shadow: 0 5px 5px rgb(0, 0, 0, #ddd);
 }
 
-
-
-
-
-.search-box {
+.search-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  border: 1px solid #ccc;
-  overflow: hidden;
-  background-color: #fff;
+  position: sticky;
+  top: 0;
+  background-color: #f9f5ef;
+  padding: 10px 0;
+  z-index: 10;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
 }
 
-.search-box input {
-  flex: 1;
-  border: none;
-  outline: none;
-  padding: 8px 12px;
-  font-size: 14px;
+.search-form {
+  width: 100%;
 }
 
 .search-button {
-  background-color: transparent;
-  border: none;
-  padding: 8px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px 20px;
+  border-radius: 3px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.search-button img {
-  width: 16px;
-  height: 16px;
+.search-icon {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) saturate(100%) invert(44%) sepia(87%) saturate(557%) hue-rotate(1deg) brightness(99%) contrast(92%);
 }
+
 
 .store-count {
-  margin-top: 8px;
-  font-size: 13px;
+  position: absolute;
+  bottom: -30px; 
+  left: 0;
+  font-size: 12px;
   color: #555;
+  padding-left: 4px;
 }
+
 
 /* Store cards */
 .location-cards-container {
@@ -133,3 +145,81 @@
 }
 
 
+
+
+
+ @media (max-width: 768px) {
+  .location-page {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .location-left {
+    width: 100%;
+    padding: 20px;
+    height: 80vh;
+    overflow-y: auto;
+  }
+
+  .search-container {
+    position: sticky;
+    top: 0;
+    background-color: #f9f5ef;
+    z-index: 1000;
+    padding: 1px 0;
+  }
+
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    padding: 5px 10px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /*.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .search-button {
+    background: transparent;
+    border: none;
+    padding-left: 10px;
+    cursor: pointer;
+  }*/
+
+  .search-button img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) saturate(100%) invert(58%) sepia(80%) saturate(418%) hue-rotate(357deg) brightness(95%) contrast(95%);
+  }
+
+  .location-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .location-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 10px;
+  }
+
+  .location-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .location-right {
+    display: none;
+  }
+}
