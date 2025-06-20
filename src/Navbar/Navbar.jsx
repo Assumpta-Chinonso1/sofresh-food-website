@@ -46,7 +46,7 @@ const Navbar = () => {
       {/* Orange line under navbar */}
       {menuOpen && <div className="mobile-top-line mobile-only"></div>}
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu *
       {menuOpen && (
         <ul className={`navbar-menu mobile-only open`}>
           <div className="mobile-separator"></div>
@@ -55,7 +55,31 @@ const Navbar = () => {
           <li><img src={assets.search_icon} alt="search" className='icon' /></li>
           <li><button onClick={handleOrderClick} className='btn'>Order Now</button></li>
         </ul>
-      )}
+      )}*/}
+
+      {menuOpen && (
+  <ul className={`navbar-menu mobile-only open`}>
+    <div className="mobile-separator"></div>
+    <li>
+      <Link to='/menu' onClick={() => setMenuOpen(false)}>Our Menu</Link>
+    </li>
+    <li>
+      <Link to='/location' onClick={() => setMenuOpen(false)}>Find Us</Link>
+    </li>
+    <li>
+      <img src={assets.search_icon} alt="search" className='icon' />
+    </li>
+    <li>
+      <button onClick={() => {
+        handleOrderClick();
+        setMenuOpen(false);
+      }} className='btn'>
+        Order Now
+      </button>
+    </li>
+  </ul>
+)}
+
 
       {/* Desktop Right Side */}
       <div className="navbar-right desktop-only">
