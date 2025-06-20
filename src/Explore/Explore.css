@@ -1,164 +1,4 @@
-/*.exploremenu {
-  display: flex;
-  flex-direction: column;
-  padding: 30px 20px;
-  background-color: #fffef9;
-  font-family: 'Poppins', sans-serif;
-}
 
-.exploremenu-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.exploremenu h1 {
-  font-size: 40px;
-  font-weight: 800;
-  color: #171212;
-  margin-bottom: 1rem;
-}
-
-.menu-gradient {
-  background: linear-gradient(to right, #f77f00, #fcbf49);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-}
-
-.menu-arrow {
-  width: 20px;
-  height: 20px;
-  margin-left: 5px;
-  transition: transform 0.3s;
-}
-
-.menu-label:hover {
-  color: green;
-}
-
-.menu-label:hover .menu-arrow {
-  transform: rotateY(180deg);
-  transition: transform 1s;
-}
-
-.menu-arrow {
-  width: 20px;
-  height: 20px;
-  margin-left: 5px;
-  transition: transform 0.3s;
-}
-
-.explore-menu-lists {
-  position: relative;
-  width: 110%;
-  overflow: hidden;
-  padding: 3rem 1rem;
-  box-sizing: border-box;
-}
-
-  .explore-menu-item {
-  display: flex;
-  gap: 9px;
-  overflow-x: auto;
-  scroll-behavior: auto;
-  padding: 1rem;
-  scrollbar-width: none;
-}
-
-.explore-menu-item::-webkit-scrollbar {
-  display: none;
-}
-
-.scroll-arrow-left,
-.scroll-arrow-right {
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  z-index: 100;
-  border: 3px solid #f77f00;
-  border-radius: 30px;
-  width: 30px;
-  height: 30px;
-  color: #f77f00;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.scroll-arrow-left {
-  left: 0.5rem;
-}
-
-.scroll-arrow-left:hover {
-  background-color: #f77f00;
-  color: #fff;
-  transition: 1s;
-}
-
-.scroll-arrow-right {
-  left: 82rem;
-}
-
-.scroll-arrow-right:hover {
-  background-color: #f77f00;
-  color: #fff;
-  transition: 1s;
-}
-
-.arrow-left,
-.arrow-right {
-  width: 20px;
-  height:20px;
-}
-
-.explore-menu-list {
-  min-width: 250px;
-  background: white;
-  border-radius: 10px;
-  padding: 10px;
-  text-align: center;
-  transition: transform 0.2s;
-}
-
-.explore-menu-list:hover {
-  transform: scale(1.05);
-}
-
-.explore-menu-list img {
-  width: 210px;
-  height: 210px;
-  border-radius: 8px;
-  transition: transform 1s;
-  object-fit: cover;
-}
-
-.explore-menu-list img:hover {
-  transform: scale(1.05);
-}
-
-.explore-menu-list p {
-  font-weight: 600;
-  margin-top: 1.2rem;
-  color: #000;
-  font-size: 1rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.explore-menu-list h2 {
-  margin-top: 0.6rem;
-  font-size: 0.95rem;
-  color: black;
-}
-
-.explore-menu-list .menu {
-  color: #f77f00;
-  font-weight: 600;
-  margin-left: 0.2rem;
-}*/
 
 .exploremenu {
   display: flex;
@@ -250,8 +90,8 @@
 }
 
  .explore-menu-list img {
-  width: 15vw;
-  height: 16vw;
+  width: 90%;
+  height: 60%;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -279,14 +119,14 @@
 .scroll-arrow-left,
 .scroll-arrow-right {
   position: absolute;
-  top: 40%;
+  top: 30%;
   transform: translateY(-50%);
-  z-index: 10;
+  z-index: 0;
   border: 2px solid #f77f00;
-  background-color: white;
+  background-color: rgb(252, 251, 251);
   border-radius: 50%;
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   color: #f77f00;
   cursor: pointer;
   display: flex;
@@ -302,11 +142,11 @@
 }
 
 .scroll-arrow-left {
-  left: 1px;
+  left: 20px;
 }
 
 .scroll-arrow-right {
-  right: 1px;
+  right: 20px;
 }
 
 
@@ -317,7 +157,7 @@
 /* === Mobile Responsive === */
 @media (max-width: 768px) {
   .exploremenu {
-    padding: 60px 20px;
+    padding: 10px 20px;
     text-align: center;
   }
 
@@ -325,12 +165,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 1px;
+    margin-bottom: 1px;
   }
 
+
   .exploremenu h1 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 0;
   }
 
@@ -340,29 +181,28 @@
 
   
   .explore-menu-lists {
-    padding: 2rem 1rem;
+    padding: 1rem 3rem;
     position: relative;
   }
 
   .explore-menu-item {
     justify-content: center;
-    padding: 1rem 0;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
   }
 
   .explore-menu-list {
     scroll-snap-align: center;
-    min-width: 85%;
+    min-width: 100%;
     margin: auto;
   }
 
   .scroll-arrow-left,
   .scroll-arrow-right {
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
   }
 
   .arrow-left,

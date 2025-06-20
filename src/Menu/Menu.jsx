@@ -1,6 +1,7 @@
  import React, { useState } from 'react';
 import './Menu.css';
 import { Allcategories } from '../assets/assests';
+import Footer from '../Footer/Footer';
 
 const categories = [
   'All Categories',
@@ -55,6 +56,9 @@ const Menu = () => {
           </div>
         ))}
       </div>
+
+    
+       
     </div>
   );
 };
