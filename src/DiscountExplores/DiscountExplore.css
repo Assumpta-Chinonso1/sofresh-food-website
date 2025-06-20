@@ -56,19 +56,20 @@
 
 @media (max-width: 720px) {
   .discount-explore-container {
-    flex-direction: column-reverse; /* ✅ show image first */
+    flex-direction: column-reverse; 
     text-align: center;
-    padding: 20px;
+    padding: 0 3px;
     gap: 20px;
+     margin-bottom: 10px;
   }
 
   .discount-image {
     justify-content: center;
-    width: 100%;
+    width: 110%;
   }
 
   .discount-image img {
-    width: 100%;
+    width: 110%;
     height: auto;
     max-width: 100%;
     border-radius: 10px;
@@ -81,13 +82,13 @@
   .discount-text h1 {
     font-size: 26px;
     line-height: 1.4;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   .discount-text p {
     font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    line-height: 1.9;
+    margin-bottom: 10px;
   }
 
   .discount-text h3 {

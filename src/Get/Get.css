@@ -1,5 +1,4 @@
 .get {
-  /*background-color: #fffaf2;*/
   padding: 40px;
   font-family: 'Poppins', sans-serif;
   text-align: center;
@@ -51,7 +50,7 @@
 
 .get button {
   position: absolute;
-  right: 9px;
+  right: 100px;
   padding: 10px 30px;
   border: none;
   background-color: #e17c00;
@@ -64,4 +63,49 @@
 
 .get button:hover {
   background-color: green;
+}
+
+@media (max-width: 768px) {
+  .get {
+    padding: 2px 40px 130px 40px;
+    margin: 5px 2px;
+  }
+
+  .get h1 {
+    font-size: 24px;
+  }
+
+  .get p {
+    font-size: 16px;
+  }
+
+  .get input[type="email"] {
+    font-size: 15px;
+    padding: 14px 120px 14px 16px;
+  }
+
+  .get button {
+    font-size: 13px;
+    padding: 9px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .get h1 {
+    font-size: 20px;
+  }
+
+  .get p {
+    font-size: 14px;
+  }
+
+  .get input[type="email"] {
+    font-size: 14px;
+    padding: 15px 110px 15px 9px;
+  }
+
+  .get button {
+    font-size: 12px;
+    padding: 5px  10px;
+  }
 }

@@ -1,5 +1,5 @@
 
-.exploremenu {
+ .exploremenu {
   display: flex;
   flex-direction: column;
   padding: 150px;
@@ -164,69 +164,66 @@
   font-weight: 600;
   margin-left: 0.2rem;
 }
+/* RESPONSIVE STYLES */
 
-
- @media (max-width: 768px) {
+@media (max-width: 1024px) {
   .exploremenu {
-    padding: 60px 20px;
+    padding: 40px 30px;
+  }
+
+  .exploremenu h1 {
+    font-size: 32px;
+  }
+
+  .menu-label {
+    font-size: 18px;
+  }
+
+  .explore-menu-lists {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .exploremenu {
+    padding: 40px 20px;
   }
 
   .exploremenu-top {
     flex-direction: row;
-    align-items: first baseline;
-    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .exploremenu h1 {
-    font-size: 10px;
-    text-align: left;
-    margin-right: 2rem 5rem;
+    font-size: 24px;
   }
 
   .menu-label {
-    font-size: 2px;
-  }
-
-  .menu-arrow {
-    width: 16px;
-    height: 16px;
-  }
-
-  .explore-menu-lists {
-    padding: 1rem 0;
-  }
-
-  .explore-menu-item {
-    gap: 10px;
-    padding: 1rem 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    font-size: 16px;
   }
 
   .explore-menu-list {
-    min-width: 180px;
-    padding: 10px;
-    scroll-snap-align: start;
+    min-width: 240px;
   }
 
   .explore-menu-list img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .explore-menu-list p {
-    font-size: 0.9rem;
-  }
-
-  .explore-menu-list h2 {
-    font-size: 0.85rem;
+    height: 170px;
   }
 
   .scroll-arrow-left,
   .scroll-arrow-right {
-    width: 26px;
-    height: 26px;
-    top: 38%;
+    display: flex;
+  }
+}
+
+@media (max-width: 500px) {
+  .exploremenu h1 {
+    font-size: 20px;
+  }
+
+  .menu-label {
+    font-size: 14px;
   }
 
   .arrow-left,
@@ -237,79 +234,5 @@
 }
 
 
-/***/
-@media (max-width: 338px) {
-  .exploremenu {
-    padding: 60px 20px;
-  }
 
-  .exploremenu-top {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-
-  .exploremenu h1 {
-    font-size: 24px;
-    font-weight: 700;
-    margin: 0;
-    line-height: 1.4;
-    flex: 1;
-    white-space: nowrap;
-  }
-
-  .menu-label {
-    display: none; 
-  }
-
-  .explore-menu-lists {
-    padding: 1rem 0;
-    position: relative;
-  }
-
-  .explore-menu-item {
-    gap: 10px;
-    padding: 1rem 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 10px;
-  }
-
-  .explore-menu-list {
-    min-width: 170px;
-    padding: 10px;
-    scroll-snap-align: start;
-  }
-
-  .explore-menu-list img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .explore-menu-list p {
-    font-size: 0.9rem;
-  }
-
-  .explore-menu-list h2 {
-    font-size: 0.85rem;
-  }
-
-  
-  .scroll-arrow-left,
-  .scroll-arrow-right {
-    display: flex;
-    width: 28px;
-    height: 28px;
-    top: 38%;
-    background-color: #fff;
-  }
-
-  .arrow-left,
-  .arrow-right {
-    width: 18px;
-    height: 18px;
-    color: #f77f00;
-  }
-} 
-
-
+ 

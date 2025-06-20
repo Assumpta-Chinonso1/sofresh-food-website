@@ -20,7 +20,6 @@
 .footer-links div {
   min-width: 50px;
 }
-
 .footer-links h4 {
   margin-bottom: 1rem;
   font-size: 1rem;
@@ -100,4 +99,59 @@
   margin-top: 1rem;
   margin-right: 0;
   padding-right: 0;
+}
+
+
+
+/* ---------- RESPONSIVENESS ---------- */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .footer-links > div {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  .footer-socials-container {
+    order: 2;
+    margin-top: 30px;
+  }
+
+  .footer-socials {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .footer-copy {
+    font-size: 0.85rem;
+    margin-top: 20px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .footer-links > div {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .footer-socials {
+    gap: 0.6rem;
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
+  }
 }

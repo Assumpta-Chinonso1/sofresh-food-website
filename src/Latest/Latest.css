@@ -156,3 +156,168 @@ margin-bottom: 40px;
   transition: transform 0.4s ease;
 }
 
+
+
+/* ---------- RESPONSIVE STYLES ---------- */
+
+@media (max-width: 1200px) {
+  .latest {
+    padding: 100px 40px;
+  }
+
+  .latest-card {
+    padding: 40px;
+  }
+
+  .latest-card img {
+    max-height: 260px;
+    margin-bottom: 40px;
+  }
+
+  .latest-card h3 {
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .latest {
+    padding: 80px 30px;
+  }
+
+  .exploremenu-top h1 {
+    font-size: 2rem;
+  }
+
+  .latest-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .latest-card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+    padding: 30px;
+  }
+
+  .latest-card img {
+    max-height: 220px;
+    height: auto;
+  }
+
+  .latest-card h3 {
+    font-size: 14px;
+  }
+
+  .latest-card p {
+    font-size: 13px;
+  }
+
+  .read-more-btn {
+    padding: 6px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .latest {
+    padding: 60px 20px;
+  }
+
+  /* .exploremenu-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }*/
+
+  
+  .exploremenu-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+
+  .exploremenu-top h1 {
+    font-size: 1.7rem;
+  }
+
+  .menu-label {
+    font-size: 14px;
+  }
+
+  .latest-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .latest-card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .latest-card img {
+    max-height: 200px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .latest-card h3 {
+    font-size: 13px;
+    padding-right: 0;
+  }
+
+  .latest-card p {
+    font-size: 13px;
+  }
+
+  .read-more-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .arrow-btn {
+    height: 16px;
+    width: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .latest {
+    padding: 40px 15px;
+  }
+
+  .exploremenu-top h1 {
+    font-size: 1.4rem;
+  }
+
+  .latest-card img {
+    max-height: 180px;
+    height: auto;
+  }
+
+  .latest-card h3 {
+    font-size: 12px;
+  }
+
+  .latest-card p {
+    font-size: 12px;
+  }
+
+  .read-more-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .arrow-btn {
+    height: 14px;
+    width: 14px;
+  }
+
+  .date-btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Ensure date & button stay side by side */
+    gap: 10px;
+  }
+}
