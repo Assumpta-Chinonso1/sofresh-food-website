@@ -1,5 +1,4 @@
-
- .exploremenu {
+.exploremenu {
   display: flex;
   flex-direction: column;
   padding: 150px;
@@ -56,24 +55,38 @@
 
 .explore-menu-lists {
   position: relative;
-  width: 100%;
+  width: 110%;
   overflow: hidden;
-  padding: 3rem 5rem;
+  padding: 9rem 9rem;
   box-sizing: border-box;
 }
 
-.explore-menu-item {
+  .explore-menu-item {
   display: flex;
-  gap: 5px;
+  gap: 9px;
   overflow-x: auto;
   scroll-behavior: auto;
-  padding: 1rem 0;
+  padding: 1rem;
   scrollbar-width: none;
 }
 
 .explore-menu-item::-webkit-scrollbar {
   display: none;
 }
+
+  /*.explore-menu-item {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  scrollbar-width: none;
+}
+
+.explore-menu-item::-webkit-scrollbar {
+  display: none;
+}*/
+
 
 .scroll-arrow-left,
 .scroll-arrow-right {
@@ -164,75 +177,58 @@
   font-weight: 600;
   margin-left: 0.2rem;
 }
-/* RESPONSIVE STYLES */
-
-@media (max-width: 1024px) {
-  .exploremenu {
-    padding: 40px 30px;
-  }
-
-  .exploremenu h1 {
-    font-size: 32px;
-  }
-
-  .menu-label {
-    font-size: 18px;
-  }
-
-  .explore-menu-lists {
-    padding: 1rem;
-  }
-}
-
 @media (max-width: 768px) {
   .exploremenu {
-    padding: 40px 20px;
+    padding: 60px 20px;
+    text-align: center;
   }
 
   .exploremenu-top {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
   }
 
   .exploremenu h1 {
     font-size: 24px;
+    margin-bottom: 0;
   }
 
   .menu-label {
     font-size: 16px;
   }
 
-  .explore-menu-list {
-    min-width: 240px;
+  .explore-menu-lists {
+    padding: 2rem 1rem;
+    position: relative;
   }
 
-  .explore-menu-list img {
-    height: 170px;
+  .explore-menu-item {
+    justify-content: center;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .explore-menu-list {
+    scroll-snap-align: center;
+    min-width: 85%;
+    margin: auto;
   }
 
   .scroll-arrow-left,
   .scroll-arrow-right {
-    display: flex;
-  }
-}
-
-@media (max-width: 500px) {
-  .exploremenu h1 {
-    font-size: 20px;
-  }
-
-  .menu-label {
-    font-size: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
   }
 
   .arrow-left,
   .arrow-right {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
   }
 }
-
-
-
- 
