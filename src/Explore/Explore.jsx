@@ -57,9 +57,15 @@ import {ArrowLeftIcon, ArrowRightIcon} from '@heroicons/react/24/solid'
         <h1>
           Explore Our <span className="menu-gradient">Varieties</span>
         </h1>
-        <span className="menu-label">
+            {/*<span className="menu-label">
           Our Menu <ArrowRightIcon className="menu-arrow" />
-        </span>
+        </span>*/}
+
+        <span className="menu-label">
+  <span className="menu-text">Our Menu</span>
+  <ArrowRightIcon className="menu-arrow" />
+</span>
+
       </div>
 
       <div className="explore-menu-lists">
