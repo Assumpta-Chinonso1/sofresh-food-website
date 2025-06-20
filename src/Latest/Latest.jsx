@@ -21,9 +21,11 @@ const Latest = () => {
         <h1>
           Latest  <span className="menu-gradient">News</span>
         </h1>
-        <span className="menu-label">
-          Read More <ArrowRightIcon className="menu-arrow" />
-        </span>
+           <span className="menu-label">
+           <span className="menu-text">Read More</span>
+             <ArrowRightIcon className="menu-arrow" />
+            </span>
+
       </div>
      
 
@@ -41,10 +43,6 @@ const Latest = () => {
               </button>
              
                     </div>
-
-    
-
-
              </div>
            ))}
 

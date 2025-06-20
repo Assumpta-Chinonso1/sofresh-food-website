@@ -1,7 +1,7 @@
 .exploremenu {
   display: flex;
   flex-direction: column;
-  padding: 150px;
+  padding: 60px 20px;
   background-color: #fffef9;
   font-family: 'Poppins', sans-serif;
 }
