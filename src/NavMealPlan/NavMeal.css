@@ -641,7 +641,7 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
   .navmeal-logo {
     width: 30px !important;
     height: 30px !important;
-    
+    margin-left: 5px !important;
   }
 
 
