@@ -11,6 +11,8 @@ import { useCart } from '../CartContext/CartContext';
   const carouselRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+
+
   const { cartCount } = useCart();
 
   const scrollToIndex = (index) => {
@@ -55,6 +57,9 @@ import { useCart } from '../CartContext/CartContext';
             <li><a href="#mealplan">Meal Plan</a></li>
           </ul>
         </nav>
+
+   
+
           <div className="navmeal-cart">
            <Link to='/cart'> <img src={assets.cartt} alt=""  className='cart'/> </Link>
           {/*<span className="cart-count">0</span> */}
