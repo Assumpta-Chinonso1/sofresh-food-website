@@ -155,7 +155,7 @@ import { FiMenu, FiX } from 'react-icons/fi';
           IMMUNITY COMBOS
           <span className="line"></span>
         </h2>
-        <p>Fortify Your Body with nature’s best defenders to keep you strong and energized this season!</p>
+        <p className='mealll-p'>Fortify Your Body with nature’s best defenders to keep you strong and energized this season!</p>
         <div className="navmeal-products">
           <div className="navmeal-product">
             <img src={assets.citrus_Gaurd} alt="Citrus Guard" />
@@ -191,7 +191,7 @@ import { FiMenu, FiX } from 'react-icons/fi';
           Detox Plan
           <span className="line"></span>
         </h2>
-        <p>A refreshing reset to cleanse, recharge, and restore your vitality.</p>
+        <p className='mealll-p'>A refreshing reset to cleanse, recharge, and restore your vitality.</p>
         <div className="navmeal-products">
           <div className="navmeal-product">
             <img src={assets.reju_juc} alt="Rejuvenate Juice" />

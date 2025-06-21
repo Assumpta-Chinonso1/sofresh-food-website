@@ -673,14 +673,26 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
     margin-bottom: 50px;
   }
 
-  /* ✅ Center Banner Section */
-  .navmeal-banner {
+  /* Center Banner Section */
+   .navmeal-banner {
     margin: 0 auto;
     text-align: center;
     background-size: cover;
     background-position: center;
-    padding: 40px 20px;
+    padding: 4px 2px;
   }
+
+   /*.navmeal-banner {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}*/
+
 
   .navmeal-banner .highlight,
   .navmeal-banner .pre {
@@ -691,6 +703,17 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
   .navmeal-banner p {
     text-align: center;
     margin: 20px auto;
+  }
+ .mealll-p {
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 10px auto;
+    padding: 0 15px;
+    display: block;
+    max-width: 35%;
   }
   
   .navmeal-section,
@@ -719,7 +742,7 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
   }
 
   .navmeal-product {
-    max-width: 320px;
+    max-width: 370px;
     width: 90%;
     margin: 0 auto;
   }
@@ -773,8 +796,8 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
   }
 
   .faq-answer {
-    padding: 0.5rem 1rem 1rem;
-    font-size: 0.95rem;
+    padding: 0.5rem 0 1rem;
+    font-size: 0.90rem;
     line-height: 1.6;
     text-align: center;
   }
