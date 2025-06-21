@@ -596,7 +596,7 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
     z-index: 3000;
   }
 
-  /* 🍽️ Header Container */
+  /*Header Container */
   .navmeal-header {
     position: fixed;
     top: 20px;
@@ -611,11 +611,11 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
     border-bottom: 1px solid #ccc;
   }
 
-  /* 🍔 Hamburger Icon */
+  /* Hamburger Icon */
   .hamburgers {
     display: block;
     position: fixed;
-    left: 20px;
+    left: 30px;
     top: 18px;
     background: none;
     border: none;
@@ -624,7 +624,7 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
     color: #333;
   }
 
-  /* 🛒 Cart Icon */
+  /*Cart Icon */
   .navmeal-cart {
     position: absolute;
     right: 20px;
@@ -634,9 +634,9 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
 
 
 
-  /* 🔽 Mobile Navigation Links */
+  /*Mobile Navigation Links */
   .navmeal-nav {
-    display: none; /* Hide normal nav on mobile */
+    display: none; 
   }
 
   .mobile-nav-menu {
@@ -660,13 +660,39 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
     text-decoration: none;
   }
 
-  /* 🌟 Padding offset for sticky header */
+  /* Padding offset for sticky header */
   .navmeal-container {
-    padding-top: 160px;
+    padding-top: 190px;
   }
 
-  /* 📸 Banner and Section Centering */
-  .navmeal-banner,
+  /*Banner and Section Centering */
+
+
+    .navmeal-container {
+    padding-top: 180px;
+    margin-bottom: 50px;
+  }
+
+  /* ✅ Center Banner Section */
+  .navmeal-banner {
+    margin: 0 auto;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+  }
+
+  .navmeal-banner .highlight,
+  .navmeal-banner .pre {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .navmeal-banner p {
+    text-align: center;
+    margin: 20px auto;
+  }
+  
   .navmeal-section,
   .navmeal-products {
     text-align: center;
@@ -675,10 +701,10 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
     margin: 0 auto;
   }
 
-  /* 🧃 Products Vertical Stack */
+  /* Products Vertical Stack */
   .navmeal-products {
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
   }
 
   .navmeal-product {
@@ -695,7 +721,7 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
     margin: 0 auto;
   }
 
-  /* 👥 Customer Reviews */
+  /*Customer Reviews */
   .navmeal-customers {
     display: flex;
     overflow-x: auto;
@@ -710,15 +736,36 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
     max-width: 100%;
   }
 
-  .carousel-arrow {
-    display: none;
-  }
 
   /* ❓ FAQ */
-  .faq-item {
-    padding: 10px;
-    margin: 10px auto;
-    width: 95%;
+
+    .faq-item {
+    width: 25%;
+    padding: 5px;
+    margin: 5px auto;
+  }
+
+  .faq-question {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .faq-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .faq-answer {
+    padding: 0.5rem 1rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center;
   }
 
   /* 🦶 Footer Logos Centered */
