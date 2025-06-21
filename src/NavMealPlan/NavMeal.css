@@ -581,7 +581,6 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
 }
 
 @media screen and (max-width: 1023px) {
-  /* 🍔 Sticky Top Banner */
   .navsss {
     position: fixed;
     top: 0;
@@ -599,10 +598,10 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
   /*Header Container */
   .navmeal-header {
     position: fixed;
-    top: 20px;
+    top: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: 100px;
     background-color: white;
     z-index: 2999;
     display: flex;
@@ -622,13 +621,14 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
     z-index: 3001;
     cursor: pointer;
     color: #333;
+    height: 50px;
   }
 
   /*Cart Icon */
   .navmeal-cart {
     position: absolute;
     right: 20px;
-    top: 18px;
+    top: 30px;
     z-index: 3001;
   }
 
@@ -669,7 +669,6 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
 
 
     .navmeal-container {
-    padding-top: 180px;
     margin-bottom: 50px;
   }
 
@@ -682,16 +681,7 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
     padding: 4px 2px;
   }
 
-   /*.navmeal-banner {
-  margin: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  width: 100%;
-  position: relative;
-}*/
+  
 
 
   .navmeal-banner .highlight,
