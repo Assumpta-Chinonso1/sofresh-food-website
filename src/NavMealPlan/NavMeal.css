@@ -567,5 +567,177 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
 
 
 /*Responsiveness*/
+/* === DESKTOP FIRST === */
+.hamburgers {
+  display: none;
+}
 
+.mobile-nav-menu {
+  display: none;
+}
+
+.mobile-nav-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  /* 🍔 Sticky Top Banner */
+  .navsss {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 3000;
+  }
+
+  /* 🍽️ Header Container */
+  .navmeal-header {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: white;
+    z-index: 2999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* 🍔 Hamburger Icon */
+  .hamburgers {
+    display: block;
+    position: fixed;
+    left: 20px;
+    top: 18px;
+    background: none;
+    border: none;
+    z-index: 3001;
+    cursor: pointer;
+    color: #333;
+  }
+
+  /* 🛒 Cart Icon */
+  .navmeal-cart {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    z-index: 3001;
+  }
+
+
+
+  /* 🔽 Mobile Navigation Links */
+  .navmeal-nav {
+    display: none; /* Hide normal nav on mobile */
+  }
+
+  .mobile-nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    padding: 30px 20px;
+    position: fixed;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    z-index: 2998;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-nav-menu a {
+    color: green;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  /* 🌟 Padding offset for sticky header */
+  .navmeal-container {
+    padding-top: 160px;
+  }
+
+  /* 📸 Banner and Section Centering */
+  .navmeal-banner,
+  .navmeal-section,
+  .navmeal-products {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  /* 🧃 Products Vertical Stack */
+  .navmeal-products {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .navmeal-product {
+    max-width: 320px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .navmeal-product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* 👥 Customer Reviews */
+  .navmeal-customers {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .navmeal-customer img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .carousel-arrow {
+    display: none;
+  }
+
+  /* ❓ FAQ */
+  .faq-item {
+    padding: 10px;
+    margin: 10px auto;
+    width: 95%;
+  }
+
+  /* 🦶 Footer Logos Centered */
+  .navmea {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .navmea img {
+    width: 50px;
+    height: auto;
+  }
+
+  footer h3.h3 {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+}
 

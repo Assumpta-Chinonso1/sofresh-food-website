@@ -46,17 +46,6 @@ const Navbar = () => {
       {/* Orange line under navbar */}
       {menuOpen && <div className="mobile-top-line mobile-only"></div>}
 
-      {/* Mobile Menu *
-      {menuOpen && (
-        <ul className={`navbar-menu mobile-only open`}>
-          <div className="mobile-separator"></div>
-          <li><Link to='/menu'>Our Menu</Link></li>
-          <li><Link to='/location'>Find Us</Link></li>
-          <li><img src={assets.search_icon} alt="search" className='icon' /></li>
-          <li><button onClick={handleOrderClick} className='btn'>Order Now</button></li>
-        </ul>
-      )}*/}
-
       {menuOpen && (
   <ul className={`navbar-menu mobile-only open`}>
     <div className="mobile-separator"></div>

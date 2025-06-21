@@ -5,11 +5,18 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../CartContext/CartContext';
+import { FiMenu, FiX } from 'react-icons/fi';
 
 
  const NavMeal = () => {
   const carouselRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+   const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
 
 
 
@@ -93,6 +100,20 @@ import { useCart } from '../CartContext/CartContext';
           🌟 Limited-Time Offer: Get 12.5% OFF our 4-Week Meal Plan! 🌟
         </p>
       </section>
+       {/* Hamburger (shown only on mobile) */}
+{/* Hamburger (Mobile Only) */}
+<button className="hamburgers" onClick={toggleMenu}>
+  {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+</button>
+
+{menuOpen && (
+  <div className="mobile-nav-menu">
+    <a href="#detox" onClick={toggleMenu}>Detox Plan</a>
+    <a href="#immunity" onClick={toggleMenu}>Immunity Plan</a>
+    <a href="#mealplan" onClick={toggleMenu}>Meal Plan</a>
+  </div>
+)}
+
 
       {/* Meal Plan Section */}
       <section id="mealplan" className="navmeal-section">
