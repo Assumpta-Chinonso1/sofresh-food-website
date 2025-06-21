@@ -49,15 +49,6 @@ const Cart = () => {
 
       <hr />
 
-
-      {/*<ul className="carrt">
-        <li className='cart-nav'>Shopping Cart <ChevronRightIcon className="icon"/>  </li>  
-         
-        <li className='cart-nav'>Checkout details <ChevronRightIcon className="icon"/> </li>
-          
-        <li className='cart-nav'>Order Complete</li>
-      </ul>*/}
-
       
       <ul className="carrt">
   <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>

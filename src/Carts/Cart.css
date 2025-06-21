@@ -262,56 +262,7 @@ margin-top: 5rem;
   align-items: center;
 }
 
- /*.navmeal-productss{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 10px;
-}
-
-.navmeal-productss{
-   width: 300px;
-  padding: 2px 50px;
-  margin: 1px 1px ;
-  background-color: #fff;
-}
-
-
-  .navmeal-productss img{
-  display: block;
-   width: 100%;
-  height: 60%;
-  margin: 20px;
-  margin-bottom: 4px;
-}
-
-
- .navmeal-productss .name{
-  margin-top: 0;
-  font-weight: 500;
-  margin-bottom: 0;
-  text-transform: uppercase;
-}
-
-.navmeal-productss {
-  text-align: center;
-  justify-content: center;
-}
-
-.navmeal-productss img {
-  display: block;
-  width: 100%;
-  margin-bottom: 4px;
-}
-
-.navmeal-productss .name {
-  margin: 0;
-  padding: 0;
-  font-weight: 500;
-  display: block;
-}*/
-
+ 
 .navmeal-productss {
   display: flex;
   flex-direction: column;
