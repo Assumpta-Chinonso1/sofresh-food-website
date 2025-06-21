@@ -56,7 +56,7 @@ import { FiMenu, FiX } from 'react-icons/fi';
       </nav>
 
       <header className="navmeal-header">
-      <Link to='/' >   <img src={assets.sofresh_logo} alt="So Fresh Logo" className="navmeal-logo" />  </Link> 
+      <Link to='/' >   <img src={assets.sofresh_logo}  alt="So Fresh Logo" className="navmeal-logo" />  </Link> 
         <nav className="navmeal-nav">
           <ul>
             <li><a href="#detox">Detox Plan</a></li>
