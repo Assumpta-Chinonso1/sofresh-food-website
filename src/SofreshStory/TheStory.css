@@ -409,4 +409,31 @@ background-color: rgba(250, 143, 13, 0.7);
 }
 
 
+@media (max-width: 768px) {
+  .quest {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+  }
+
+  .quest-story-img span {
+    font-size: 14px;
+    width: 80%;
+    top: 28%;
+  }
+
+  .quest-text {
+    margin-top: 20px;
+  }
+
+  .quest-text h1 {
+    font-size: 24px;
+  }
+
+  .quest-text p {
+    font-size: 15px;
+  }
+}
+
+
 
