@@ -627,4 +627,111 @@ margin-top: 5rem;
   color: white;
 }
 
+@media (max-width: 768px) {
+  /* Flex mobile nav header: hamburger - center logo - cart badge */
+  .navmeal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  .hamburger-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navmeal-logo-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .navmeal-logo {
+    width: 120px;
+    height: auto;
+  }
+
+  .navmeal-cart {
+    position: relative;
+  }
+
+  .navmeal-nav {
+    display: none;
+  }
+
+  /* Show mobile menu */
+  .mobile-nav {
+    background-color: #fff;
+    padding: 15px 0;
+    border-top: 1px solid #ccc;
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .mobile-nav ul li {
+    margin: 10px 0;
+  }
+
+  .mobile-nav ul li a {
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  /* Hide checkout steps except Shopping Cart */
+  .carrt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 15px;
+  }
+
+  .carrt li:nth-child(2),
+  .carrt li:nth-child(3) {
+    display: none;
+  }
+
+  /* Adjust cart empty image and text */
+  .empty-cart {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .empty-cart-icon {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+
+  .browse-store {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  /* Product grid (if shown in future) */
+  .checks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .navmeal-productss {
+    width: 100%;
+    text-align: center;
+  }
+}
 
