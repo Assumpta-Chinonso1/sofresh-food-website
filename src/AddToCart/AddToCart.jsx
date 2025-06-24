@@ -7,6 +7,8 @@ import './AddToCart.css';
 import { useCart } from '../CartContext/CartContext.jsx';
 import { useLocation } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
+import { useNavigate } from 'react-router-dom';
+
 
 
 const AddToCart = () => {
@@ -17,6 +19,15 @@ const AddToCart = () => {
   const [isCountryOpen, setIsCountryOpen] = useState(false);
 const [isCityOpen, setIsCityOpen] = useState(false);
 const [isStateOpen, setIsStateOpen] = useState(false);
+const navigate = useNavigate();
+
+
+const handleMobileCheckout = () => {
+  if (window.innerWidth <= 768) {
+    navigate('/Checkout');
+  }
+};
+
 
 const { cartCount } = useCart();
 
@@ -288,7 +299,11 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
             Total: ₦{calculateTotal().toLocaleString()}
                    </p>
 
-              <button className="checkout-btn">Proceed to Checkout</button>
+              {/*<button className="checkout-btn">Proceed to Checkout</button>*/}
+              <button className="checkout-btn" onClick={handleMobileCheckout}>
+                      Proceed to Checkout
+                  </button>
+
             </div>
           </div>
         

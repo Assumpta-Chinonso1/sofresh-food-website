@@ -437,79 +437,6 @@ select {
 }
 
 
-
-/***
-.coupon-sections {
-  padding: 16px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  margin-top: 24px;
-}
-
-.coupon-toggles {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-
-.coupon-toggles span {
-  font-size: 17px;
-  font-weight: 600;
-  color: #333;
-}
-
-.coupon-toggles .icon {
-  width: 22px;
-  height: 22px;
-  transition: transform 0.3s ease;
-}
-
-.coupon-toggles .rotated {
-  transform: rotate(180deg);
-}
-
-.coupon-contents {
-  margin-top: 1px;
-  padding-top: 10px;
-  border-top: 1px solid #eee;
-}
-
-.coupon-rows {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1px;
-  align-items: center;
-}
-
-.coupon-inputs {
-  flex: 1;
-  min-width: 200px;
-  padding: 12px 14px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.apply-btn {
-  padding: 12px 18px;
-  background-color: #8758ff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: 500;
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.3s ease;
-}
-
-.apply-btn:hover {
-  background-color: #6a3dcd;
-}*/
-
-
 .coupon-sections {
   padding: 16px 0;
   border-top: 1px solid #ccc;
@@ -581,3 +508,152 @@ select {
   background-color: #888;
 }
 
+
+
+/* ======= Small Devices (Mobile: up to 480px) ======= */
+@media (max-width: 480px) {
+  .checkout-container {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .checkout-left, .checkout-right {
+    width: 100%;
+  }
+
+  .delivery-options {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .name-fields {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .coupon-rows {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .coupon-toggles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .summary-item {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .item-quantity {
+    align-self: flex-end;
+  }
+
+  .price-summary {
+    font-size: 14px;
+  }
+
+  .place-order-btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* ======= Medium Devices (Tablets: 481px - 768px) ======= */
+@media (min-width: 481px) and (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .checkout-left, .checkout-right {
+    width: 100%;
+  }
+
+  .delivery-options {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .coupon-rows {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .place-order-btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* ======= Large Devices (Desktops: 769px - 1024px) ======= */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .checkout-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 32px;
+  }
+
+  .checkout-left {
+    width: 58%;
+  }
+
+  .checkout-right {
+    width: 38%;
+  }
+
+  .coupon-rows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .summary-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+/* ======= Extra Large Devices (1025px and above) ======= */
+@media (min-width: 1025px) {
+  .checkout-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 80px;
+    gap: 48px;
+  }
+
+  .checkout-left {
+    width: 60%;
+  }
+
+  .checkout-right {
+    width: 35%;
+  }
+
+  .coupon-rows {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+}
