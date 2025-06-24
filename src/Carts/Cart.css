@@ -630,18 +630,6 @@ margin-top: 5rem;
 
 
 
-/* -------- MOBILE ONLY (max-width: 768px) -------- */
- /*@media (max-width: 768px) {
-  .navmeal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 16px;
-    background-color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }*/
 
   @media (max-width: 768px) {
   .navmeal-header {
@@ -658,80 +646,65 @@ margin-top: 5rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
-  /* Add spacing below the fixed header */
   .cart-content,
   .checks {
     margin-top: 1px; 
   }
 }
 
-
-  /*.hamburger-icon {
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-  }
-
-  .navmeal-logo-link {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .navmeal-logo {
-    width: 110px;
-    height: auto;
-  }
-
-  .navmeal-cart {
-    display: block;
-  }
-
-  .navmeal-nav {
-    display: none !important;
-  }
-
-  .mobile-nav {
-    display: none;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    text-align: left;
-  }
-
-  .mobile-nav.open {
+  
+@media (max-width: 768px) {
+  .fullscreen-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: 1000;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start;
+    padding: 80px 30px 30px 30px; 
   }
 
-  .mobile-nav ul {
+  .fullscreen-nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-top: 20px;
+    width: 100%;
   }
 
-  .mobile-nav ul li {
-    margin: 10px 0;
+  .fullscreen-nav li {
+    margin-bottom: 20px;
   }
 
-  .mobile-nav ul li a {
-    text-decoration: none;
+  .fullscreen-nav a {
+    font-size: 20px;
     color: #333;
-    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
   }
 
-  /* Only show first li (Shopping Cart) in the process list */
-  /* Base Hamburger */
-.hamburger-icon {
-  display: none;
-  z-index: 1001;
-}
+  .fullscreen-nav .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+  }
 
-/* Mobile only */
-@media (max-width: 768px) {
   .hamburger-icon {
     display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1002;
+  }
+
+  .hamburger-icon.open {
+    left: auto;
+    right: 20px;
   }
 
   .navmeal-nav {
@@ -742,7 +715,11 @@ margin-top: 5rem;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    top: 20px;
+    z-index: 1001;
   }
+}
+
 
   .mobile-nav.open {
     display: block;
@@ -768,7 +745,7 @@ margin-top: 5rem;
   .mobile-nav li {
     margin: 10px 0;
   }
-}
+
 
   .carrt li {
     display: none;
