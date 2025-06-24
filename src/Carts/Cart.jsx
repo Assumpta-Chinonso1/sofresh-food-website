@@ -1,4 +1,4 @@
-import { assets} from '../assets/assests';
+/*import { assets} from '../assets/assests';
 import { Link } from 'react-router-dom';
 import './Cart.css';
 import { ChevronRightIcon } from '@heroicons/react/16/solid';
@@ -8,14 +8,14 @@ import { new_products } from '../assets/assests';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../CartContext/CartContext.jsx';
 import { useLocation } from 'react-router-dom';
-//import { useState } from 'react';
+
 
 
 const Cart = () => {
 
    const { addToCart } = useContext(CartContext);
    const navigation = useNavigate();
-   //const [isMenuOpen, setIsMenuOpen] = useState(false);
+   
 
     const { cartCount } = useCart();
 
@@ -42,7 +42,7 @@ const Cart = () => {
         </nav>
         <div className="navmeal-cart">
           <Link to='/cart'><img src={assets.cartt} alt="" className='cart' />
-         {/* <span className="cart-count">0</span>*/}
+       
          <span className="cart-count-badge">{cartCount}</span>
           </Link>
         </div>
@@ -116,6 +116,6 @@ const Cart = () => {
     </div>
   );
 };
-export default Cart;
+export default Cart;*/
 
 
