@@ -8,12 +8,14 @@ import { new_products } from '../assets/assests';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../CartContext/CartContext.jsx';
 import { useLocation } from 'react-router-dom';
+//import { useState } from 'react';
 
 
 const Cart = () => {
 
    const { addToCart } = useContext(CartContext);
    const navigation = useNavigate();
+   //const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const { cartCount } = useCart();
 
@@ -49,7 +51,7 @@ const Cart = () => {
 
       <hr />
 
-      
+    
       <ul className="carrt">
   <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
     <Link to="/add">
