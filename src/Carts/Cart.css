@@ -666,7 +666,7 @@ margin-top: 5rem;
 }
 
 
-  .hamburger-icon {
+  /*.hamburger-icon {
     display: block;
     font-size: 24px;
     cursor: pointer;
@@ -722,6 +722,54 @@ margin-top: 5rem;
   }
 
   /* Only show first li (Shopping Cart) in the process list */
+  /* Base Hamburger */
+.hamburger-icon {
+  display: none;
+  z-index: 1001;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  .hamburger-icon {
+    display: block;
+  }
+
+  .navmeal-nav {
+    display: none;
+  }
+
+  .navmeal-logo-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mobile-nav.open {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: none;
+    background: white;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    text-align: center;
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .mobile-nav li {
+    margin: 10px 0;
+  }
+}
+
   .carrt li {
     display: none;
   }
