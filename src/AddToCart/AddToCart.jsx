@@ -6,6 +6,7 @@ import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
 import './AddToCart.css';
 import { useCart } from '../CartContext/CartContext.jsx';
 import { useLocation } from 'react-router-dom';
+//import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 
 
 const AddToCart = () => {
@@ -28,6 +29,8 @@ const currentPath = location.pathname;
   const [country, setCountry] = useState('');
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
+
+  
  
 
 
@@ -82,6 +85,7 @@ const currentPath = location.pathname;
 
       <hr />
 
+ 
       <ul className="carrt">
   <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
     <Link to="/add">

@@ -24,9 +24,7 @@ const Cart = () => {
       </nav>
 
       <header className="navmeal-header">
-        {/*<div className="hamburger-icon">
-        <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} size={24} />
-           </div>*/}
+     
            <div className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`}>
            <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} size={24} />
                 </div>
@@ -52,16 +50,6 @@ const Cart = () => {
           </ul>
         </nav>
       </header>
-
-      {/*{isMenuOpen && (
-        <div className="mobile-nav open">
-          <ul>
-            <li><a href="#detox">Detox Plan</a></li>
-            <li><a href="#immunity">Immunity Combos</a></li>
-            <li><a href="#mealplan">Meal Plan</a></li>
-          </ul>
-        </div>
-      )}*/}
 
       {isMenuOpen && (
   <div className="fullscreen-nav">
