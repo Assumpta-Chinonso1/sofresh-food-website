@@ -6,7 +6,7 @@ import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
 import './AddToCart.css';
 import { useCart } from '../CartContext/CartContext.jsx';
 import { useLocation } from 'react-router-dom';
-//import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
+import { Sling as Hamburger } from 'hamburger-react';
 
 
 const AddToCart = () => {
@@ -22,6 +22,8 @@ const { cartCount } = useCart();
 
 const location = useLocation();
 const currentPath = location.pathname;
+
+const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 
 
@@ -66,6 +68,11 @@ const currentPath = location.pathname;
       <nav className="navsss">
         <h4>GET 12.5% DISCOUNTS ON FOUR WEEKS MEAL PLAN</h4>
       </nav>
+        <div className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`}>
+           <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} size={24} />
+                </div>
+
+
 
       <header className="navmeal-header">
         <Link to="/"><img src={assets.sofresh_logo} alt="Logo" className="navmeal-logo" /></Link>
@@ -84,6 +91,19 @@ const currentPath = location.pathname;
       </header>
 
       <hr />
+
+         {isMenuOpen && (
+  <div className="fullscreen-nav">
+    <div className="close-icon">
+      <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} size={24} />
+    </div>
+    <ul>
+      <li><a href="#detox" onClick={() => setIsMenuOpen(false)}>Detox Plan</a></li>
+      <li><a href="#immunity" onClick={() => setIsMenuOpen(false)}>Immunity Combos</a></li>
+      <li><a href="#mealplan" onClick={() => setIsMenuOpen(false)}>Meal Plan</a></li>
+    </ul>
+  </div>
+)}
 
  
       <ul className="carrt">
