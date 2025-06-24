@@ -77,11 +77,7 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
       <header className="navmeal-header">
         <Link to="/"><img src={assets.sofresh_logo} alt="Logo" className="navmeal-logo" /></Link>
         <nav className="navmeal-nav">
-          <ul>
-            <li><a href="#detox">Detox Plan</a></li>
-            <li><a href="#immunity">Immunity Combos</a></li>
-            <li><a href="#mealplan">Meal Plan</a></li>
-          </ul>
+        
         </nav>
         <div className="navmeal-cart">
           <Link to="/cart"><img src={assets.cartt} alt="Cart" className="cart" />

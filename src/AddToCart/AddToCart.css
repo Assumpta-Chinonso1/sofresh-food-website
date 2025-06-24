@@ -390,4 +390,142 @@ input[type='radio']:checked + .custom-radio {
 
 
 
- 
+ /*@media (max-width: 768px) {
+  
+  .cart-wrapper {
+    margin-top: 140px;
+    padding: 0 16px;
+  }
+
+  .cart-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .cart-left {
+    width: 100%;
+  }
+
+  .cart-item-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .item-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cart-img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .qty-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 12px 0;
+  }
+
+  .item-total {
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 600;
+  }
+
+  .remove-btn {
+    background: transparent;
+    color: #ff4d4d;
+    border: none;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  
+  .cart-summary {
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+  }
+
+  .cart-summary h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .cart-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 15px;
+  }
+
+  .delivery-section {
+    margin-top: 20px;
+  }
+
+  .location-dropdown {
+    margin-top: 20px;
+  }
+
+  .grand-total {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: right;
+    margin-top: 20px;
+  }
+
+  
+  .checkout-btn {
+    width: 100%;
+    background-color: #1b1b1b;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  
+  .coupon-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .coupon-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  .apply-btn {
+    padding: 12px;
+    background: #8758ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}*/
+
+

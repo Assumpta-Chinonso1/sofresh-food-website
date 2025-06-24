@@ -41,93 +41,35 @@ const Cart = () => {
             <span className="cart-count-badge">{cartCount}</span>
           </Link>
         </div>
+        </header>
 
-        <nav className="navmeal-nav">
-          <ul>
-            <li><a href="#detox">Detox Plan</a></li>
-            <li><a href="#immunity">Immunity Combos</a></li>
-            <li><a href="#mealplan">Meal Plan</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      {/*{isMenuOpen && (
+{isMenuOpen && (
   <div className="fullscreen-nav">
     <div className="close-icon">
       <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} size={24} />
     </div>
+
+    {/* Main nav links */}
     <ul>
       <li><a href="#detox" onClick={() => setIsMenuOpen(false)}>Detox Plan</a></li>
       <li><a href="#immunity" onClick={() => setIsMenuOpen(false)}>Immunity Combos</a></li>
       <li><a href="#mealplan" onClick={() => setIsMenuOpen(false)}>Meal Plan</a></li>
     </ul>
-  </div>
-)}
 
-
-      <hr />
-
-      <ul className="carrt">
-        <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
-          <Link to="/add">Shopping Cart <ChevronRightIcon className="icon" /></Link>
-        </li>
-        <li className={`cart-nav ${currentPath === '/Checkout' ? 'active' : ''}`}>
-          <Link to="/Checkout">Checkout Details <ChevronRightIcon className="icon" /></Link>
-        </li>
-        <li className={`cart-nav ${currentPath === '/complete' ? 'active' : ''}`}>
-          <Link to="/complete">Order Complete</Link>
-        </li>
-      </ul>
-            <ul className="carrt">
-        <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
-          <Link to="/add">
-            Shopping Cart <ChevronRightIcon className="icon" />
-          </Link>
-        </li>
-        <li className={`cart-nav ${currentPath === '/Checkout' ? 'active' : ''}`}>
-          <Link to="/Checkout">
-            Checkout Details <ChevronRightIcon className="icon" />
-          </Link>
-        </li>
-        <li className={`cart-nav ${currentPath === '/complete' ? 'active' : ''}`}>
-          <Link to="/complete">
-            Order Complete
-          </Link>
-        </li>
-      </ul>*/}
-
-      {isMenuOpen && (
-  <div className="fullscreen-nav">
-    <div className="close-icon">
-      <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} size={24} />
-    </div>
-    <ul>
-      <li><a href="#detox" onClick={() => setIsMenuOpen(false)}>Detox Plan</a></li>
-      <li><a href="#immunity" onClick={() => setIsMenuOpen(false)}>Immunity Combos</a></li>
-      <li><a href="#mealplan" onClick={() => setIsMenuOpen(false)}>Meal Plan</a></li>
+    {/*  MOBILE CART NAVIGATION ONLY */}
+    <ul className="mobile-cart-nav">
+      <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
+        <Link to="/add">Shopping Cart <ChevronRightIcon className="icon" /></Link>
+      </li>
+      <li className={`cart-nav ${currentPath === '/Checkout' ? 'active' : ''}`}>
+        <Link to="/Checkout">Checkout Details <ChevronRightIcon className="icon" /></Link>
+      </li>
+      <li className={`cart-nav ${currentPath === '/complete' ? 'active' : ''}`}>
+        <Link to="/complete">Order Complete</Link>
+      </li>
     </ul>
   </div>
 )}
-
-{/* ✅ Desktop nav path steps — ensure this is visible */}
-<ul className="carrt">
-  <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
-    <Link to="/add">
-      Shopping Cart <ChevronRightIcon className="icon" />
-    </Link>
-  </li>
-  <li className={`cart-nav ${currentPath === '/Checkout' ? 'active' : ''}`}>
-    <Link to="/Checkout">
-      Checkout Details <ChevronRightIcon className="icon" />
-    </Link>
-  </li>
-  <li className={`cart-nav ${currentPath === '/complete' ? 'active' : ''}`}>
-    <Link to="/complete">
-      Order Complete
-    </Link>
-  </li>
-</ul>
-
 
 
       <div className="cart-content">
