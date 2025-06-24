@@ -628,31 +628,49 @@ margin-top: 5rem;
 }
 
 
-@media (max-width: 768px) {
-  /* Sticky announcement + header */
-  .navsss {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
 
+
+/* -------- MOBILE ONLY (max-width: 768px) -------- */
+ /*@media (max-width: 768px) {
   .navmeal-header {
-    position: sticky;
-    top: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 15px;
-    background-color: white;
+    padding: 12px 16px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
     z-index: 999;
+  }*/
+
+  @media (max-width: 768px) {
+  .navmeal-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
-  /* Hamburger */
+  /* Add spacing below the fixed header */
+  .cart-content,
+  .checks {
+    margin-top: 1px; 
+  }
+}
+
+
   .hamburger-icon {
-    font-size: 28px;
-    cursor: pointer;
     display: block;
-    z-index: 1001;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
   }
 
   .navmeal-logo-link {
@@ -667,26 +685,30 @@ margin-top: 5rem;
   }
 
   .navmeal-cart {
-    z-index: 1001;
+    display: block;
   }
 
   .navmeal-nav {
-    display: none; /* Hide desktop menu */
+    display: none !important;
   }
 
-  /* Show hamburger menu links */
   .mobile-nav {
-    display: block;
-    background-color: white;
-    width: 100%;
-    padding: 20px 0;
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+
+  .mobile-nav.open {
+    display: flex;
   }
 
   .mobile-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
   }
 
   .mobile-nav ul li {
@@ -695,20 +717,11 @@ margin-top: 5rem;
 
   .mobile-nav ul li a {
     text-decoration: none;
-    font-size: 18px;
     color: #333;
-    font-weight: 500;
+    font-size: 16px;
   }
 
-  /* Cart progress nav - show only Shopping Cart */
-  .carrt {
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    flex-direction: column;
-    align-items: center;
-  }
-
+  /* Only show first li (Shopping Cart) in the process list */
   .carrt li {
     display: none;
   }
@@ -717,49 +730,50 @@ margin-top: 5rem;
     display: block;
   }
 
-  /* Adjust empty cart text/image */
-  .empty-cart-icon {
-    width: 200px;
-    margin: auto;
+
+/* -------- DESKTOP ONLY (min-width: 769px) -------- */
+@media (min-width: 769px) {
+  .hamburger-icon,
+  .mobile-nav {
+    display: none !important;
   }
 
-  .empty-cart h2 {
-    font-size: 20px;
-    text-align: center;
+  .navmeal-nav {
+    display: none; 
   }
+}
 
-  .browse-store {
-    font-size: 16px;
-    padding: 8px 16px;
-  }
 
-  .new-in-store-title {
-    font-size: 18px;
-    margin-top: 20px;
-  }
-
-  /* Product list responsiveness */
+@media (max-width: 768px) {
   .checks {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
     padding: 20px;
+    align-items: center;
   }
 
   .navmeal-productss {
-    width: 100%;
-    max-width: 300px;
-    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
   .navmeal-productss img {
     width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+    margin-bottom: 10px;
   }
 
   .btnss {
     width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
   }
 }
-

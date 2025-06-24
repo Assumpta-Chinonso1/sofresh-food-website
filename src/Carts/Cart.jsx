@@ -119,14 +119,12 @@ const Cart = () => {
 export default Cart;*/
 
 
-
-import { assets } from '../assets/assests';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import './Cart.css';
+import { useState, useContext } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ChevronRightIcon } from '@heroicons/react/16/solid';
-import { useContext, useState } from 'react';
+import { assets, new_products } from '../assets/assests';
 import { CartContext, useCart } from '../CartContext/CartContext.jsx';
-import { new_products } from '../assets/assests';
+import './Cart.css';
 
 const Cart = () => {
   const { addToCart } = useContext(CartContext);
@@ -144,25 +142,21 @@ const Cart = () => {
       </nav>
 
       <header className="navmeal-header">
-        {/* Hamburger - shown only on mobile */}
         <div className="hamburger-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          ☰
+          &#9776;
         </div>
 
-        {/* Centered logo */}
         <Link to="/" className="navmeal-logo-link">
           <img src={assets.sofresh_logo} alt="So Fresh Logo" className="navmeal-logo" />
         </Link>
 
-        {/* Cart */}
         <div className="navmeal-cart">
           <Link to="/cart">
-            <img src={assets.cartt} alt="Cart" className="cart" />
+            <img src={assets.cartt} alt="" className="cart" />
             <span className="cart-count-badge">{cartCount}</span>
           </Link>
         </div>
 
-        {/* Desktop Nav */}
         <nav className="navmeal-nav">
           <ul>
             <li><a href="#detox">Detox Plan</a></li>
@@ -172,9 +166,8 @@ const Cart = () => {
         </nav>
       </header>
 
-      {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="mobile-nav">
+        <div className="mobile-nav open">
           <ul>
             <li><a href="#detox">Detox Plan</a></li>
             <li><a href="#immunity">Immunity Combos</a></li>
@@ -185,24 +178,18 @@ const Cart = () => {
 
       <hr />
 
-      {/* Progress steps */}
       <ul className="carrt">
         <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
-          <Link to="/add">
-            Shopping Cart <ChevronRightIcon className="icon" />
-          </Link>
+          <Link to="/add">Shopping Cart <ChevronRightIcon className="icon" /></Link>
         </li>
         <li className={`cart-nav ${currentPath === '/Checkout' ? 'active' : ''}`}>
-          <Link to="/Checkout">
-            Checkout Details <ChevronRightIcon className="icon" />
-          </Link>
+          <Link to="/Checkout">Checkout Details <ChevronRightIcon className="icon" /></Link>
         </li>
         <li className={`cart-nav ${currentPath === '/complete' ? 'active' : ''}`}>
           <Link to="/complete">Order Complete</Link>
         </li>
       </ul>
 
-      {/* Empty Cart */}
       <div className="cart-content">
         <div className="empty-cart">
           <img src={assets.empty_cart} alt="Empty Cart" className="empty-cart-icon" />
@@ -212,32 +199,24 @@ const Cart = () => {
         </div>
       </div>
 
-      {/* Product List */}
-      <section className="checks">
-        {new_products.map((product) => (
+      <section className='checks'>
+        {new_products.map(product => (
           <div key={product.id} className="navmeal-productss">
             <img src={product.image} alt={product.name} />
-            <p className="name">{product.name}</p>
+            <p className='name'>{product.name}</p>
             <span>₦{product.price.toLocaleString()}</span>
-            <button
-              className="btnss"
-              onClick={() => {
-                addToCart(product);
-                navigation('/add');
-              }}
-            >
-              ADD TO CART
-            </button>
+            <button className="btnss" onClick={() => {
+              addToCart(product)
+              navigation('/add')
+            }}>ADD TO CART</button>
           </div>
         ))}
       </section>
 
-      {/* WhatsApp */}
       <a href="https://wa.me/2348133124741" className="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <img src={assets.whatsapp} alt="Chat on WhatsApp" />
       </a>
 
-      {/* Footer */}
       <footer className="navFoot">
         <div className="navmea">
           <img src={assets.visa_c} alt="" />
@@ -245,12 +224,11 @@ const Cart = () => {
           <img src={assets.bank_t} alt="" />
           <img src={assets.pal_pay} alt="" />
         </div>
-        <h3 className="h3">Copyright 2025 <span>© So Fresh Neigbourhood Market</span></h3>
+        <h3 className='h3'>Copyright 2025 <span>© So Fresh Neigbourhood Market</span></h3>
       </footer>
     </div>
   );
 };
 
 export default Cart;
-
 
