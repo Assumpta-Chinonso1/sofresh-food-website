@@ -322,10 +322,6 @@ text-transform: uppercase;
 }
 
 
-
-
-
-
 /* Location Radio Buttons */
 .location-dropdown {
   margin: 20px 0;
@@ -389,11 +385,9 @@ input[type='radio']:checked + .custom-radio {
 }
 
 
-
- /*@media (max-width: 768px) {
-  
+@media (max-width: 768px) {
   .cart-wrapper {
-    margin-top: 140px;
+    margin-top: 1px;
     padding: 0 16px;
   }
 
@@ -407,88 +401,44 @@ input[type='radio']:checked + .custom-radio {
     width: 100%;
   }
 
-  .cart-item-card {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-
-  .item-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .cart-img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .qty-control {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin: 12px 0;
-  }
-
-  .item-total {
-    text-align: center;
-    margin-top: 8px;
-    font-weight: 600;
-  }
-
-  .remove-btn {
-    background: transparent;
-    color: #ff4d4d;
-    border: none;
-    font-size: 14px;
-    margin-top: 10px;
-  }
-
-  
-  .cart-summary {
-    width: 100%;
-    margin-top: 10px;
-    padding: 20px;
-    background: #f8f8f8;
-    border-radius: 10px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
-  }
-
-  .cart-summary h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    font-weight: 600;
-  }
-
-  .cart-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    font-size: 15px;
-  }
-
-  .delivery-section {
-    margin-top: 20px;
+  .cart-header-row {
+    display: none; 
   }
 
   .location-dropdown {
     margin-top: 20px;
   }
 
-  .grand-total {
-    font-weight: bold;
-    font-size: 16px;
-    text-align: right;
-    margin-top: 20px;
-  }
+.grand-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 0 6px;
+  text-align: left !important;
+  color: transparent; 
+  position: relative;
+}
 
-  
+.grand-total::before,
+.grand-total::after {
+  color: black;
+  position: absolute;
+  top: 0;
+}
+
+.grand-total::before {
+  content: "Total:";
+  left: 0;
+}
+
+.grand-total::after {
+  content: attr(data-total);
+  right: 0;
+}
+
+
   .checkout-btn {
     width: 100%;
     background-color: #1b1b1b;
@@ -498,11 +448,10 @@ input[type='radio']:checked + .custom-radio {
     padding: 16px;
     border: none;
     border-radius: 6px;
-    margin-top: 20px;
+    margin-bottom: 10px;
     text-align: center;
   }
 
-  
   .coupon-row {
     display: flex;
     flex-direction: column;
@@ -517,15 +466,82 @@ input[type='radio']:checked + .custom-radio {
     border: 1px solid #ccc;
   }
 
-  .apply-btn {
-    padding: 12px;
-    background: #8758ff;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
+
+  .coupon-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 6px;
+    font-size: 15px;
     font-weight: 500;
-    font-size: 14px;
+    cursor: pointer;
   }
-}*/
+
+  .coupon-toggle span {
+    flex: 1;
+    text-align: left;
+  }
+
+  .coupon-toggle .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .coupon-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hamburger-icon {
+    position: fixed; 
+    top: 20px;
+    left: 16px;
+    z-index: 1002;
+    display: block;
+  }
+
+  .navmeal-logo-link,
+  .navmeal-logo {
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    z-index: 1001;
+  }
+
+  .navmeal-cart {
+    position: fixed;
+    right: 16px;
+    top: 20px;
+    z-index: 1002;
+  }
+
+  .navmeal-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+    padding: 60px 16px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .cart-wrapper {
+    margin-top: 140px;
+  }
+}
+
 
 

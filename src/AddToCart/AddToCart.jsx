@@ -283,10 +283,17 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
                 ))}
               </div>
 
-              <p className="grand-total">Total: ₦{calculateTotal().toLocaleString()}</p>
+              {/*<p className="grand-total">Total: ₦{calculateTotal().toLocaleString()}</p>*/}
+              <p className="grand-total" data-total={`₦${calculateTotal().toLocaleString()}`}>
+            Total: ₦{calculateTotal().toLocaleString()}
+                   </p>
+
               <button className="checkout-btn">Proceed to Checkout</button>
             </div>
           </div>
+        
+ 
+
         )}
       </div>
 
