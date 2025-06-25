@@ -61,12 +61,7 @@ const CheckoutPage = () => {
           <img src={assets.sofresh_logo} alt="Logo" className="navmeal-logo" />
         </Link>
         <nav className="navmeal-nav">
-          {/*<ul>
-            <li><a href="#detox">Detox Plan</a></li>
-            <li><a href="#immunity">Immunity Combos</a></li>
-            <li><a href="#mealplan">Meal Plan</a></li>
-          </ul>*/}
-
+         
            <ul>
             <li><a href="#detox" onClick={() => setIsMenuOpen(false)}>Detox Plan</a></li>
               <li><a href="#immunity" onClick={() => setIsMenuOpen(false)}>Immunity Combos</a></li>
