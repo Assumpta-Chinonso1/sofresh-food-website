@@ -646,6 +646,26 @@ select {
 }
 
 
+@media (max-width: 768px) {
+  .carrt .cart-nav {
+    display: none; /* Hide all by default */
+  }
 
+  /* Only show the active nav */
+  .carrt .cart-nav.active {
+    display: block;
+    font-weight: bold;
+    color: #8758ff; /* Sofresh purple */
+  }
 
+  .carrt .cart-nav a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #8758ff; /* Text color of active item */
+  }
 
+  .carrt .cart-nav .icon {
+    font-size: 18px;
+  }
+}
