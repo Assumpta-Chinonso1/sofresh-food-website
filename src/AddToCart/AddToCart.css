@@ -397,8 +397,6 @@ input[type='radio']:checked + .custom-radio {
     gap: 0;
   }
 
-
-
   .cart-left {
     width: 100%;
   }
@@ -410,7 +408,6 @@ input[type='radio']:checked + .custom-radio {
   .location-dropdown {
     margin-top: 20px;
   }
-
 
   .grand-total {
     margin-top: 8px; 
