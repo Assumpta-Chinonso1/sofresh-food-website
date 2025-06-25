@@ -104,9 +104,9 @@ const CheckoutPage = () => {
         <li className={`cart-nav ${currentPath === '/complete' ? 'active' : ''}`}>
           <Link to="/complete">Order Complete</Link>
         </li>
-      </ul>*/}
+      </ul>*
 
-   <ul className="carrt">
+  <ul className="carrt">
   <li className={`cart-nav ${currentPath === '/add' ? 'active' : ''}`}>
     <Link to="/add">
       Shopping Cart <ChevronRightIcon className="icon" />
@@ -120,7 +120,27 @@ const CheckoutPage = () => {
   <li className={`cart-nav ${currentPath === '/complete' ? 'active' : ''}`}>
     <Link to="/complete">Order Complete</Link>
   </li>
+</ul>*/}
+<ul className="mobile-cart-nav">
+  {currentPath === '/add' && (
+    <li className="cart-nav active">
+      <Link to="/add">Shopping Cart <ChevronRightIcon className="icon" /></Link>
+    </li>
+  )}
+
+  {currentPath === '/Checkout' && (
+    <li className="cart-nav active">
+      <Link to="/Checkout">Checkout Details <ChevronRightIcon className="icon" /></Link>
+    </li>
+  )}
+
+  {currentPath === '/complete' && (
+    <li className="cart-nav active">
+      <Link to="/complete">Order Complete</Link>
+    </li>
+  )}
 </ul>
+
 
 
       <div className="checkout-container">

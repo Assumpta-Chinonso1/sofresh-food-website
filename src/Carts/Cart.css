@@ -785,30 +785,3 @@ margin-top: 5rem;
 }
 
 
-@media (max-width: 768px) {
-  .mobile-cart-nav {
-    margin-top: 30px;
-    padding-left: 0;
-    list-style: none;
-    width: 100%;
-  }
-
-  .mobile-cart-nav li {
-    margin-bottom: 15px;
-  }
-
-  .mobile-cart-nav a {
-    font-size: 18px;
-    color: #000;
-    font-weight: 500;
-    text-decoration: none;
-  }
-
-  .mobile-cart-nav .icon {
-    margin-left: 8px;
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-  }
-}
-
