@@ -89,15 +89,6 @@ const CheckoutPage = () => {
     </ul>
   </div>
 )}
-
-      
-          {/* Main nav links *
-          <ul>
-            <li><a href="#detox" onClick={() => setIsMenuOpen(false)}>Detox Plan</a></li>
-            <li><a href="#immunity" onClick={() => setIsMenuOpen(false)}>Immunity Combos</a></li>
-            <li><a href="#mealplan" onClick={() => setIsMenuOpen(false)}>Meal Plan</a></li>
-          </ul>*/}
-
       <hr />
       <ul className="carrt">
         <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
