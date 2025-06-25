@@ -60,11 +60,17 @@ const CheckoutPage = () => {
           <img src={assets.sofresh_logo} alt="Logo" className="navmeal-logo" />
         </Link>
         <nav className="navmeal-nav">
-          <ul>
+          {/*<ul>
             <li><a href="#detox">Detox Plan</a></li>
             <li><a href="#immunity">Immunity Combos</a></li>
             <li><a href="#mealplan">Meal Plan</a></li>
-          </ul>
+          </ul>*/}
+
+           <ul>
+            <li><a href="#detox" onClick={() => setIsMenuOpen(false)}>Detox Plan</a></li>
+              <li><a href="#immunity" onClick={() => setIsMenuOpen(false)}>Immunity Combos</a></li>
+              <li><a href="#mealplan" onClick={() => setIsMenuOpen(false)}>Meal Plan</a></li>
+              </ul>
         </nav>
         <div className="navmeal-cart">
           <Link to="/cart">
@@ -75,20 +81,26 @@ const CheckoutPage = () => {
       </header>
 
       
-      {isMenuOpen && (
-        <div className="fullscreen-nav">
-          <div className="close-icon">
-            <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} size={24} />
-          </div>
-          </div>
-      )}
+     {isMenuOpen && (
+  <div className="fullscreen-nav">
+    <div className="close-icon">
+      <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} size={24} />
+    </div>
+    <ul className="mobile-nav-links">
+      <li><a href="#detox" onClick={() => setIsMenuOpen(false)}>Detox Plan</a></li>
+      <li><a href="#immunity" onClick={() => setIsMenuOpen(false)}>Immunity Combos</a></li>
+      <li><a href="#mealplan" onClick={() => setIsMenuOpen(false)}>Meal Plan</a></li>
+    </ul>
+  </div>
+)}
+
       
-          {/* Main nav links */}
+          {/* Main nav links *
           <ul>
             <li><a href="#detox" onClick={() => setIsMenuOpen(false)}>Detox Plan</a></li>
             <li><a href="#immunity" onClick={() => setIsMenuOpen(false)}>Immunity Combos</a></li>
             <li><a href="#mealplan" onClick={() => setIsMenuOpen(false)}>Meal Plan</a></li>
-          </ul>
+          </ul>*/}
 
       <hr />
       <ul className="carrt">

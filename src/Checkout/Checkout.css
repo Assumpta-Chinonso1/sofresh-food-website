@@ -599,3 +599,61 @@ select {
 
 
 
+
+
+/* Desktop styles */
+.navmeal-nav {
+  display: flex;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navmeal-nav {
+    display: none;
+  }
+  .fullscreen-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 👈 Align content to the left */
+    padding: 100px 20px 20px 20px;
+  }
+
+  .mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .mobile-nav-links li {
+    margin-bottom: 20px;
+  }
+
+  .mobile-nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+  }
+}
+
+
+.hamburger-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+}
