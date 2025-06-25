@@ -628,7 +628,7 @@ margin-top: 5rem;
 }
 
 
-/* ========== MOBILE VIEW (max-width: 768px) ========== */
+/* ==== MOBILE VIEW (max-width: 768px) ==== */
 @media (max-width: 768px) {
   .navmeal-header {
     position: fixed;
