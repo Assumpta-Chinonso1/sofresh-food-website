@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ChevronRightIcon, ChevronDownIcon } from '@heroicons/react/16/solid';
 import { assets } from '../assets/assests';
 import { CartContext } from '../CartContext/CartContext';
+import { Sling as Hamburger } from 'hamburger-react';
 
 const CheckoutPage = () => {
   const { cartItems, getTotalCartAmount, cartCount } = useContext(CartContext);
@@ -13,6 +14,8 @@ const CheckoutPage = () => {
   const [couponCode, setCouponCode] = useState('');
   const location = useLocation();
   const currentPath = location.pathname;
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const DELIVERY_FEE = 1000;
   const subtotal = getTotalCartAmount();
@@ -48,6 +51,10 @@ const CheckoutPage = () => {
         <h4>GET 12.5% DISCOUNTS ON FOUR WEEKS MEAL PLAN</h4>
       </nav>
 
+       <div className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`}>
+                 <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} size={24} />
+                      </div>
+
       <header className="navmeal-header">
         <Link to="/">
           <img src={assets.sofresh_logo} alt="Logo" className="navmeal-logo" />
@@ -66,6 +73,22 @@ const CheckoutPage = () => {
           </Link>
         </div>
       </header>
+
+      
+      {isMenuOpen && (
+        <div className="fullscreen-nav">
+          <div className="close-icon">
+            <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} size={24} />
+          </div>
+          </div>
+      )}
+      
+          {/* Main nav links */}
+          <ul>
+            <li><a href="#detox" onClick={() => setIsMenuOpen(false)}>Detox Plan</a></li>
+            <li><a href="#immunity" onClick={() => setIsMenuOpen(false)}>Immunity Combos</a></li>
+            <li><a href="#mealplan" onClick={() => setIsMenuOpen(false)}>Meal Plan</a></li>
+          </ul>
 
       <hr />
       <ul className="carrt">
