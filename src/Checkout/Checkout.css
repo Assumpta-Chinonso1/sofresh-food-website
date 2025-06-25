@@ -621,7 +621,7 @@ select {
     z-index: 999;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* 👈 Align content to the left */
+    align-items: flex-start; 
     padding: 100px 20px 20px 20px;
   }
 
@@ -641,12 +641,38 @@ select {
     font-size: 18px;
     color: #333;
   }
+
+
+/*.hamburger-icon {
+  display: none;
 }
 
+ .hamburger-icon {
+    display: block;
+    position: fixed;        
+    top: 20px;
+    right: 20px;
+    z-index: 1001;          
+  }
+
+   .hamburger-icon {
+    display: block;
+    position: fixed;      
+    top: 15px;
+    right: 15px;
+    z-index: 9999;       
+    background: white;    
+    padding: 5px;
+    border-radius: 5px;
+  }*/
+
+}
 
 .hamburger-icon {
   display: none;
 }
+
+
 
 @media (max-width: 768px) {
   .hamburger-icon {

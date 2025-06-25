@@ -54,6 +54,7 @@ const CheckoutPage = () => {
        <div className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`}>
                  <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} size={24} />
                       </div>
+  
 
       <header className="navmeal-header">
         <Link to="/">
