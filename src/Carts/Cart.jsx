@@ -55,19 +55,6 @@ const Cart = () => {
       <li><a href="#immunity" onClick={() => setIsMenuOpen(false)}>Immunity Combos</a></li>
       <li><a href="#mealplan" onClick={() => setIsMenuOpen(false)}>Meal Plan</a></li>
     </ul>
-
-    {/*  MOBILE CART NAVIGATION ONLY *
-    <ul className="mobile-cart-nav">
-      <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
-        <Link to="/add">Shopping Cart <ChevronRightIcon className="icon" /></Link>
-      </li>
-      <li className={`cart-nav ${currentPath === '/Checkout' ? 'active' : ''}`}>
-        <Link to="/Checkout">Checkout Details <ChevronRightIcon className="icon" /></Link>
-      </li>
-      <li className={`cart-nav ${currentPath === '/complete' ? 'active' : ''}`}>
-        <Link to="/complete">Order Complete</Link>
-      </li>
-    </ul>*/}
     <ul className="mobile-cart-nav">
   {currentPath === '/add' && (
     <li className="cart-nav active">
@@ -94,29 +81,6 @@ const Cart = () => {
 
   </div>
 )}
-
-{/*<ul className="mobile-cart-nav">
-  {currentPath === '/add' && (
-    <li className="cart-nav active">
-      <Link to="/add">Shopping Cart <ChevronRightIcon className="icon" /></Link>
-    </li>
-  )}
-
-  {currentPath === '/Checkout' && (
-    <li className="cart-nav active">
-      <Link to="/Checkout">Checkout Details <ChevronRightIcon className="icon" /></Link>
-    </li>
-  )}
-
-  {currentPath === '/complete' && (
-    <li className="cart-nav active">
-      <Link to="/complete">Order Complete</Link>
-    </li>
-  )}
-</ul>
-  </div>
-)}*/}
-
 
       <div className="cart-content">
         <div className="empty-cart">

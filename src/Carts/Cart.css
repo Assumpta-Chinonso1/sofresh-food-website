@@ -726,8 +726,6 @@ margin-top: 5rem;
   .carrt li:first-child {
     display: block;
   }
-
- 
   .checks {
     display: flex;
     flex-direction: column;

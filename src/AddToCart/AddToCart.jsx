@@ -247,11 +247,11 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
 ].map(({ label, value, setter, options, placeholder, isOpen, setIsOpen }) => (
   <div key={label} className="input-group">
     <div className="fake-select" onClick={() => {
-      // Close all others first
+      
       setIsCountryOpen(false);
       setIsCityOpen(false);
       setIsStateOpen(false);
-      // Then open the one being clicked
+  
       setIsOpen(!isOpen);
     }}>
       <p className="select-label">{label}</p>

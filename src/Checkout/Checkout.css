@@ -671,21 +671,35 @@ select {
 }
 
 
+   @media (max-width: 768px) {
+  .mobile-cart-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2px;
+    list-style: none; 
+    padding: 0;
+  }
 
-@media (max-width: 768px) {
   .mobile-cart-nav .cart-nav {
     font-weight: bold;
+    text-align: center;
   }
 
   .mobile-cart-nav .cart-nav a {
     color: gray;
-    font-size: 16px;
+    font-size: 20px;
     display: flex;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
+    gap: 6px;
+    text-decoration: none;
   }
 
   .mobile-cart-nav .icon {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
+
+
