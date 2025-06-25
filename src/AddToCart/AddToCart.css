@@ -545,8 +545,6 @@ input[type='radio']:checked + .custom-radio {
   }
 }
 
-
-
 @media (max-width: 768px) {
   .navmeal-header {
     position: fixed;
