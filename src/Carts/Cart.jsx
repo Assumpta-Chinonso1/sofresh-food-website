@@ -51,7 +51,7 @@ const Cart = () => {
       <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} size={24} />
     </div>
 
-    {/* Main nav links *
+    {/* Main nav links */}
     <ul>
       <li><a href="#detox" onClick={() => setIsMenuOpen(false)}>Detox Plan</a></li>
       <li><a href="#immunity" onClick={() => setIsMenuOpen(false)}>Immunity Combos</a></li>
@@ -84,7 +84,7 @@ const Cart = () => {
   </div>
 )}
 
-      {/*<div className="cart-content">
+      <div className="cart-content">
         <div className="empty-cart">
           <img src={assets.empty_cart} alt="Empty Cart" className="empty-cart-icon" />
           <h2>Your cart is currently empty!</h2>
