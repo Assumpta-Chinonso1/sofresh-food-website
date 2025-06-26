@@ -597,7 +597,7 @@ const Cart = () => {
 export default Cart;*/
 
 
-/import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ChevronRightIcon } from '@heroicons/react/16/solid';
 import { assets, new_products } from '../assets/assests';
@@ -606,8 +606,10 @@ import { Sling as Hamburger } from 'hamburger-react';
 import './Cart.css';
 
 const Cart = () => {
-  const { addToCart, cartItems, removeFromCart, deleteFromCart, getTotalCartAmount } = useContext(CartContext);
-  const { cartCount } = useCart();
+ // const { addToCart, cartItems, removeFromCart, deleteFromCart, getTotalCartAmount } = useContext(CartContext);
+ // const { cartCount } = useCart();
+ const { addToCart, cartItems, removeFromCart, deleteFromCart, getTotalCartAmount, cartCount } = useCart();
+
   const navigation = useNavigate();
   const location = useLocation();
   const currentPath = location.pathname;

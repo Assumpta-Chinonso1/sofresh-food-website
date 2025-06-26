@@ -627,7 +627,7 @@ margin-top: 5rem;
   color: white;
 }
 
-.cart-container {
+/*.cart-container {
   position: relative;
   display: inline-block;
 }
@@ -730,7 +730,154 @@ margin-top: 5rem;
 .empty {
   text-align: center;
   color: #888;
+}*/
+
+
+/****/
+
+/* Cart.css */
+
+.cart-container {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
 }
+
+.cart-icon-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-icon {
+  font-size: 24px;
+  color: #fff;
+  background: #8758ff;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ff5e57;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  z-index: 10;
+}
+
+.cart-preview {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  width: 350px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  z-index: 20;
+}
+
+.cart-icon-wrapper:hover .cart-preview {
+  display: block;
+}
+
+.empty-cart {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+.cart-item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-details h4 {
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+}
+
+.item-details p {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #8758ff;
+  font-weight: bold;
+}
+
+.item-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item-controls button {
+  background: #f1f1f1;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #333;
+}
+
+.item-controls button:hover {
+  background: #8758ff;
+  color: white;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff5e57;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.delete-btn:hover {
+  color: #d9534f;
+}
+
+.cart-total {
+  text-align: right;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 10px;
+  color: #333;
+}
+
 
 
 
