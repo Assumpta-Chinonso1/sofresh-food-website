@@ -1,5 +1,5 @@
 
-import { useState, useContext } from 'react';
+/*import { useState, useContext } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ChevronRightIcon } from '@heroicons/react/16/solid';
 import { assets, new_products } from '../assets/assests';
@@ -51,7 +51,7 @@ const Cart = () => {
       <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} size={24} />
     </div>
 
-    {/* Main nav links */}
+    {/* Main nav links *
     <ul>
       <li><a href="#detox" onClick={() => setIsMenuOpen(false)}>Detox Plan</a></li>
       <li><a href="#immunity" onClick={() => setIsMenuOpen(false)}>Immunity Combos</a></li>
@@ -91,7 +91,7 @@ const Cart = () => {
           <Link to="/store" className="browse-store">Browse store</Link>
           <h3 className="new-in-store-title">New in store</h3>
         </div>
-      </div>*/}
+      </div>*
 
       <div className="cart-content">
   {cartItems.length === 0 ? (
@@ -162,5 +162,8 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default Cart;*/
+
+
+
 
