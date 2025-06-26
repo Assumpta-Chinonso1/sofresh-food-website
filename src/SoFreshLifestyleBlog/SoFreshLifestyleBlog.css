@@ -69,7 +69,7 @@
 
 
 
-/* Extra Large Screens (Desktops, TVs) */
+
 @media (min-width: 1400px) {
   .blog {
     padding: 60px 200px;
@@ -84,7 +84,7 @@
   }
 }
 
-/* Large Laptops / Desktops */
+
 @media (min-width: 1200px) and (max-width: 1399px) {
   .blog {
     padding: 50px 150px;
