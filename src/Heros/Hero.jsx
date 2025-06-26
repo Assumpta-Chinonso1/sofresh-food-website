@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react'
 import './Hero.css'
 import Order from '../Order/Order'

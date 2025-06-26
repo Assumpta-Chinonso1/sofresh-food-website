@@ -69,7 +69,7 @@ import { FiMenu, FiX } from 'react-icons/fi';
 
           <div className="navmeal-cart">
            <Link to='/cart'> <img src={assets.cartt} alt=""  className='cart'/> </Link>
-          {/*<span className="cart-count">0</span> */}
+        
                   <span className="cart-count-badge">{cartCount}</span>
 
            <div className="cart-dropdown">
@@ -101,7 +101,6 @@ import { FiMenu, FiX } from 'react-icons/fi';
         </p>
       </section>
        {/* Hamburger (shown only on mobile) */}
-{/* Hamburger (Mobile Only) */}
 <button className="hamburgers" onClick={toggleMenu}>
   {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
 </button>

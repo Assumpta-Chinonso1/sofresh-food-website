@@ -34,8 +34,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
 }
-
-
 .navmeal-logo {
   width: 50px;
   height: 50px;
@@ -49,8 +47,6 @@
   gap: 50px;
    color: rgb(68, 54, 54);
 }
-
-
 .navmeal-nav ul li a {
   text-decoration: none;
   color: #403c3c;
@@ -132,8 +128,6 @@
   border-top: 10px solid rgba(0, 0, 0, 0.2); 
 }
 
-
-
 .navmeal-products {
   display: flex;
   flex-wrap: wrap;
@@ -142,9 +136,6 @@
   margin-top: 20px;
  
 }
-
-
-
 .navmeal-product {
   width: 400px;
   border: 2px solid #f0f0f0;
@@ -159,10 +150,6 @@
   box-shadow: 0 15px 20px 1px #f0f0f0; 
   border-color: #fff; 
 }
-
-
-
-
 
 .navmeal-product img {
   width: 100%;
@@ -563,11 +550,6 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
   pointer-events: none; 
 }
 
-
-
-
-/*Responsiveness*/
-/* === DESKTOP FIRST === */
 .hamburgers {
   display: none;
 }
@@ -580,6 +562,8 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
   display: none;
 }
 
+
+/*Responsiveness*/
 @media screen and (max-width: 1023px) {
   .navsss {
     position: fixed;
@@ -632,12 +616,6 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
     z-index: 3001;
   }
 
-  /*.navmeal-logo {
-  width: 40px;   
-  height: 40px;  
-  margin-left: 60px;
-}*/
-
   .navmeal-logo {
     width: 40px !important;
     height: 40px !important;
@@ -671,19 +649,14 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
     text-decoration: none;
   }
 
-  /* Padding offset for sticky header */
   .navmeal-container {
     padding-top: 190px;
   }
-
-  /*Banner and Section Centering */
-
 
     .navmeal-container {
     margin-bottom: 50px;
   }
 
-  /* Center Banner Section */
    .navmeal-banner {
     margin: 0 auto;
     text-align: center;
@@ -691,10 +664,6 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
     background-position: center;
     padding: 4px 2px;
   }
-
-  
-
-
   .navmeal-banner .highlight,
   .navmeal-banner .pre {
     font-size: 1.6rem;
@@ -735,8 +704,6 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
     display: block;
     border-radius: 4px;
   }
-
-  /* Products Vertical Stack */
   .navmeal-products {
     flex-direction: column;
     gap: 20px;
@@ -803,7 +770,7 @@ box-shadow: 0 4px 8px rgb(97, 175, 97);
     text-align: center;
   }
 
-  /* 🦶 Footer Logos Centered */
+ 
   .navmea {
     display: flex;
     justify-content: center;

@@ -1,5 +1,4 @@
-
-/* === GENERAL === */
+/* GENERAL  */
 .navbar {
   position: fixed;
   top: 0;
@@ -18,7 +17,7 @@
   cursor: pointer;
 }
 
-/* === NAV MENU DESKTOP === */
+/* NAV MENU DESKTOP  */
 .navbar-menu.desktop-only {
   display: flex;
   list-style: none;
@@ -36,7 +35,7 @@
   transition: 0.3s ease;
 }
 
-/* === ICON & RIGHT SIDE === */
+/*ICON & RIGHT SIDE */
 .icon {
   width: 20px;
   height: 20px;
@@ -50,7 +49,7 @@
   gap: 40px;
 }
 
-/* === BUTTON === */
+/* BUTTON  */
 .btn {
   background-color: orange;
   font-size: 18px;
@@ -66,7 +65,7 @@
   background-color: green;
 }
 
-/* === MOBILE ONLY === */
+/* MOBILE ONLY */
 .mobile-only {
   display: none;
 }
@@ -135,7 +134,7 @@
     font-family: 'Times New Roman', Times, serif;
   }
 
-  /* Nice orange separator */
+  
   .mobile-separator {
      position: fixed;
     top: 80px;
