@@ -14,6 +14,8 @@ const Cart = () => {
   const navigation = useNavigate();
   const location = useLocation();
   const currentPath = location.pathname;
+  const { cartItems,  removeFromCart, deleteFromCart, getTotalCartAmount } = useContext(CartContext);
+
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -82,14 +84,52 @@ const Cart = () => {
   </div>
 )}
 
-      <div className="cart-content">
+      {/*<div className="cart-content">
         <div className="empty-cart">
           <img src={assets.empty_cart} alt="Empty Cart" className="empty-cart-icon" />
           <h2>Your cart is currently empty!</h2>
           <Link to="/store" className="browse-store">Browse store</Link>
           <h3 className="new-in-store-title">New in store</h3>
         </div>
+      </div>*/}
+
+      <div className="cart-content">
+  {cartItems.length === 0 ? (
+    <div className="empty-cart">
+      <img src={assets.empty_cart} alt="Empty Cart" className="empty-cart-icon" />
+      <h2>Your cart is currently empty!</h2>
+      <Link to="/store" className="browse-store">Browse store</Link>
+      <h3 className="new-in-store-title">New in store</h3>
+    </div>
+  ) : (
+    <div className="filled-cart">
+      <h2 className="cart-title">Your Cart</h2>
+      {cartItems.map(item => (
+        <div key={item.id} className="cart-item">
+          <img src={item.image} alt={item.name} className="cart-item-img" />
+          <div className="cart-item-details">
+            <p className="cart-item-name">{item.name}</p>
+            <p className="cart-item-price">₦{(item.price * item.quantity).toLocaleString()}</p>
+            <p className="cart-item-qty">Qty: {item.quantity}</p>
+          </div>
+          <div className="cart-buttons">
+            <button onClick={() => removeFromCart(item.id)}>-</button>
+            <button onClick={() => addToCart(item)}>+</button>
+            <button className="cart-remove-btn" onClick={() => deleteFromCart(item.id)}>
+              Cancel
+            </button>
+          </div>
+        </div>
+      ))}
+
+      <div className="cart-total">
+        <h3>Total: ₦{getTotalCartAmount().toLocaleString()}</h3>
+        <Link to="/Checkout" className="checkout-btn">Proceed to Checkout</Link>
       </div>
+    </div>
+  )}
+</div>
+
 
       <section className='checks'>
         {new_products.map(product => (
