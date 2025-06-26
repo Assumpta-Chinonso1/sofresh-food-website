@@ -129,7 +129,6 @@
   }
 }
 
-/* Mobile Devices (Tablets and Large Phones) */
 @media (min-width: 576px) and (max-width: 767px) {
   .blog {
     padding: 25px 30px;
