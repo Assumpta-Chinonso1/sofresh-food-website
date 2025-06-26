@@ -1,5 +1,5 @@
 
-/*import { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ChevronRightIcon } from '@heroicons/react/16/solid';
 import { assets, new_products } from '../assets/assests';
@@ -162,7 +162,7 @@ const Cart = () => {
   );
 };
 
-export default Cart;*/
+export default Cart;
 
 
 /*import { useState, useContext } from 'react';
