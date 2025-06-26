@@ -143,15 +143,11 @@
   }
 }
 
-/* Extra Small Devices (Phones) */
+
 @media (max-width: 575px) {
   .blog {
     padding: 20px 15px;
   }
-
-  /* .blog-title {
-    font-size: 20px;
-  }*/
 
   .blog-page h1 {
     font-size: 22px;
