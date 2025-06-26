@@ -90,37 +90,6 @@ const CheckoutPage = () => {
   </div>
 )}
       <hr />
-      {/*<ul className="carrt">
-        <li className={`cart-nav ${currentPath === '/cart' ? 'active' : ''}`}>
-          <Link to="/add">
-            Shopping Cart <ChevronRightIcon className="icon" />
-          </Link>
-        </li>
-        <li className={`cart-nav ${currentPath === '/Checkout' ? 'active' : ''}`}>
-          <Link to="/Checkout">
-            Checkout Details <ChevronRightIcon className="icon" />
-          </Link>
-        </li>
-        <li className={`cart-nav ${currentPath === '/complete' ? 'active' : ''}`}>
-          <Link to="/complete">Order Complete</Link>
-        </li>
-      </ul>*
-
-  <ul className="carrt">
-  <li className={`cart-nav ${currentPath === '/add' ? 'active' : ''}`}>
-    <Link to="/add">
-      Shopping Cart <ChevronRightIcon className="icon" />
-    </Link>
-  </li>
-  <li className={`cart-nav ${currentPath === '/Checkout' ? 'active' : ''}`}>
-    <Link to="/Checkout">
-      Checkout Details <ChevronRightIcon className="icon" />
-    </Link>
-  </li>
-  <li className={`cart-nav ${currentPath === '/complete' ? 'active' : ''}`}>
-    <Link to="/complete">Order Complete</Link>
-  </li>
-</ul>*/}
 <ul className="mobile-cart-nav">
   {currentPath === '/add' && (
     <li className="cart-nav active">
