@@ -627,68 +627,109 @@ margin-top: 5rem;
   color: white;
 }
 
+.cart-container {
+  position: relative;
+  display: inline-block;
+}
 
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+  color: #8758ff;
+}
 
-/****/
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: red;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.cart-dropdown {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 100;
+  border-radius: 8px;
+}
+
+.cart-dropdown h4 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.cart-items {
+  max-height: 250px;
+  overflow-y: auto;
+}
 
 .cart-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: #fff;
-  border-radius: 10px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
-.cart-item-img {
-  width: 80px;
-  height: 80px;
+.cart-item img {
+  width: 50px;
+  height: 50px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
-.cart-item-details {
+.item-info {
   flex: 1;
-  margin-left: 1rem;
 }
 
-.cart-buttons {
+.quantity-control {
   display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
+  align-items: center;
+  gap: 5px;
 }
 
-.cart-buttons button {
-  background-color: #8758ff;
+.quantity-control button {
+  background: #8758ff;
   color: white;
-  padding: 6px 10px;
   border: none;
+  padding: 4px 6px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 12px;
 }
 
-.cart-remove-btn {
-  background-color: crimson;
+.delete-btn {
+  background: crimson;
 }
 
-.cart-total {
-  margin-top: 1.5rem;
-  text-align: right;
-  font-weight: bold;
-  font-size: 1.2rem;
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .checkout-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  background: #00b894;
+  background: #8758ff;
   color: white;
-  padding: 10px 16px;
-  border-radius: 8px;
-  text-decoration: none;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.empty {
+  text-align: center;
+  color: #888;
 }
 
 
